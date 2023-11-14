@@ -1,9 +1,16 @@
 .button {
+  @apply inline-flex bg-green-600 text-white cursor-pointer justify-center px-4 py-2 text-center
+    whitespace-nowrap rounded transition duration-300
+    hover:bg-green-400
+    focus:outline-none;
+}
+
+/* .button {
   @apply inline-flex bg-white text-black border-gray-50 border cursor-pointer justify-center px-4 py-2 text-center
     whitespace-nowrap rounded
     hover:border-gray-500
     focus:outline-none;
-}
+} */
 
 .button.addon-right {
   @apply rounded-r-none;

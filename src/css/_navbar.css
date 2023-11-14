@@ -96,6 +96,6 @@
   }
 
   .navbar-item.active:not(.dropdown), .navbar-item.active.dropdown > .navbar-link {
-    @apply text-blue-500;
+    @apply text-green-500;
   }
 }

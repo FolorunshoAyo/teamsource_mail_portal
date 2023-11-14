@@ -27,7 +27,7 @@
 }
 
 .checkbox input[type=checkbox]:checked+.check, .radio input[type=radio]:checked+.check {
-  @apply bg-no-repeat bg-center bg-blue-500 border-blue-500 border-4;
+  @apply bg-no-repeat bg-center bg-green-500 border-green-500 border-4;
 }
 
 .checkbox input[type=checkbox]:checked+.check {
@@ -39,7 +39,7 @@
 }
 
 .switch input[type=checkbox]:checked+.check {
-  @apply bg-blue-500 border-blue-500;
+  @apply bg-green-500 border-blue-500;
 }
 
 .switch input[type=checkbox]+.check:before {

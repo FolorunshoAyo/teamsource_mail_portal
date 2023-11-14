@@ -1,6 +1,7 @@
 "use strict";
 
 /* Aside & Navbar: dropdowns */
+
 Array.from(document.getElementsByClassName('dropdown')).forEach(function (elA) {
   elA.addEventListener('click', function (e) {
     if (e.currentTarget.classList.contains('navbar-item')) {
@@ -13,6 +14,7 @@ Array.from(document.getElementsByClassName('dropdown')).forEach(function (elA) {
     }
   });
 });
+
 /* Aside Mobile toggle */
 
 Array.from(document.getElementsByClassName('mobile-aside-button')).forEach(function (el) {
@@ -23,6 +25,7 @@ Array.from(document.getElementsByClassName('mobile-aside-button')).forEach(funct
     dropdownIcon.classList.toggle('mdi-backburger');
   });
 });
+
 /* NavBar menu mobile toggle */
 
 Array.from(document.getElementsByClassName('--jb-navbar-menu-toggle')).forEach(function (el) {
@@ -33,6 +36,7 @@ Array.from(document.getElementsByClassName('--jb-navbar-menu-toggle')).forEach(f
     dropdownIcon.classList.toggle('mdi-close');
   });
 });
+
 /* Modal: open */
 
 Array.from(document.getElementsByClassName('--jb-modal')).forEach(function (el) {
@@ -42,6 +46,7 @@ Array.from(document.getElementsByClassName('--jb-modal')).forEach(function (el) 
     document.documentElement.classList.add('clipped');
   });
 });
+
 /* Modal: close */
 
 Array.from(document.getElementsByClassName('--jb-modal-close')).forEach(function (el) {
@@ -50,6 +55,7 @@ Array.from(document.getElementsByClassName('--jb-modal-close')).forEach(function
     document.documentElement.classList.remove('is-clipped');
   });
 });
+
 /* Notification dismiss */
 
 Array.from(document.getElementsByClassName('--jb-notification-dismiss')).forEach(function (el) {

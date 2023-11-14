@@ -56,7 +56,14 @@ const dateNowMillis = Date.now()
 
 const concatHtml = file => {
   let replaceHtmlClassWith = ''
-  const formScreenFiles = ['login']
+  const formScreenFiles = 
+  [
+    'login',
+    'register',
+    'account_details',
+    'forgot_password',
+    'mail_sent'
+  ]
 
   if (formScreenFiles.indexOf(file) > -1) {
     replaceHtmlClassWith = 'form-screen'
@@ -101,7 +108,10 @@ const concatHtml = file => {
     index: 'Dashboard',
     forms: 'Forms',
     profile: 'Profile',
-    login: 'Login'
+    login: 'Login',
+    account_details: 'New Account | TeamSend',
+    forgot_password: 'Forgot Password | TeamSend',
+    mail_sent: 'Mail Sent | TeamSend',
   }
 
   const titleStringsLong = {
@@ -142,6 +152,10 @@ exports.default = series(
     () => concatHtml('forms'),
     () => concatHtml('profile'),
     () => concatHtml('login'),
+    () => concatHtml('register'),
+    () => concatHtml('account_details'),
+    () => concatHtml('forgot_password'),
+    () => concatHtml('mail_sent'),
     processJsMain,
     processJsMainMin,
     processJsChartSample,

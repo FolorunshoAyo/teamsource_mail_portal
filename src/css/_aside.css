@@ -1,9 +1,9 @@
 .aside {
-  @apply w-60 -left-60 fixed top-0 z-40 h-screen bg-gray-800 transition-all lg:left-0;
+  @apply w-60 -left-60 fixed top-0 z-40 h-screen bg-green-800 transition-all lg:left-0;
 }
 
 .aside-tools {
-  @apply flex flex-row w-full bg-gray-900 text-white flex-1 px-3 h-14 items-center;
+  @apply flex flex-row w-full bg-green-900 text-white flex-1 px-3 h-14 items-center;
 }
 
 .aside-mobile-expanded .aside {
@@ -43,7 +43,7 @@
 }
 
 .menu-list li.active > a {
-  @apply bg-gray-700;
+  @apply bg-green-700;
 }
 
 .menu-list li ul {
@@ -55,6 +55,6 @@
 }
 
 .menu-list li.active ul {
-  @apply block bg-gray-600;
+  @apply block bg-green-600;
 }
 
