@@ -1,5 +1,5 @@
 .aside {
-  @apply w-60 -left-60 fixed top-0 z-40 h-screen bg-green-800 transition-all lg:left-0;
+  @apply w-60 -left-60 fixed top-0 z-40 h-screen bg-green-800 overflow-y-auto transition-all lg:left-0;
 }
 
 .aside-tools {
@@ -27,11 +27,11 @@
 }
 
 .menu-list li a {
-  @apply py-2 flex text-gray-300;
+  @apply py-2 flex text-white;
 }
 
 .menu-list li > a {
-  @apply hover:bg-gray-700;
+  @apply hover:bg-green-700;
 }
 
 .menu-list li a .menu-item-label {
@@ -55,6 +55,10 @@
 }
 
 .menu-list li.active ul {
-  @apply block bg-green-600;
+  @apply block bg-green-700;
+}
+
+.menu-list li.active ul li.active > a{
+  @apply bg-green-600;
 }
 

@@ -1,0 +1,123 @@
+<section class="section main-section">
+  <div class="flex flex-col sm:flex-row gap-4 mb-6 shadow-lg">
+    <div class="card w-full sm:w-1/2">
+      <header class="card-header">
+        <p class="card-header-title">
+          <span class="icon"><i class="mdi mdi-import"></i></span>
+          Bulk Import
+        </p>
+      </header>
+      <div class="card-content">
+        <img src="https://fullaccess.maildoll.com/bulk/import.jpg" class="mx-auto" style="width: 250px; height: 250px;"/>
+        <form
+          class="mt-6"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="mb-6 text-center">
+            <input type="file" name="csv" required="" />
+          </div>
+
+          <div class="field text-center">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" name="isGroup" id="groupCheck" value="1">
+                <span class="check"></span>
+                <span class="control-label">Create Group?</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="m-3 hidden" id="groupForm">
+            <div class="field">
+                <label class="label">Group Name</label>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control icons-left">
+                      <input class="input" type="text" name="gname" placeholder="Enter Group Name...">
+                      <span class="icon left"><i class="mdi mdi-account"></i></span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+          
+            <div class="field">
+                <label class="label">Group Description</label>
+                <div class="control">
+                  <textarea class="textarea" placeholder="Enter Group Description"></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">List Type</label>
+                <div class="field-body">
+                  <div class="field grouped multiline">
+                    <div class="control">
+                      <label class="radio">
+                        <input 
+                        type="radio" 
+                        name="type"
+                        value="email"
+                        checked>
+                        <span class="check"></span>
+                        <span class="control-label">Email Group</span>
+                      </label>
+                    </div>
+                    <!-- <div class="control">
+                      <label class="radio">
+                        <input 
+                        type="radio" 
+                        name="type"
+                        value="sms"
+                        >
+                        <span class="check"></span>
+                        <span class="control-label">SMS Group</span>
+                      </label>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="button">
+              Import
+            </button>
+          </div>
+
+          <ul class="my-3 font-medium text-center leading-none">
+            <li class="mt-2">File size must be smaller then 20MB</li>
+            <li class="mt-2">File type must be CSV</li>
+          </ul>
+        </form>
+        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 text-left mt-2" role="alert">
+            <p>Please upload your containing csv file compitable with CSV(Comma Delimited) unless some field
+                will be truncated.</p>
+        </div>
+        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 text-left mt-2" role="alert">
+            <p>Please be careful with the columns; Extra columns are not ideal csv for importing.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card w-full sm:w-1/2 self-start shadow-lg">
+        <header class="card-header">
+            <p class="card-header-title">
+              <span class="icon"><i class="mdi mdi-export"></i></span>
+              Bulk Export
+            </p>
+        </header>
+        <div class="card-content">
+            <img src="https://fullaccess.maildoll.com/bulk/export.jpg"  class="mx-auto" style="width: 250px; height: 250px;"/>
+            <div class="text-center mt-6">
+                <a href="#" class="button">Export
+                    Contacts</a>
+            </div>
+            <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 text-left mt-2" role="alert">
+                <p>Download the <a href="#" class="text-lg font-bold hover:underline leading-none">sample csv</a> file and override the sample data.
+                    Make sure each column has data as like the sample csv.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>

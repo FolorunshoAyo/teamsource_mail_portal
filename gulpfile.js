@@ -62,7 +62,7 @@ const concatHtml = file => {
     'register',
     'account_details',
     'forgot_password',
-    'mail_sent'
+    'mail-sent'
   ]
 
   if (formScreenFiles.indexOf(file) > -1) {
@@ -104,18 +104,28 @@ const concatHtml = file => {
   sources.push('src/html/parts/bottom.html')
 
   const titleStrings = {
-    tables: 'Tables',
-    index: 'Dashboard',
-    forms: 'Forms',
-    profile: 'Profile',
-    login: 'Login',
+    tables: 'Tables | TeamSend',
+    index: 'Dashboard | TeamSend',
+    forms: 'Forms | TeamSend',
+    profile: 'Profile | TeamSend',
+    login: 'Login | TeamSend',
     account_details: 'New Account | TeamSend',
     forgot_password: 'Forgot Password | TeamSend',
-    mail_sent: 'Mail Sent | TeamSend',
+    'mail-sent': 'Mail Sent | TeamSend',
+    agents: 'Agents | TeamSend',
+    'all-contacts': "Contacts | TeamSend",
+    'bulk-upload': "Bulk Export Import Contacts | TeamSend",
+    'new-group': "New Group | TeamSend",
+    'all-groups': "All Groups | TeamSend"
   }
 
   const titleStringsLong = {
-    tables: 'Responsive Tables'
+    tables: 'Responsive Tables',
+    agents: 'Agents',
+    'all-contacts': "Contacts",
+    'bulk-upload': "Bulk Export Import Contacts",
+    'new-group': "New Group",
+    'all-groups': "All Groups"
   }
 
   const titleStringReplacement = titleStrings[file] ? titleStrings[file] : ''
@@ -155,7 +165,12 @@ exports.default = series(
     () => concatHtml('register'),
     () => concatHtml('account_details'),
     () => concatHtml('forgot_password'),
-    () => concatHtml('mail_sent'),
+    () => concatHtml('mail-sent'),
+    () => concatHtml('agents'),
+    () => concatHtml('all-contacts'),
+    () => concatHtml('bulk-upload'),
+    () => concatHtml('all-groups'),
+    () => concatHtml('new-group'),
     processJsMain,
     processJsMainMin,
     processJsChartSample,

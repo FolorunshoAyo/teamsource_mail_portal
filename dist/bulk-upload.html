@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Forms | TeamSend</title>
+  <title>Bulk Export Import Contacts | TeamSend</title>
 
   <!-- Tailwind is included -->
   <link rel="stylesheet" href="css/main.css?v=1700212117910">
@@ -151,7 +151,7 @@
     </ul>
     <p class="menu-label">Contacts</p>
     <ul class="menu-list">
-      <li class="--set-active-all-contacts-html">
+      <li class="--set-active-all-contacts-html active">
         <a class="dropdown">
           <span class="icon"><i class="mdi mdi-contactless-payment"></i></span>
           <span class="menu-item-label">Contacts</span>
@@ -164,7 +164,7 @@
               <span>All Contacts</span>
             </a>
           </li>
-          <li class="--set-active-bulk-upload-html">
+          <li class="active">
             <a href="bulk-upload.html">
               <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>Bulk Import/Export</span>
@@ -205,7 +205,7 @@
           <span class="menu-item-label">Tables</span>
         </a>
       </li>
-      <li class="active">
+      <li class="--set-active-forms-html">
         <a href="forms.html">
           <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
           <span class="menu-item-label">Forms</span>
@@ -271,7 +271,7 @@
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
       <li>Admin</li>
-      <li>Forms | TeamSend</li>
+      <li>Bulk Export Import Contacts | TeamSend</li>
     </ul>
   </div>
 </section>
@@ -279,188 +279,134 @@
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <h1 class="title">
-      Forms | TeamSend
+      Bulk Export Import Contacts
     </h1>
   </div>
 </section>
 
-  <section class="section main-section">
-    <div class="card mb-6">
+<section class="section main-section">
+  <div class="flex flex-col sm:flex-row gap-4 mb-6 shadow-lg">
+    <div class="card w-full sm:w-1/2">
       <header class="card-header">
         <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-ballot"></i></span>
-          Forms
+          <span class="icon"><i class="mdi mdi-import"></i></span>
+          Bulk Import
         </p>
       </header>
       <div class="card-content">
-        <form method="get">
-          <div class="field">
-            <label class="label">From</label>
-            <div class="field-body">
-              <div class="field">
-                <div class="control icons-left">
-                  <input class="input" type="text" placeholder="Name">
-                  <span class="icon left"><i class="mdi mdi-account"></i></span>
-                </div>
-              </div>
-              <div class="field">
-                <div class="control icons-left icons-right">
-                  <input class="input" type="email" placeholder="Email" value="alex@smith.com">
-                  <span class="icon left"><i class="mdi mdi-mail"></i></span>
-                  <span class="icon right"><i class="mdi mdi-check"></i></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <div class="field-body">
-              <div class="field">
-                <div class="field addons">
-                  <div class="control">
-                    <input class="input" value="+44" size="3" readonly>
-                  </div>
-                  <div class="control expanded">
-                    <input class="input" type="tel" placeholder="Your phone number">
-                  </div>
-                </div>
-                <p class="help">Do not enter the first zero</p>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <label class="label">Department</label>
-            <div class="control">
-              <div class="select">
-                <select>
-                  <option>Business development</option>
-                  <option>Marketing</option>
-                  <option>Sales</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <hr>
-          <div class="field">
-            <label class="label">Subject</label>
-
-            <div class="control">
-              <input class="input" type="text" placeholder="e.g. Partnership opportunity">
-            </div>
-            <p class="help">
-              This field is required
-            </p>
+        <img src="https://fullaccess.maildoll.com/bulk/import.jpg" class="mx-auto" style="width: 250px; height: 250px;"/>
+        <form
+          class="mt-6"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="mb-6 text-center">
+            <input type="file" name="csv" required="" />
           </div>
 
-          <div class="field">
-            <label class="label">Question</label>
+          <div class="field text-center">
             <div class="control">
-              <textarea class="textarea" placeholder="Explain how we can help you"></textarea>
-            </div>
-          </div>
-          <hr>
-
-          <div class="field grouped">
-            <div class="control">
-              <button type="submit" class="button green">
-                Submit
-              </button>
-            </div>
-            <div class="control">
-              <button type="reset" class="button red">
-                Reset
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-ballot-outline"></i></span>
-          Custom elements
-        </p>
-      </header>
-      <div class="card-content">
-        <div class="field">
-          <label class="label">Checkbox</label>
-          <div class="field-body">
-            <div class="field grouped multiline">
-              <div class="control">
-                <label class="checkbox"><input type="checkbox" value="lorem" checked>
-                  <span class="check"></span>
-                  <span class="control-label">Lorem</span>
-                </label>
-              </div>
-              <div class="control">
-                <label class="checkbox"><input type="checkbox" value="ipsum">
-                  <span class="check"></span>
-                  <span class="control-label">Ipsum</span>
-                </label>
-              </div>
-              <div class="control">
-                <label class="checkbox"><input type="checkbox" value="dolore">
-                  <span class="check is-primary"></span>
-                  <span class="control-label">Dolore</span>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="field">
-          <label class="label">Radio</label>
-          <div class="field-body">
-            <div class="field grouped multiline">
-              <div class="control">
-                <label class="radio">
-                  <input type="radio" name="sample-radio" value="one" checked>
-                  <span class="check"></span>
-                  <span class="control-label">One</span>
-                </label>
-              </div>
-              <div class="control">
-                <label class="radio">
-                  <input type="radio" name="sample-radio" value="two">
-                  <span class="check"></span>
-                  <span class="control-label">Two</span>
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="field">
-          <label class="label">Switch</label>
-          <div class="field-body">
-            <div class="field">
-              <label class="switch">
-                <input type="checkbox" value="false">
+              <label class="checkbox">
+                <input type="checkbox" name="isGroup" id="groupCheck" value="1">
                 <span class="check"></span>
-                <span class="control-label">Default</span>
+                <span class="control-label">Create Group?</span>
               </label>
             </div>
           </div>
+
+          <div class="m-3 hidden" id="groupForm">
+            <div class="field">
+                <label class="label">Group Name</label>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control icons-left">
+                      <input class="input" type="text" name="gname" placeholder="Enter Group Name...">
+                      <span class="icon left"><i class="mdi mdi-account"></i></span>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+          
+            <div class="field">
+                <label class="label">Group Description</label>
+                <div class="control">
+                  <textarea class="textarea" placeholder="Enter Group Description"></textarea>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">List Type</label>
+                <div class="field-body">
+                  <div class="field grouped multiline">
+                    <div class="control">
+                      <label class="radio">
+                        <input 
+                        type="radio" 
+                        name="type"
+                        value="email"
+                        checked>
+                        <span class="check"></span>
+                        <span class="control-label">Email Group</span>
+                      </label>
+                    </div>
+                    <!-- <div class="control">
+                      <label class="radio">
+                        <input 
+                        type="radio" 
+                        name="type"
+                        value="sms"
+                        >
+                        <span class="check"></span>
+                        <span class="control-label">SMS Group</span>
+                      </label>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="button">
+              Import
+            </button>
+          </div>
+
+          <ul class="my-3 font-medium text-center leading-none">
+            <li class="mt-2">File size must be smaller then 20MB</li>
+            <li class="mt-2">File type must be CSV</li>
+          </ul>
+        </form>
+        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 text-left mt-2" role="alert">
+            <p>Please upload your containing csv file compitable with CSV(Comma Delimited) unless some field
+                will be truncated.</p>
         </div>
-        <hr>
-        <div class="field">
-          <label class="label">File</label>
-          <div class="field-body">
-            <div class="field file">
-              <label class="upload control">
-                <a class="button">
-                  Upload
-                </a>
-                <input type="file">
-              </label>
-            </div>
-          </div>
+        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 text-left mt-2" role="alert">
+            <p>Please be careful with the columns; Extra columns are not ideal csv for importing.</p>
         </div>
       </div>
     </div>
-  </section>
-
+    <div class="card w-full sm:w-1/2 self-start shadow-lg">
+        <header class="card-header">
+            <p class="card-header-title">
+              <span class="icon"><i class="mdi mdi-export"></i></span>
+              Bulk Export
+            </p>
+        </header>
+        <div class="card-content">
+            <img src="https://fullaccess.maildoll.com/bulk/export.jpg"  class="mx-auto" style="width: 250px; height: 250px;"/>
+            <div class="text-center mt-6">
+                <a href="#" class="button">Export
+                    Contacts</a>
+            </div>
+            <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 text-left mt-2" role="alert">
+                <p>Download the <a href="#" class="text-lg font-bold hover:underline leading-none">sample csv</a> file and override the sample data.
+                    Make sure each column has data as like the sample csv.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">

@@ -15,28 +15,31 @@
   <div class="navbar-menu" id="navbar-menu">
     <div class="navbar-end">
       <div class="navbar-item dropdown has-divider">
-        <a class="navbar-link">
+        <a class="navbar-link relative">
+          <span class="hidden absolute top-2 right-0 inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75"></span>
           <span class="icon"><i class="mdi mdi-bell"></i></span>
           <span>Notification</span>
           <span class="icon">
             <i class="mdi mdi-chevron-down"></i>
           </span>
         </a>
-        <div class="navbar-dropdown">
-          <a href="profile.html" class="navbar-item flex items-center">
-            <i class="mdi mdi-email-outline mdi-12px"></i>
-            <div class="ml-2">
-              <span class="font-medium">New Email Campaign Created</span>
+        <div class="navbar-dropdown notifications">
+          <a href="profile.html" class="navbar-item flex items-center gap-4">
+            <i class="mdi mdi-email-outline mdi-24px"></i>
+            <div>
+              <span class="font-medium md:font-sm">New Email Campaign Created</span>
               <div class="w-full truncate text-gray-600">28 minutes ago</div>
             </div>
           </a>
-          <a href="profile.html" class="navbar-item flex items-center">
-            <i class="mdi mdi-bell-outline mdi-12px"></i>
-            <div class="ml-2">
+          <a href="profile.html" class="navbar-item flex items-center gap-4">
+            <i class="mdi mdi-bell-outline mdi-24px"></i>
+            <div>
               <span class="font-medium">Your limit has been upgraded</span>
               <div class="w-full truncate text-gray-600">28 minutes ago</div>
             </div>
           </a>
+          <hr>
+          <a href="#" class="navbar-link text-center">see all notifications</a>
         </div>
       </div>
       <div class="navbar-item dropdown has-divider has-user-avatar">
@@ -48,17 +51,19 @@
           <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
         </a>
         <div class="navbar-dropdown">
+          <span class="navbar-item gap-1">
+            <span class="text-green-500">Account Type:</span>Customer
+          </span>
+          <span class="navbar-item gap-1">
+            <span class="text-green-500">Amount:</span>NGN 15,000
+          </span>
           <a href="profile.html" class="navbar-item --set-active-profile-html">
             <span class="icon"><i class="mdi mdi-account"></i></span>
-            <span>My Profile</span>
+            <span>Profile</span>
           </a>
           <a class="navbar-item">
-            <span class="icon"><i class="mdi mdi-settings"></i></span>
-            <span>Settings</span>
-          </a>
-          <a class="navbar-item">
-            <span class="icon"><i class="mdi mdi-email"></i></span>
-            <span>Messages</span>
+            <span class="icon"><i class="mdi mdi-lock"></i></span>
+            <span>Reset Password</span>
           </a>
           <hr class="navbar-divider">
           <a class="navbar-item">

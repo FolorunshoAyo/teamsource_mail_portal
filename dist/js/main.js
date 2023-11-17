@@ -63,3 +63,15 @@ Array.from(document.getElementsByClassName('--jb-notification-dismiss')).forEach
     e.currentTarget.closest('.notification').classList.add('hidden');
   });
 });
+
+/* More report func. */
+document.getElementById("see-more-report").addEventListener("click", function (e) {
+  var moreReportContainer = document.getElementById("more-report");
+  var currTarget = e.currentTarget;
+  moreReportContainer.classList.toggle("hidden");
+  if (currTarget.lastElementChild.textContent.trim() === "see more") {
+    currTarget.lastElementChild.textContent = "see less";
+  } else {
+    currTarget.lastElementChild.textContent = "see more";
+  }
+});

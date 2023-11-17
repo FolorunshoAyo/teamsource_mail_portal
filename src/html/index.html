@@ -1,9 +1,9 @@
 <section class="section main-section">
   <div class="flex justify-between items-center mb-4">
     <span class="text-lg font-semibold">General Report</span>
-    <a href="#" class="text-lg text-green-500 flex items-center">
-      <i class="mdi mdi-arrow-down-left"></i>
-      See more
+    <a href="#" id="see-more-report" class="text-lg text-green-500 flex items-center">
+      <i class="mdi mdi-arrow-down-left mr-2"></i>
+      <span>see more</span>
     </a>
   </div>
   <div class="grid gap-6 grid-cols-1 md:grid-cols-3 mb-6">
@@ -48,13 +48,15 @@
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="grid gap-6 grid-cols-1 md:grid-cols-3 mb-6 hidden" id="more-report">
     <div class="card">
       <div class="card-content">
         <div class="flex items-center justify-between">
           <div class="widget-label">
             <h3>Email Templates</h3>
-            <h1>10</h1>
+            <h1>13</h1>
           </div>
           <span class="icon widget-icon text-green-500"
             ><i class="mdi mdi-xml mdi-48px"></i
@@ -68,7 +70,7 @@
         <div class="flex items-center justify-between">
           <div class="widget-label">
             <h3>Sent Emails</h3>
-            <h1>10</h1>
+            <h1>5</h1>
           </div>
           <span class="icon widget-icon text-green-500"
             ><i class="mdi mdi-email-outline mdi-48px"></i
@@ -82,7 +84,7 @@
         <div class="flex items-center justify-between">
           <div class="widget-label">
             <h3>Bounced</h3>
-            <h1>10</h1>
+            <h1>30</h1>
           </div>
           <span class="icon widget-icon text-green-500"
             ><i class="mdi mdi-alert-outline mdi-48px"></i
@@ -218,49 +220,45 @@
       </header>
       <div class="card-content">
         <div class="mt-5">
-            <div class="shadow-sm rounded-sm px-4 py-4 mb-3 flex items-center">
-              <div
-                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
-              >
-                <span class="text-4xl text-green-500">2</span>
-              </div>
-              <div class="ml-4 mr-auto">
-                <div class="font-medium tooltip">#20237908</div>
-                <div class="font-medium tooltip">MONTHLY</div>
-                <div class="text-gray-600 text-xs tooltip">
-                  2023-11-10 21:10:08
-                </div>
-              </div>
-              <div
-                class="py-1 px-2 rounded-full text-xs cursor-pointer font-medium tooltip text-red-600"
-              >
-                NOT PAID
+          <div class="shadow-sm rounded-sm px-4 py-4 mb-3 flex items-center">
+            <div
+              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+            >
+              <span class="text-4xl text-green-500">2</span>
+            </div>
+            <div class="ml-4 mr-auto">
+              <div class="font-medium tooltip">#20237908</div>
+              <div class="font-medium tooltip">MONTHLY</div>
+              <div class="text-gray-600 text-xs tooltip">
+                2023-11-10 21:10:08
               </div>
             </div>
-            <div class="shadow-sm rounded-sm px-4 py-4 mb-3 flex items-center">
-              <div
-                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
-              >
-                <span class="text-4xl text-green-500">1</span>
-              </div>
-              <div class="ml-4 mr-auto">
-                <div class="font-medium tooltip">#20237818</div>
-                <div class="font-medium tooltip">FREE</div>
-                <div class="text-gray-600 text-xs tooltip">
-                  2023-11-07 10:36:13
-                </div>
-              </div>
-              <div
-                class="py-1 px-2 rounded-full text-xs cursor-pointer font-medium tooltip text-green-800"
-              >
-                PAID
+            <div
+              class="py-1 px-2 rounded-full text-xs cursor-pointer font-medium tooltip text-red-600"
+            >
+              NOT PAID
+            </div>
+          </div>
+          <div class="shadow-sm rounded-sm px-4 py-4 mb-3 flex items-center">
+            <div
+              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+            >
+              <span class="text-4xl text-green-500">1</span>
+            </div>
+            <div class="ml-4 mr-auto">
+              <div class="font-medium tooltip">#20237818</div>
+              <div class="font-medium tooltip">FREE</div>
+              <div class="text-gray-600 text-xs tooltip">
+                2023-11-07 10:36:13
               </div>
             </div>
-          <a
-            href="#"
-            class="button w-full"
-            >View More</a
-          >
+            <div
+              class="py-1 px-2 rounded-full text-xs cursor-pointer font-medium tooltip text-green-800"
+            >
+              PAID
+            </div>
+          </div>
+          <a href="#" class="button w-full">View More</a>
         </div>
       </div>
     </div>
@@ -711,7 +709,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="card has-table mb-6">
     <header class="card-header">
       <p class="card-header-title">
@@ -1060,17 +1058,23 @@
   </div>
 
   <div class="mb-4">
-    <span class="text-lg font-semibold flex items-center"><i class="mdi mdi-eye-circle-outline mdi-24px"></i> Logs</span>
+    <span class="text-lg font-semibold flex items-center"
+      ><i class="mdi mdi-eye-circle-outline mdi-24px mr-2"></i> Logs</span
+    >
   </div>
 
   <div class="flex flex-row md:flex-row gap-4">
     <div class="w-full md:w-1/2">
       <div class="bg-white shadow-sm rounded-sm p-4 flex items-center gap-2">
         <div class="image w-40">
-          <img src="https://fullaccess.maildoll.com/not_found/mail-not-found.png" class="w-full h-full" alt="Mail Illustration"/>
+          <img
+            src="https://fullaccess.maildoll.com/not_found/mail-not-found.png"
+            class="w-full h-full"
+            alt="Mail Illustration"
+          />
         </div>
         <div class="w-full">
-          <p class="mb-4">Mail Logs</p>
+          <p class="mb-4 font-base font-semibold">Mail Logs</p>
           <a href="#" class="button">View Logs</a>
         </div>
       </div>
@@ -1078,7 +1082,11 @@
     <div class="w-full md:w-1/2">
       <div class="bg-white shadow-sm rounded-sm p-4 flex items-center gap-2">
         <div class="image w-40">
-          <img src="https://fullaccess.maildoll.com/not_found/log.png" class="w-full h-full" alt="Mail Illustration"/>
+          <img
+            src="https://fullaccess.maildoll.com/not_found/log.png"
+            class="w-full h-full"
+            alt="Mail Illustration"
+          />
         </div>
         <div class="w-full">
           <p class="mb-4">Campaign Logs</p>

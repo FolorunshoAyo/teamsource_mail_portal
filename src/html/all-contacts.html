@@ -1,0 +1,276 @@
+<section class="section main-section">
+  <form>
+    <div class="field">
+      <div class="control icons-left">
+        <input class="input" type="text" placeholder="Search contacts ....">
+        <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
+      </div>
+    </div>
+  </form>
+  <div class="my-6 flex flex-col items-center md:flex-row gap-4">
+    <div class="w-1/2 md:w-1/4">
+      <button class="button w-full md:w-fit --jb-modal"
+      data-target="new-contact-modal"
+      >
+        <i class="mdi mdi-plus"></i>
+        Add New Contact
+      </button>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <button class="filter-button active">
+        <i class="mdi mdi-email-outline mdi-24px"></i>
+        <span>All Contacts</span>
+      </button>
+      <button class="filter-button">
+        <i class="mdi mdi-star-outline mdi-24px"></i>
+        <span>Favourites</span>
+      </button>
+      <button class="filter-button">
+        <i class="mdi mdi-close-octagon-outline mdi-24px"></i>
+        <span>Blocked</span>
+      </button>
+      <button class="filter-button">
+        <i class="mdi mdi-trash-can-outline mdi-24px"></i>
+        <span>Trashed</span>
+      </button>
+    </div>
+  </div>
+  <div class="card has-table">
+    <header class="card-header tool-table">
+      <p class="card-header-title">
+        <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
+        All Contacts
+      </p>
+      <div class="tools inline-flex items-center space-x-2">
+        <a href="#" class="card-header-icon" title="reload">
+          <span class="icon"><i class="mdi mdi-reload mdi-24px"></i></span>
+        </a>
+        <a href="#" class="card-header-icon" title="Add to Favourites">
+          <span class="icon"><i class="mdi mdi-star-outline mdi-24px"></i></span>
+        </a>
+        <a href="#" class="card-header-icon" title="Blacklist email">
+          <span class="icon"><i class="mdi mdi-close-octagon-outline mdi-24px"></i></span>
+        </a>
+        <a href="#" class="card-header-icon" title="Delete selected email">
+          <span class="icon"><i class="mdi mdi-trash-can-outline mdi-24px"></i></span>
+        </a>
+        <a href="#" class="card-header-icon" title="send test mail">
+          <span class="icon"><i class="mdi mdi-send mdi-24px"></i></span>
+        </a>
+        <a href="#" class="card-header-icon" title="Export CSV">
+          <span class="icon"><i class="mdi mdi-file-document-outline mdi-24px"></i></span>
+        </a>
+      </div>
+      <p class="ml-2 flex items-center p-2">
+        <span class="text-green-500">Total: <span id="email-count">6</span> email(s)</span>
+      </p>
+    </header>
+    <div class="card-content">
+      <table>
+        <thead>
+          <tr>
+            <th class="checkbox-cell">
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="check"></span>
+              </label>
+            </th>
+            <th class="image-cell"></th>
+            <th>User</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Created</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="checkbox-cell">
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="check"></span>
+              </label>
+            </td>
+            <td class="image-cell">
+              <div class="image">
+                <img
+                  src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                  class="rounded-full"
+                />
+              </div>
+            </td>
+            <td data-label="User">Adebisi Emmanuel</td>
+            <td data-label="Email">adebisiemmanuel@gmail.com</td>
+            <td data-label="Phone Number">+2347011111000</td>
+            <td data-label="Created">1 week ago</td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
+                <a
+                  class="fav-button"
+                  href="javascript:void(0)"
+                >
+                  <span class="icon"><i class="mdi mdi-star-outline mdi-24px"></i></span>
+                </a>
+                <a
+                  class="button light"
+                >
+                  <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="checkbox-cell">
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="check"></span>
+              </label>
+            </td>
+            <td class="image-cell">
+              <div class="image">
+                <img
+                  src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                  class="rounded-full"
+                />
+              </div>
+            </td>
+            <td data-label="User">Adebisi Emmanuel</td>
+            <td data-label="Email">adebisiemmanuel@gmail.com</td>
+            <td data-label="Phone Number">+2347011111000</td>
+            <td data-label="Created">1 week ago</td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
+                <a
+                  class="fav-button"
+                  href="javascript:void(0)"
+                >
+                  <span class="icon"><i class="mdi mdi-star-outline mdi-24px"></i></span>
+                </a>
+                <a
+                  class="button small light"
+                >
+                  <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="checkbox-cell">
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="check"></span>
+              </label>
+            </td>
+            <td class="image-cell">
+              <div class="image">
+                <img
+                  src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                  class="rounded-full"
+                />
+              </div>
+            </td>
+            <td data-label="User">Adebisi Emmanuel</td>
+            <td data-label="Email">adebisiemmanuel@gmail.com</td>
+            <td data-label="Phone Number">+2347011111000</td>
+            <td data-label="Created">1 week ago</td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
+                <a
+                  class="fav-button"
+                  href="javascript:void(0)"
+                >
+                  <span class="icon"><i class="mdi mdi-star-outline mdi-24px"></i></span>
+                </a>
+                <a
+                  class="button small light"
+                >
+                  <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="checkbox-cell">
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="check"></span>
+              </label>
+            </td>
+            <td class="image-cell">
+              <div class="image">
+                <img
+                  src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                  class="rounded-full"
+                />
+              </div>
+            </td>
+            <td data-label="User">Adebisi Emmanuel</td>
+            <td data-label="Email">adebisiemmanuel@gmail.com</td>
+            <td data-label="Phone Number">+2347011111000</td>
+            <td data-label="Created">1 week ago</td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
+                <a
+                  class="fav-button"
+                  href="javascript:void(0)"
+                >
+                  <span class="icon"><i class="mdi mdi-star-outline mdi-24px"></i></span>
+                </a>
+                <a
+                  class="button small light"
+                >
+                  <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="checkbox-cell">
+              <label class="checkbox">
+                <input type="checkbox">
+                <span class="check"></span>
+              </label>
+            </td>
+            <td class="image-cell">
+              <div class="image">
+                <img
+                  src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                  class="rounded-full"
+                />
+              </div>
+            </td>
+            <td data-label="User">Adebisi Emmanuel</td>
+            <td data-label="Email">adebisiemmanuel@gmail.com</td>
+            <td data-label="Phone Number">+2347011111000</td>
+            <td data-label="Created">1 week ago</td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
+                <a
+                  class="fav-button"
+                  href="javascript:void(0)"
+                >
+                  <span class="icon"><i class="mdi mdi-star-outline mdi-24px"></i></span>
+                </a>
+                <a
+                  class="button small light"
+                >
+                  <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-pagination">
+        <div class="flex items-center justify-between">
+          <div class="buttons">
+            <button type="button" class="button active">1</button>
+            <button type="button" class="button">2</button>
+            <button type="button" class="button">3</button>
+          </div>
+          <small>Page 1 of 3</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

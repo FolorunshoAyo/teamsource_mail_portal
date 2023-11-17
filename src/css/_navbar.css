@@ -91,6 +91,10 @@
     lg:bg-white lg:absolute lg:top-full lg:left-0 lg:min-w-full lg:z-20 lg:shadow-md lg:rounded-b;
   }
 
+  .navbar-item .navbar-dropdown.notifications{
+    @apply lg:min-w-max
+  }
+
   .navbar-item:not(.active) .navbar-dropdown {
     @apply lg:hidden;
   }

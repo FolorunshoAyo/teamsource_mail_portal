@@ -5,6 +5,25 @@
     focus:outline-none;
 }
 
+.filter-button{
+  @apply inline-flex gap-2 bg-white shadow-sm cursor-pointer items-center 
+  px-4 py-2 rounded-lg transition duration-300
+  hover:bg-green-600
+  hover:text-white
+}
+
+.table-action-button{
+  @apply flex cursor-pointer justify-center items-center 
+  px-4 py-2 rounded-lg transition duration-300
+  hover:bg-green-600
+  hover:text-white
+  hover:shadow-sm
+}
+
+.filter-button.active{
+  @apply bg-green-600 text-white
+}
+
 /* .button {
   @apply inline-flex bg-white text-black border-gray-50 border cursor-pointer justify-center px-4 py-2 text-center
     whitespace-nowrap rounded
@@ -20,7 +39,12 @@
   @apply rounded-l-none;
 }
 
-.button.small {
+.fav-button{
+  @apply text-yellow-500
+}
+
+.button.small,
+.fav-button {
   @apply text-xs p-1;
 }
 
@@ -44,8 +68,12 @@
   @apply bg-blue-500 border-blue-500 text-white hover:bg-blue-600;
 }
 
+.button.yellow {
+  @apply bg-yellow-500 border-yellow-500 text-white hover:bg-yellow-600;
+}
+
 .button.light {
-  @apply bg-gray-100 border-gray-100 hover:bg-gray-200;
+  @apply bg-gray-500 border-gray-500 hover:bg-gray-600;
 }
 
 .buttons {
