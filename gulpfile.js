@@ -60,8 +60,8 @@ const concatHtml = file => {
   [
     'login',
     'register',
-    'account_details',
-    'forgot_password',
+    'account-details',
+    'forgot-password',
     'mail-sent'
   ]
 
@@ -109,14 +109,18 @@ const concatHtml = file => {
     forms: 'Forms | TeamSend',
     profile: 'Profile | TeamSend',
     login: 'Login | TeamSend',
-    account_details: 'New Account | TeamSend',
-    forgot_password: 'Forgot Password | TeamSend',
+    "account-details": 'New Account | TeamSend',
+    "forgot-password": 'Forgot Password | TeamSend',
     'mail-sent': 'Mail Sent | TeamSend',
     agents: 'Agents | TeamSend',
     'all-contacts': "Contacts | TeamSend",
     'bulk-upload': "Bulk Export Import Contacts | TeamSend",
     'new-group': "New Group | TeamSend",
-    'all-groups': "All Groups | TeamSend"
+    'all-groups': "All Groups | TeamSend",
+    'check-bounce': "Bounce Checker | TeamSend",
+    'bounced-emails': "Bounced Emails | TeamSend",
+    'template-builder-originate': 'Create New Email Template | TeamSend',
+    'email-templates': 'Email Templates | TeamSend'
   }
 
   const titleStringsLong = {
@@ -125,7 +129,22 @@ const concatHtml = file => {
     'all-contacts': "Contacts",
     'bulk-upload': "Bulk Export Import Contacts",
     'new-group': "New Group",
-    'all-groups': "All Groups"
+    'all-groups': "All Groups",
+    'check-bounce': "Bounce Checker",
+    'bounced-emails': "Bounce Emails",
+    'template-builder-originate': 'Create New Email Template',
+    'Email Templates': 'Email Templates | TeamSend'
+  }
+
+  const subMenuLinks = {
+    'all-contacts': "contacts",
+    'bulk-upload': "contacts",
+    'all-groups': "groups",
+    'new-group': "groups",
+    'check-bounce': "emails",
+    'bounced-emails': "emails",
+    'template-builder-originate': "email-builder",
+    'email-templates': "email-builder"
   }
 
   const titleStringReplacement = titleStrings[file] ? titleStrings[file] : ''
@@ -137,7 +156,9 @@ const concatHtml = file => {
     .pipe(replace('--html-class', replaceHtmlClassWith))
     .pipe(replace('--stylesheet-min-path', `css/main.css?v=${dateNowMillis.toString()}`))
     .pipe(replace(`--set-active-${file}-html`, 'active'))
+    .pipe(replace(`--plus-or-minus-${subMenuLinks[file]}`, 'minus'))
     .pipe(replace(/ --set-active-[a-z-]+/gi, ''))
+    .pipe(replace(/--plus-or-minus-[a-z-]+/gi, 'plus'))
     .pipe(replace('{{ titleString }}', titleStringReplacement))
     .pipe(replace('{{ titleStringLong }}', titleStringLongReplacement))
     .pipe(dest(destDir))
@@ -163,14 +184,18 @@ exports.default = series(
     () => concatHtml('profile'),
     () => concatHtml('login'),
     () => concatHtml('register'),
-    () => concatHtml('account_details'),
-    () => concatHtml('forgot_password'),
+    () => concatHtml('account-details'),
+    () => concatHtml('forgot-password'),
     () => concatHtml('mail-sent'),
     () => concatHtml('agents'),
     () => concatHtml('all-contacts'),
     () => concatHtml('bulk-upload'),
     () => concatHtml('all-groups'),
     () => concatHtml('new-group'),
+    () => concatHtml('check-bounce'),
+    () => concatHtml('bounced-emails'),
+    () => concatHtml('template-builder-originate'),
+    () => concatHtml('email-templates'),
     processJsMain,
     processJsMainMin,
     processJsChartSample,

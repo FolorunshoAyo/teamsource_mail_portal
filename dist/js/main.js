@@ -1,5 +1,6 @@
 "use strict";
 
+var _document$getElementB;
 /* Aside & Navbar: dropdowns */
 
 Array.from(document.getElementsByClassName('dropdown')).forEach(function (elA) {
@@ -65,7 +66,7 @@ Array.from(document.getElementsByClassName('--jb-notification-dismiss')).forEach
 });
 
 /* More report func. */
-document.getElementById("see-more-report").addEventListener("click", function (e) {
+(_document$getElementB = document.getElementById("see-more-report")) === null || _document$getElementB === void 0 || _document$getElementB.addEventListener("click", function (e) {
   var moreReportContainer = document.getElementById("more-report");
   var currTarget = e.currentTarget;
   moreReportContainer.classList.toggle("hidden");
@@ -75,3 +76,27 @@ document.getElementById("see-more-report").addEventListener("click", function (e
     currTarget.lastElementChild.textContent = "see more";
   }
 });
+
+/* New Group Step Functionality*/
+var stepsELs = document.querySelectorAll("#new-group-form .step");
+var progressEls = document.querySelectorAll("ol.progress li");
+progressEls = Array.from(progressEls);
+stepsELs = Array.from(stepsELs);
+function step(step) {
+  console.log("Active Step is: ".concat(step));
+  var currStep = step - 1;
+
+  // DISABLE ANY PROGRESS EL
+  for (var i = 0; i < stepsELs.length; i++) {
+    progressEls[i].classList.remove("active");
+  }
+
+  // Disable all active steps
+  for (var _i = 0; _i < stepsELs.length; _i++) {
+    stepsELs[_i].classList.remove("active");
+  }
+
+  //Set target step to active
+  progressEls[currStep].classList.add("active");
+  stepsELs[currStep].classList.add("active");
+}

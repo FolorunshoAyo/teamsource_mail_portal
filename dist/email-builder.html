@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Email Builder | Teamsend</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://teamsource.net/wp-content/uploads/2023/05/TeamSource-Logo.png"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="email-builder/dist/builder.css" />
+    <script src="email-builder/dist/builder.js"></script>
+
+    <!-- @RSS Plugin -->
+    <script src="email-builder/plugins/rss/RssElement.js"></script>
+    <script src="email-builder/plugins/rss/RssControl.js"></script>
+    <script src="email-builder/plugins/rss/RssWidget.js"></script>
+
+    <script>
+      // Builder parameters
+      var params = new URLSearchParams(window.location.search);
+      var strict = params.get("type") == "custom" ? false : true;
+      var template = params.get("template");
+
+      console.log("Template: ", template, "\n", "Strict: ", strict);
+
+      var templates = [
+        {
+          name: "Blank",
+          //url: "design.php?id=6037a0a8583a7&type=default",
+          url: `email-builder.html?template=blank&type=default`,
+          thumbnail: "email-builder\/templates\/default\/blank\/thumb.png",
+        },
+        {
+          name: "Pricing Table",
+          url: "email-builder.html?template=pricing-table&type=default",
+          thumbnail: "email-builder\/templates\/default\/pricing-table\/thumb.png",
+        },
+        {
+          name: "Listing & Tables",
+          url: "email-builder.html?template=listing-and-tables&type=default",
+          thumbnail: "email-builder\/templates\/default\/listing-and-tables\/thumb.png",
+        },
+        // {
+        //   name: "Forms Building",
+        //   url: "design.php?id=6037a23568208&type=default",
+        //   thumbnail: "templates\/default\/6037a23568208\/thumb.png",
+        // },
+        {
+          name: "1-2-1 column layout",
+          url: "email-builder.html?template=1-2-1-column-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/1-2-1-column-layout\/thumb.png",
+        },
+        {
+          name: "1-2 column layout",
+          url: "email-builder.html?template=1-2-1-column-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/1-2-column-layout\/thumb.png",
+        },
+        {
+          name: "1-3-1 column layout",
+          url: "email-builder.html?template=1-3-1-column-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/1-3-1-column-layout\/thumb.png",
+        },
+        {
+          name: "1-3-2 column layout",
+          url: "email-builder.html?template=1-3-2-column-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/1-3-2-column-layout\/thumb.png",
+        },
+        {
+          name: "1-3 column layout",
+          url: "email-builder.html?template=1-3-column-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/1-3-column-layout\/thumb.png",
+        },
+        {
+          name: "One column layout",
+          url: "email-builder.html?template=one-column-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/one-column-layout\/thumb.png",
+        },
+        {
+          name: "2-1-2 column layout",
+          url: "email-builder.html?template=2-1-2-column-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/2-1-2-column-layout\/thumb.png",
+        },
+        {
+          name: "2-1 column layout",
+          url: "email-builder.html?template=2-1-column-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/2-1-column-layout\/thumb.png",
+        },
+        {
+          name: "Two columns layout",
+          url: "email-builder.html?template=two-columns-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/two-columns-layout\/thumb.png",
+        },
+        {
+          name: "3-1-3 column layout",
+          url: "email-builder.html?template=3-1-3-column-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/3-1-3-column-layout\/thumb.png",
+        },
+        {
+          name: "Three columns layout",
+          url: "email-builder.html?template=three-columns-layout&type=default",
+          thumbnail: "email-builder\/templates\/default\/three-columns-layou\/thumb.png",
+        },
+      ];
+      var tags = [
+        // { type: "label", tag: "CONTACT_FIRST_NAME" },
+        // { type: "label", tag: "CONTACT_LAST_NAME" },
+        // { type: "label", tag: "CONTACT_FULL_NAME" },
+        // { type: "label", tag: "CONTACT_EMAIL" },
+        // { type: "label", tag: "CONTACT_PHONE" },
+        // { type: "label", tag: "CONTACT_ADDRESS" },
+        // { type: "label", tag: "ORDER_ID" },
+        // { type: "label", tag: "ORDER_DUE" },
+        // { type: "label", tag: "ORDER_TAX" },
+        // { type: "label", tag: "PRODUCT_NAME" },
+        // { type: "label", tag: "PRODUCT_PRICE" },
+        // { type: "label", tag: "PRODUCT_QTY" },
+        // { type: "label", tag: "PRODUCT_SKU" },
+        // { type: "label", tag: "AGENT_NAME" },
+        // { type: "label", tag: "AGENT_SIGNATURE" },
+        // { type: "label", tag: "AGENT_MOBILE_PHONE" },
+        // { type: "label", tag: "AGENT_ADDRESS" },
+        // { type: "label", tag: "AGENT_WEBSITE" },
+        // { type: "label", tag: "AGENT_DISCLAIMER" },
+        // { type: "label", tag: "CURRENT_DATE" },
+        // { type: "label", tag: "CURRENT_MONTH" },
+        // { type: "label", tag: "CURRENT_YEAR" },
+        // { type: "button", tag: "PERFORM_CHECKOUT", text: "Checkout" },
+        // { type: "button", tag: "PERFORM_OPTIN", text: "Subscribe" },
+        { type: "label", tag: "%LAST_NAME%" },
+        { type: "label", tag: "%FIRST_NAME%" },
+        { type: "label", tag: "%FULL_NAME%" },
+        { type: "label", tag: "%EMAIL%" },            
+        { type: "label", tag: "%UNSUBSCRIBE%" },            
+      ];
+
+      // new builder
+      var editor = new Editor({
+        emailMode: true,
+        strict: strict, // default == true
+        showInlineToolbar: true, // default == true
+        logoImgUrl: "https://teamsource.net/wp-content/uploads/2023/05/TeamSource-Logo.png",
+        root: "/teamsource-mail-portal-2/dist/email-builder/dist/",
+        url: `/teamsource-mail-portal-2/dist/email-builder/templates/default/${template}/index.html`,
+        urlBack: window.location.origin,
+        uploadAssetUrl: "email-builder-asset.php",
+        uploadAssetMethod: "POST",
+        uploadTemplateUrl: "upload.php",
+        uploadTemplateCallback: function (response) {
+          window.location = response.url;
+        },
+        saveUrl: "save-to-disk.php", // You can try with other sample server scripts like: save-to-mysql.php or save-to-aws-s3.php
+        saveMethod: "POST",
+        // data: {
+        //   _token: "CSRF_TOKEN",
+        //   type: "default",
+        //   template_id: "6037a2135b974",
+        // },
+        templates: templates,
+        tags: tags,
+        changeTemplateCallback: function (url) {
+          window.location = url;
+        },
+
+        /*
+                    Disable features: 
+                    change_template|export|save_close|footer_exit|help
+                */
+        // disableFeatures: [ 'change_template', 'export', 'save_close', 'footer_exit', 'help' ],
+        // disableWidgets: [ 'TwoColumnsWidget', 'ThreeColumnsWidget' ],
+        // Custom header for: save, changeTemplate, export
+        // header: { "Authorize": "KEY-DFDJUELDFDKFJDK" },
+
+        export: {
+          url: "export.php",
+        },
+        backgrounds: [
+          "email-builder/assets/image/backgrounds/images1.jpg",
+          "email-builder/assets/image/backgrounds/images2.jpg",
+          "email-builder/assets/image/backgrounds/images3.jpg",
+          "email-builder/assets/image/backgrounds/images4.png",
+          "email-builder/assets/image/backgrounds/images5.jpg",
+          "email-builder/assets/image/backgrounds/images6.jpg",
+          "email-builder/assets/image/backgrounds/images9.jpg",
+          "email-builder/assets/image/backgrounds/images11.jpg",
+          "email-builder/assets/image/backgrounds/images12.jpg",
+          "email-builder/assets/image/backgrounds/images13.jpg",
+          "email-builder/assets/image/backgrounds/images14.jpg",
+          "email-builder/assets/image/backgrounds/images15.jpg",
+          "email-builder/assets/image/backgrounds/images16.jpg",
+          "email-builder/assets/image/backgrounds/images17.png",
+        ],
+      });
+
+      // @RSS plugin
+      var rssWidget = new RssWidget({ handler: "rss.php" });
+    //   editor.addWidget(rssWidget, { index: 10 });
+
+      $(document).ready(function () {
+        editor.init();
+      });
+    </script>
+
+    <style>
+      .lds-dual-ring {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 4px;
+        border-radius: 80%;
+        border: 2px solid #aaa;
+        border-color: #007bff transparent #007bff transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+      }
+      @keyframes lds-dual-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="overflow-hidden">
+    <div
+      style="
+        text-align: center;
+        height: 100vh;
+        vertical-align: middle;
+        padding: auto;
+        display: flex;
+      "
+    >
+      <div style="margin: auto" class="lds-dual-ring"></div>
+    </div>
+
+    <script>
+      switch (window.location.protocol) {
+        case "http:":
+        case "https:":
+          //remote file over http or https
+          break;
+        case "file:":
+          alert(
+            "Please put the builderjs/ folder into your document root and open it through a web URL"
+          );
+          window.location.href = "./index.php";
+          break;
+        default:
+        //some other protocol
+      }
+    </script>
+  </body>
+</html>

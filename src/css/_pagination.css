@@ -1,0 +1,25 @@
+.pagination{
+    @apply my-6;
+}
+
+.pagination ul{
+   @apply inline-flex -space-x-px text-sm; 
+}
+
+.pagination ul li a{
+    @apply flex items-center justify-center px-3 
+    h-8 mx-0 leading-tight text-gray-500 bg-white 
+    border border-r-0 border-gray-300 rounded-sm
+    hover:bg-gray-100 
+    hover:text-gray-700
+}
+
+.pagination ul li:last-child a{
+    @apply border-r
+}
+
+.pagination ul li a.active{
+    @apply text-green-600 bg-green-50
+    hover:text-green-700
+    hover:bg-green-100
+}

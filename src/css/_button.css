@@ -91,3 +91,25 @@
 .buttons .button {
   @apply mx-1;
 }
+
+button[disabled]{
+  @apply bg-green-200
+  cursor-not-allowed
+  hover:bg-green-200
+}
+
+.progress li{
+  @apply text-gray-500 
+}
+
+.progress li span:first-child{
+  @apply border-gray-500
+}
+
+.progress li.active{
+  @apply text-green-500
+}
+
+.progress li.active span:first-child{
+  @apply border-green-600
+}

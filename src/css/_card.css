@@ -28,12 +28,10 @@
 
 .card-header-title, .card-header-icon {
   @apply flex items-center p-2 
-  hover:bg-green-500
-  hover:text-white
 }
 
 .card-header-title {
-  @apply flex-grow font-bold ;
+  @apply flex-grow font-bold;
 }
 
 .card-header-icon {

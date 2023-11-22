@@ -103,3 +103,11 @@
     @apply text-green-500;
   }
 }
+
+.template-menu{
+  @apply hidden;
+}
+
+.template-menu.active{
+  @apply block;
+}

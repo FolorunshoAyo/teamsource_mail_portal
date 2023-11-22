@@ -71,7 +71,7 @@ Array.from(document.getElementsByClassName('--jb-notification-dismiss')).forEach
 })
 
 /* More report func. */
-document.getElementById("see-more-report").addEventListener("click", function (e){
+document.getElementById("see-more-report")?.addEventListener("click", function (e){
   const moreReportContainer = document.getElementById("more-report");
   const currTarget = e.currentTarget;
 
@@ -83,3 +83,31 @@ document.getElementById("see-more-report").addEventListener("click", function (e
     currTarget.lastElementChild.textContent = "see more";
   }
 })
+
+
+/* New Group Step Functionality*/
+let stepsELs = document.querySelectorAll("#new-group-form .step");
+let progressEls = document.querySelectorAll("ol.progress li");
+
+progressEls = Array.from(progressEls);
+stepsELs = Array.from(stepsELs);
+
+function step(step){
+  console.log(`Active Step is: ${step}`);
+
+  let currStep = step - 1;
+
+  // DISABLE ANY PROGRESS EL
+  for(let i = 0; i < stepsELs.length; i++){
+    progressEls[i].classList.remove("active");
+  }
+
+  // Disable all active steps
+  for(let i = 0; i < stepsELs.length; i++){
+    stepsELs[i].classList.remove("active");
+  }
+
+  //Set target step to active
+  progressEls[currStep].classList.add("active");
+  stepsELs[currStep].classList.add("active");
+}
