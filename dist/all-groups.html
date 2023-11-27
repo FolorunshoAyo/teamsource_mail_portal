@@ -7,7 +7,7 @@
   <title>All Groups | TeamSend</title>
 
   <!-- Tailwind is included -->
-  <link rel="stylesheet" href="css/main.css?v=1700557162923">
+  <link rel="stylesheet" href="css/main.css?v=1701071784237">
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="https://teamsource.net/wp-content/uploads/2023/05/TeamSource-Favicon.png"/>
@@ -124,7 +124,7 @@
   </div>
 </nav>
 
-<aside class="aside is-placed-left is-expanded overflow-y-auto">
+<aside class="aside is-placed-left is-expanded">
   <div class="aside-tools">
     <div>
       Team<b class="font-bold">Send</b>
@@ -245,6 +245,48 @@
         </ul>
       </li>
     </ul>
+    <p class="menu-label">Campaigns</p>
+    <ul class="menu-list">
+      <li class="--set-active-all-campaigns-html">
+        <a class="dropdown">
+          <span class="icon"><i class="mdi mdi-xml"></i></span>
+          <span class="menu-item-label">Campaigns</span>
+          <span class="icon"><i class="mdi mdi-plus"></i></span>
+        </a>
+        <ul>
+          <li class="--set-active-all-campaigns-html">
+            <a href="all-campaigns.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>All Campaigns</span>
+            </a>
+          </li>
+          <li class="--set-active-new-campaign-html">
+            <a href="new-campaign.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Add New</span>
+            </a>
+          </li>
+          <li class="--set-active-email-schedule-html">
+            <a href="email-schedule.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Schedule</span>
+            </a>
+          </li>
+          <li class="--set-active-email-tracker-html">
+            <a href="email-tracker.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Tracker</span>
+            </a>
+          </li>
+          <li class="--set-active-email-logs-html">
+            <a href="email-logs.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Logs</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
     <!-- <p class="menu-label">Examples</p>
     <ul class="menu-list">
       <li class="--set-active-tables-html">
@@ -333,19 +375,20 @@
 </section>
 
 <section class="section main-section">
+  <div class="p-6 bg-white shadow-sm rounded-sm">
     <div class="my-6 flex flex-col items-center sm:justify-between sm:flex-row gap-4">
-        <a class="button" href="new-group.html">
-            <i class="mdi mdi-plus"></i>
-            Add New Group
-        </a>
-        <form>
-            <div class="field">
-              <div class="control icons-left">
-                <input class="input" type="text" placeholder="Search Groups....">
-                <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
-              </div>
+      <a class="button" href="new-group.html">
+          <i class="mdi mdi-plus"></i>
+          Add New Group
+      </a>
+      <form>
+          <div class="field">
+            <div class="control icons-left">
+              <input class="input" type="text" placeholder="Search Groups....">
+              <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
             </div>
-        </form>
+          </div>
+      </form>
     </div>
     <div class="card has-table mb-6">
         <header class="card-header">
@@ -474,6 +517,7 @@
           </div>
         </div>
     </div>
+  </div>
 </section>
 <footer class="footer">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
@@ -827,7 +871,7 @@
 </div>
 
 <!-- Scripts below are for demo only -->
-<script type="text/javascript" src="js/main.min.js?v=1700557162923"></script>
+<script type="text/javascript" src="js/main.min.js?v=1701071784237"></script>
 
 
 <!-- <script>

@@ -1,0 +1,328 @@
+<section class="main main-section">
+  <div class="p-4 bg-white shadow-sm rounded-sm">
+    <ol
+      class="progress my-6 max-w-lg mx-auto mt-6 mb-10 items-center justify-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0 rtl:space-x-reverse"
+    >
+      <li
+        class="active flex items-center text-green-600 space-x-2.5 rtl:space-x-reverse"
+      >
+        <span
+          class="flex items-center justify-center w-8 h-8 border rounded-full shrink-0"
+        >
+          1
+        </span>
+        <span>
+          <h3 class="font-medium leading-tight">New Campaign</h3>
+          <p class="text-sm">Enter Basic Campaign Info</p>
+        </span>
+      </li>
+      <li
+        class="flex items-center text-gray-500 space-x-2.5 rtl:space-x-reverse"
+      >
+        <span
+          class="flex items-center justify-center w-8 h-8 border rounded-full shrink-0"
+        >
+          2
+        </span>
+        <span>
+          <h3 class="font-medium leading-tight">Select Email Template</h3>
+          <p class="text-sm">Choose from created templates</p>
+        </span>
+      </li>
+      <li
+        class="flex items-center text-gray-500 space-x-2.5 rtl:space-x-reverse"
+      >
+        <span
+          class="flex items-center justify-center w-8 h-8 border rounded-full shrink-0 dark:border-gray-400"
+        >
+          3
+        </span>
+        <span>
+          <h3 class="font-medium leading-tight">Select Email Group/Segment(Audience)</h3>
+          <p class="text-sm">Select from created email groups</p>
+        </span>
+      </li>
+    </ol>
+    <form
+      id="new-campaign-form"
+      class="p-2 max-w-3xl mx-auto xs:flex gap-2 overflow-x-hidden transition-all duration-500"
+    >
+      <!-- Step 1 -->
+      <div class="step active">
+        <div class="field spaced">
+          <label class="label"
+            >Campaign Name <span class="text-red-600">*</span></label
+          >
+          <div class="field-body">
+            <div class="field">
+              <div class="control icons-left">
+                <input
+                  class="input"
+                  type="text"
+                  name="cname"
+                  placeholder="Campaign Name"
+                />
+                <span class="icon left"><i class="mdi mdi-account"></i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field spaced">
+          <label class="label">Short Description</label>
+          <div class="control">
+            <textarea
+              class="textarea"
+              name="gdesc"
+              placeholder="Short Description"
+            >
+            </textarea>
+          </div>
+        </div>
+        <div class="field spaced">
+            <label class="label"
+              >Campaign Subject <span class="text-red-600">*</span></label
+            >
+            <div class="field-body">
+              <div class="field">
+                <div class="control icons-left">
+                  <input
+                    class="input"
+                    type="text"
+                    name="csubject"
+                    placeholder="Campaign Subject"
+                  />
+                  <span class="icon left"><i class="mdi mdi-account"></i></span>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="field spaced">
+            <label class="label"
+              >Set From <span class="text-red-600">*</span></label
+            >
+            <div class="field-body">
+              <div class="field">
+                <div class="control icons-left">
+                  <input
+                    class="email"
+                    type="text"
+                    name="cfrom"
+                    placeholder="Set From"
+                  />
+                  <span class="icon left"><i class="mdi mdi-email-arrow-left-outline"></i></span>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="field spaced">
+            <label class="label"
+              >Reply To <span class="text-red-600">*</span></label
+            >
+            <div class="field-body">
+              <div class="field">
+                <div class="control icons-left">
+                  <input
+                    class="email"
+                    type="text"
+                    name="rto"
+                    placeholder="Reply To"
+                  />
+                  <span class="icon left"><i class="mdi mdi-email-arrow-right-outline"></i></span>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="field spaced">
+          <label class="label">Active Status</label>
+          <div class="field-body">
+            <div class="field">
+              <label class="switch">
+                <input type="checkbox" value="false" />
+                <span class="check"></span>
+                <span class="control-label">Set Active?</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="text-end">
+          <button type="button" class="button" onclick="step(2);">Next</button>
+        </div>
+      </div>
+      <!-- Step 2 -->
+      <div class="step">
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-3">
+            <label class="form-card card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Template Name - 1
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex align-center justify-end">
+                        <span class="mr-2 text-green-500">Select:</span>
+                        <input type="radio" name="template" value="1">
+                        <span class="check"></span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                </div>
+            </label>
+            <label class="form-card card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Template Name - 2
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex align-center justify-end">
+                        <span class="mr-2 text-green-500">Select:</span>
+                        <input type="radio" name="template" value="2">
+                        <span class="check"></span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                </div>
+            </label>
+            <label class="form-card card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Template Name - 3
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex align-center justify-end">
+                        <span class="mr-2 text-green-500">Select:</span>
+                        <input type="radio" name="template" value="3">
+                        <span class="check"></span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                </div>
+            </label>
+            <label class="form-card card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Template Name - 4
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex align-center justify-end">
+                        <span class="mr-2 text-green-500">Select:</span>
+                        <input type="radio" name="template" value="4">
+                        <span class="check"></span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                </div>
+            </label>
+        </div>
+        <div class="text-end">
+            <button type="button" class="button" onclick="step(1)">Back</button>
+            <button type="button" class="button" onclick="step(3);">Next</button>
+        </div>
+      </div>
+      <!-- Step 3 -->
+      <div class="step">
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-3">
+            <label class="form-card card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Group Name - 1
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex align-center justify-end">
+                        <span class="mr-2 text-green-500">Select:</span>
+                        <input type="radio" name="group" value="1">
+                        <span class="check"></span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                </div>
+            </label>
+            <label class="form-card card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Group Name - 2
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex align-center justify-end">
+                        <span class="mr-2 text-green-500">Select:</span>
+                        <input type="radio" name="group" value="2">
+                        <span class="check"></span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                </div>
+            </label>
+            <label class="form-card card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Group Name - 3
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex align-center justify-end">
+                        <span class="mr-2 text-green-500">Select:</span>
+                        <input type="radio" name="group" value="3">
+                        <span class="check"></span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                </div>
+            </label>
+            <label class="form-card card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Group Name - 4
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex align-center justify-end">
+                        <span class="mr-2 text-green-500">Select:</span>
+                        <input type="radio" name="group" value="4">
+                        <span class="check"></span>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                </div>
+            </label>
+        </div>
+        <div class="my-6 text-end">
+          <button
+            type="submit"
+            class="button flex items-center gap-2 justify-center bg-green-500 text-white mr-2"
+          >
+            <i class="mdi mdi-open-in-new mdi-24px"></i> Save Campaign
+          </button>
+          <button type="button" class="button" onclick="step(2);">Back</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

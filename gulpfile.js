@@ -120,7 +120,10 @@ const concatHtml = file => {
     'check-bounce': "Bounce Checker | TeamSend",
     'bounced-emails': "Bounced Emails | TeamSend",
     'template-builder-originate': 'Create New Email Template | TeamSend',
-    'email-templates': 'Email Templates | TeamSend'
+    'email-templates': 'Email Templates | TeamSend',
+    'all-campaign': 'All Campaigns | TeamSend',
+    'new-capmaign': 'New Campaign | TeamSend',
+    'campaigns': 'Email Campaign Details | Teamsend'
   }
 
   const titleStringsLong = {
@@ -133,7 +136,10 @@ const concatHtml = file => {
     'check-bounce': "Bounce Checker",
     'bounced-emails': "Bounce Emails",
     'template-builder-originate': 'Create New Email Template',
-    'Email Templates': 'Email Templates | TeamSend'
+    'email-templates': 'Email Templates',
+    'all-campaign': 'All Campaigns',
+    'new-capmaign': 'New Campaign',
+    'campaigns': 'Email Campaign Details'
   }
 
   const subMenuLinks = {
@@ -144,7 +150,9 @@ const concatHtml = file => {
     'check-bounce': "emails",
     'bounced-emails': "emails",
     'template-builder-originate': "email-builder",
-    'email-templates': "email-builder"
+    'email-templates': "email-builder",
+    'all-campaigns': "campaigns",
+    'new-campaign': "campaigns"
   }
 
   const titleStringReplacement = titleStrings[file] ? titleStrings[file] : ''
@@ -196,6 +204,9 @@ exports.default = series(
     () => concatHtml('bounced-emails'),
     () => concatHtml('template-builder-originate'),
     () => concatHtml('email-templates'),
+    () => concatHtml('all-campaigns'),
+    () => concatHtml('new-campaign'),
+    () => concatHtml('campaign'),
     processJsMain,
     processJsMainMin,
     processJsChartSample,

@@ -7,7 +7,7 @@
   <title>Create New Email Template | TeamSend</title>
 
   <!-- Tailwind is included -->
-  <link rel="stylesheet" href="css/main.css?v=1700557162923">
+  <link rel="stylesheet" href="css/main.css?v=1701071784237">
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="https://teamsource.net/wp-content/uploads/2023/05/TeamSource-Favicon.png"/>
@@ -124,7 +124,7 @@
   </div>
 </nav>
 
-<aside class="aside is-placed-left is-expanded overflow-y-auto">
+<aside class="aside is-placed-left is-expanded">
   <div class="aside-tools">
     <div>
       Team<b class="font-bold">Send</b>
@@ -245,6 +245,48 @@
         </ul>
       </li>
     </ul>
+    <p class="menu-label">Campaigns</p>
+    <ul class="menu-list">
+      <li class="--set-active-all-campaigns-html">
+        <a class="dropdown">
+          <span class="icon"><i class="mdi mdi-xml"></i></span>
+          <span class="menu-item-label">Campaigns</span>
+          <span class="icon"><i class="mdi mdi-plus"></i></span>
+        </a>
+        <ul>
+          <li class="--set-active-all-campaigns-html">
+            <a href="all-campaigns.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>All Campaigns</span>
+            </a>
+          </li>
+          <li class="--set-active-new-campaign-html">
+            <a href="new-campaign.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Add New</span>
+            </a>
+          </li>
+          <li class="--set-active-email-schedule-html">
+            <a href="email-schedule.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Schedule</span>
+            </a>
+          </li>
+          <li class="--set-active-email-tracker-html">
+            <a href="email-tracker.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Tracker</span>
+            </a>
+          </li>
+          <li class="--set-active-email-logs-html">
+            <a href="email-logs.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Logs</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
     <!-- <p class="menu-label">Examples</p>
     <ul class="menu-list">
       <li class="--set-active-tables-html">
@@ -355,7 +397,7 @@
             <div class="field spaced">
                 <label class="label">Select a deisgn template</label>
                 <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a0a8583a7/thumb.svg" style="width: 100%; height:100%;" alt="Blank" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -372,7 +414,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a2135b974/thumb.svg" style="width: 100%; height:100%;" alt="Pricing Table" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -389,7 +431,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a2250a3a3/thumb.svg" style="width: 100%; height:100%;" alt="Listing & Tables" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -406,7 +448,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a2401b055/thumb.svg" style="width: 100%; height:100%;" alt="1-2-1 column layout" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -423,7 +465,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <input type="radio" name="template" value="1-2-column-layout" checked>
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a24ebdbd6/thumb.svg" style="width: 100%; height:100%;" alt="1-2 column layout" class="hover:opacity-80 transition duration-300">
@@ -441,7 +483,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a25ddce80/thumb.svg" style="width: 100%; height:100%;" alt="1-3-1 column layout" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -458,7 +500,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a26b0a286/thumb.svg" style="width: 100%; height:100%;" alt="1-3-2 column layout" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -475,7 +517,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a275bf375/thumb.svg" style="width: 100%; height:100%;" alt="1-3 column layout" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -492,7 +534,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a28418c95/thumb.svg" style="width: 100%; height:100%;" alt="One column layout" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -509,7 +551,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a29a35e05/thumb.svg" style="width: 100%; height:100%;" alt="2-1-2 column layout" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -526,7 +568,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a2aa315d4/thumb.svg" style="width: 100%; height:100%;" alt="2-1 column layout" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -543,7 +585,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a2b67ed27/thumb.svg" style="width: 100%; height:100%;" alt="Two columns layout" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -560,7 +602,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a2c3d7fa1/thumb.svg" style="width: 100%; height:100%;" alt="3-1-3 column layout" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -577,7 +619,7 @@
                             </div>
                         </div>
                     </label>
-                    <label class="card template-card">
+                    <label class="card form-card">
                         <div class="w-full h-64">
                             <img src="https://demo.builderjs.net/templates/default/6037a2dcb6c56/thumb.svg" style="width: 100%; height:100%;" alt="Three columns layout" class="hover:opacity-80 transition duration-300">
                         </div>
@@ -954,7 +996,7 @@
 </div>
 
 <!-- Scripts below are for demo only -->
-<script type="text/javascript" src="js/main.min.js?v=1700557162923"></script>
+<script type="text/javascript" src="js/main.min.js?v=1701071784237"></script>
 
 
 <!-- <script>

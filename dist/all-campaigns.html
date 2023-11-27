@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bulk Export Import Contacts | TeamSend</title>
+  <title></title>
 
   <!-- Tailwind is included -->
   <link rel="stylesheet" href="css/main.css?v=1701071784237">
@@ -151,11 +151,11 @@
     </ul>
     <p class="menu-label">Contacts</p>
     <ul class="menu-list">
-      <li class="--set-active-all-contacts-html active">
+      <li class="--set-active-all-contacts-html">
         <a class="dropdown">
           <span class="icon"><i class="mdi mdi-contactless-payment"></i></span>
           <span class="menu-item-label">Contacts</span>
-          <span class="icon"><i class="mdi mdi-minus"></i></span>
+          <span class="icon"><i class="mdi mdi-plus"></i></span>
         </a>
         <ul>
           <li class="--set-active-all-contacts-html">
@@ -164,7 +164,7 @@
               <span>All Contacts</span>
             </a>
           </li>
-          <li class="active">
+          <li class="--set-active-bulk-upload-html">
             <a href="bulk-upload.html">
               <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>Bulk Import/Export</span>
@@ -247,14 +247,14 @@
     </ul>
     <p class="menu-label">Campaigns</p>
     <ul class="menu-list">
-      <li class="--set-active-all-campaigns-html">
+      <li class="active">
         <a class="dropdown">
           <span class="icon"><i class="mdi mdi-xml"></i></span>
           <span class="menu-item-label">Campaigns</span>
-          <span class="icon"><i class="mdi mdi-plus"></i></span>
+          <span class="icon"><i class="mdi mdi-minus"></i></span>
         </a>
         <ul>
-          <li class="--set-active-all-campaigns-html">
+          <li class="active">
             <a href="all-campaigns.html">
               <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>All Campaigns</span>
@@ -361,7 +361,7 @@
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
       <li>Admin</li>
-      <li>Bulk Export Import Contacts | TeamSend</li>
+      <li></li>
     </ul>
   </div>
 </section>
@@ -369,135 +369,252 @@
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <h1 class="title">
-      Bulk Export Import Contacts
+      
     </h1>
   </div>
 </section>
 
-<section class="section main-section">
-  <div class="flex flex-col sm:flex-row gap-4 mb-6 shadow-lg">
-    <div class="card w-full sm:w-1/2">
-      <header class="card-header">
-        <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-import"></i></span>
-          Bulk Import
-        </p>
-      </header>
-      <div class="card-content">
-        <img src="https://fullaccess.maildoll.com/bulk/import.jpg" class="mx-auto" style="width: 250px; height: 250px;"/>
-        <form
-          class="mt-6"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <div class="mb-6 text-center">
-            <input type="file" name="csv" required="" />
-          </div>
-
-          <div class="field text-center">
-            <div class="control">
-              <label class="checkbox">
-                <input type="checkbox" name="isGroup" id="groupCheck" value="1">
-                <span class="check"></span>
-                <span class="control-label">Create Group?</span>
-              </label>
-            </div>
-          </div>
-
-          <div class="m-3 hidden" id="groupForm">
-            <div class="field">
-                <label class="label">Group Name</label>
-                <div class="field-body">
-                  <div class="field">
-                    <div class="control icons-left">
-                      <input class="input" type="text" name="gname" placeholder="Enter Group Name...">
-                      <span class="icon left"><i class="mdi mdi-account"></i></span>
-                    </div>
+<section class="main main-section">
+    <div class="p-6 bg-white shadow-sm rounded-sm">
+        <div class="my-6 flex flex-col items-center sm:justify-between sm:flex-row gap-4">
+            <a class="button" href="new-campaign.html">
+                <i class="mdi mdi-plus"></i>
+                Add New Campaign
+            </a>
+            <form>
+                <div class="field">
+                  <div class="control icons-left">
+                    <input class="input" type="text" placeholder="Search Campaign....">
+                    <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
                   </div>
                 </div>
-            </div>
-
-          
-            <div class="field">
-                <label class="label">Group Description</label>
-                <div class="control">
-                  <textarea class="textarea" placeholder="Enter Group Description"></textarea>
-                </div>
-            </div>
-
-            <div class="field">
-                <label class="label">List Type</label>
-                <div class="field-body">
-                  <div class="field grouped multiline">
-                    <div class="control">
-                      <label class="radio">
-                        <input 
-                        type="radio" 
-                        name="type"
-                        value="email"
-                        checked>
-                        <span class="check"></span>
-                        <span class="control-label">Email Group</span>
-                      </label>
-                    </div>
-                    <!-- <div class="control">
-                      <label class="radio">
-                        <input 
-                        type="radio" 
-                        name="type"
-                        value="sms"
+            </form>
+        </div>
+        <div class="card has-table mb-6">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
+                All Groups
+              </p>
+              <a href="#" class="card-header-icon">
+                <span class="icon"><i class="mdi mdi-reload"></i></span>
+              </a>
+            </header>
+            <div class="card-content">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Campaign Name</th>
+                    <th>Total Emails</th>
+                    <th>Sent To (Count)</th>
+                    <th>Template</th>
+                    <th>Status</th>
+                    <th>Created</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="image-cell">
+                      <div class="image">
+                        <img
+                          src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                          class="rounded-full"
+                        />
+                      </div>
+                    </td>
+                    <td data-label="Capmaign Name">
+                        <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
+                            Campaign Name
+                        </a>
+                        <p>Some Desc</p>
+                    </td>
+                    <td data-label="Total Emails">20</td>
+                    <td data-label="Template">Template Name</td>
+                    <td data-label="Status">
+                        <div class="flex items-center text-red-600">
+                            <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
+                        </div>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                    <td class="actions-cell">
+                      <div class="buttons right nowrap">
+                        <a
+                          class="button green"
+                          href="javascript:void(0)"
                         >
-                        <span class="check"></span>
-                        <span class="control-label">SMS Group</span>
-                      </label>
-                    </div> -->
+                          <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
+                        </a>
+                        <a
+                        class="button yellow"
+                        href="javscript:void(0)"
+                        >
+                            <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                        </a>
+                        <a
+                          class="button red"
+                          href="javscript:void(0)"
+                        >
+                          <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="image-cell">
+                      <div class="image">
+                        <img
+                          src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                          class="rounded-full"
+                        />
+                      </div>
+                    </td>
+                    <td data-label="Capmaign Name">
+                        <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
+                            Campaign Name
+                        </a>
+                        <p>Some Desc</p>
+                    </td>
+                    <td data-label="Total Emails">20</td>
+                    <td data-label="Template">Template Name</td>
+                    <td data-label="Status">
+                        <div class="flex items-center text-red-600">
+                            <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
+                        </div>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                    <td class="actions-cell">
+                      <div class="buttons right nowrap">
+                        <a
+                          class="button green"
+                          href="javascript:void(0)"
+                        >
+                          <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
+                        </a>
+                        <a
+                        class="button yellow"
+                        href="javscript:void(0)"
+                        >
+                            <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                        </a>
+                        <a
+                          class="button red"
+                          href="javscript:void(0)"
+                        >
+                          <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="image-cell">
+                      <div class="image">
+                        <img
+                          src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                          class="rounded-full"
+                        />
+                      </div>
+                    </td>
+                    <td data-label="Capmaign Name">
+                        <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
+                            Campaign Name
+                        </a>
+                        <p>Some Desc</p>
+                    </td>
+                    <td data-label="Total Emails">20</td>
+                    <td data-label="Template">Template Name</td>
+                    <td data-label="Status">
+                        <div class="flex items-center text-red-600">
+                            <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
+                        </div>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                    <td class="actions-cell">
+                      <div class="buttons right nowrap">
+                        <a
+                          class="button green"
+                          href="javascript:void(0)"
+                        >
+                          <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
+                        </a>
+                        <a
+                        class="button yellow"
+                        href="javscript:void(0)"
+                        >
+                            <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                        </a>
+                        <a
+                          class="button red"
+                          href="javscript:void(0)"
+                        >
+                          <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="image-cell">
+                      <div class="image">
+                        <img
+                          src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                          class="rounded-full"
+                        />
+                      </div>
+                    </td>
+                    <td data-label="Capmaign Name">
+                        <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
+                            Campaign Name
+                        </a>
+                        <p>Some Desc</p>
+                    </td>
+                    <td data-label="Total Emails">20</td>
+                    <td data-label="Template">Template Name</td>
+                    <td data-label="Status">
+                        <div class="flex items-center text-red-600">
+                            <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
+                        </div>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                    <td class="actions-cell">
+                      <div class="buttons right nowrap">
+                        <a
+                          class="button green"
+                          href="javascript:void(0)"
+                        >
+                          <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
+                        </a>
+                        <a
+                        class="button yellow"
+                        href="javscript:void(0)"
+                        >
+                            <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                        </a>
+                        <a
+                          class="button red"
+                          href="javscript:void(0)"
+                        >
+                          <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="table-pagination">
+                <div class="flex items-center justify-between">
+                  <div class="buttons">
+                    <button type="button" class="button active">1</button>
+                    <button type="button" class="button">2</button>
+                    <button type="button" class="button">3</button>
                   </div>
+                  <small>Page 1 of 3</small>
                 </div>
               </div>
-          </div>
-
-          <div class="text-center">
-            <button type="submit" class="button">
-              Import
-            </button>
-          </div>
-
-          <ul class="my-3 font-medium text-center leading-none">
-            <li class="mt-2">File size must be smaller then 20MB</li>
-            <li class="mt-2">File type must be CSV</li>
-          </ul>
-        </form>
-        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 text-left mt-2" role="alert">
-            <p>Please upload your containing csv file compitable with CSV(Comma Delimited) unless some field
-                will be truncated.</p>
-        </div>
-        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 text-left mt-2" role="alert">
-            <p>Please be careful with the columns; Extra columns are not ideal csv for importing.</p>
-        </div>
-      </div>
-    </div>
-    <div class="card w-full sm:w-1/2 self-start shadow-lg">
-        <header class="card-header">
-            <p class="card-header-title">
-              <span class="icon"><i class="mdi mdi-export"></i></span>
-              Bulk Export
-            </p>
-        </header>
-        <div class="card-content">
-            <img src="https://fullaccess.maildoll.com/bulk/export.jpg"  class="mx-auto" style="width: 250px; height: 250px;"/>
-            <div class="text-center mt-6">
-                <a href="#" class="button">Export
-                    Contacts</a>
-            </div>
-            <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 text-left mt-2" role="alert">
-                <p>Download the <a href="#" class="text-lg font-bold hover:underline leading-none">sample csv</a> file and override the sample data.
-                    Make sure each column has data as like the sample csv.</p>
             </div>
         </div>
     </div>
-  </div>
 </section>
-
 <footer class="footer">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
     <div class="flex items-center justify-start space-x-3">

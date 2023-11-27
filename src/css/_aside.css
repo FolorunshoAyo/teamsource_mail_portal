@@ -6,6 +6,10 @@
   @apply flex flex-row w-full bg-green-900 text-white flex-1 px-3 h-14 items-center;
 }
 
+.menu{
+  @apply mb-6
+}
+
 .aside-mobile-expanded .aside {
   @apply left-0;
 }

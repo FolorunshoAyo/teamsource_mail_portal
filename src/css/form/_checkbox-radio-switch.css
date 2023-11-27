@@ -4,27 +4,27 @@
   @apply inline-flex items-center cursor-pointer relative;
 }
 
-.template-card{
+.form-card{
   @apply cursor-pointer;
 }
 
 .checkbox input[type=checkbox],
 .radio input[type=radio],
-.template-card input[type=radio],
+.form-card input[type=radio],
 .switch input[type=checkbox] {
   @apply absolute left-0 opacity-0 -z-1;
 }
 
 .checkbox input[type=checkbox]+.check,
 .radio input[type=radio]+.check,
-.template-card input[type=radio]+.check,
+.form-card input[type=radio]+.check,
 .switch input[type=checkbox]+.check {
   @apply border-gray-300 border hover:border-gray-400;
 }
 
 .checkbox input[type=checkbox]+.check,
 .radio input[type=radio]+.check,
-.template-card input[type=radio]+.check
+.form-card input[type=radio]+.check
 {
   @apply block w-5 h-5;
 }
@@ -38,14 +38,14 @@
 }
 
 .radio input[type=radio]+.check,
-.template-card input[type=radio]+.check,
+.form-card input[type=radio]+.check,
 .switch input[type=checkbox]+.check,
 .switch input[type=checkbox]+.check:before {
   @apply rounded-full;
 }
 
 .checkbox input[type=checkbox]:checked+.check,
-.template-card input[type=radio]:checked+.check,
+.form-card input[type=radio]:checked+.check,
 .radio input[type=radio]:checked+.check {
   @apply bg-no-repeat bg-center bg-green-500 border-green-500 border-4;
 }
@@ -55,7 +55,7 @@
 }
 
 .radio input[type=radio]:checked+.check,
-.template-card input[type=radio]:checked+.check{
+.form-card input[type=radio]:checked+.check{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z' /%3E%3C/svg%3E");
 }
 
