@@ -1,7 +1,7 @@
 <section class="section main-section">
   <div class="p-4 bg-white shadow-sm rounded-sm">
     <ol
-      class="progress my-6 max-w-lg mx-auto mt-6 mb-10 items-center justify-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0 rtl:space-x-reverse"
+      class="progress my-6 mx-auto mt-6 mb-10 items-center justify-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0 rtl:space-x-reverse"
     >
       <li
         class="active flex items-center text-green-600 space-x-2.5 rtl:space-x-reverse"
@@ -70,7 +70,7 @@
           <div class="field-body">
             <div class="field">
               <label class="switch">
-                <input type="checkbox" value="false" />
+                <input type="checkbox" name="active" />
                 <span class="check"></span>
                 <span class="control-label">Set Active?</span>
               </label>
@@ -303,12 +303,32 @@
             </table>
             <div class="table-pagination">
               <div class="flex items-center justify-between">
-                <div class="buttons">
-                  <button type="button" class="button active">1</button>
-                  <button type="button" class="button">2</button>
-                  <button type="button" class="button">3</button>
-                </div>
-                <small>Page 1 of 3</small>
+                  <nav class="pagination my-6">
+                      <ul>
+                        <li>
+                          <a href="#" class="active">Previous</a>
+                        </li>
+                        <li>
+                          <a href="#">1</a>
+                        </li>
+                        <li>
+                          <a href="#">2</a>
+                        </li>
+                        <li>
+                          <a href="#">3</a>
+                        </li>
+                        <li>
+                          <a href="#" >4</a>
+                        </li>
+                        <li>
+                          <a href="#">5</a>
+                        </li>
+                        <li>
+                          <a href="#">Next</a>
+                        </li>
+                      </ul>
+                  </nav>
+                  <small>Page 1 of 10</small>
               </div>
             </div>
           </div>

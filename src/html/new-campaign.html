@@ -1,7 +1,7 @@
 <section class="main main-section">
   <div class="p-4 bg-white shadow-sm rounded-sm">
     <ol
-      class="progress my-6 max-w-lg mx-auto mt-6 mb-10 items-center justify-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0 rtl:space-x-reverse"
+      class="progress my-6 mx-auto mt-6 mb-10 items-center justify-center w-full space-y-4 sm:flex sm:space-x-8 sm:space-y-0 rtl:space-x-reverse"
     >
       <li
         class="active flex items-center text-green-600 space-x-2.5 rtl:space-x-reverse"
@@ -45,7 +45,7 @@
     </ol>
     <form
       id="new-campaign-form"
-      class="p-2 max-w-3xl mx-auto xs:flex gap-2 overflow-x-hidden transition-all duration-500"
+      class="p-2 max-w-5xl mx-auto flex gap-2 overflow-x-hidden transition-all duration-500"
     >
       <!-- Step 1 -->
       <div class="step active">
@@ -104,12 +104,12 @@
               <div class="field">
                 <div class="control icons-left">
                   <input
-                    class="email"
-                    type="text"
+                    class="input"
+                    type="email"
                     name="cfrom"
                     placeholder="Set From"
                   />
-                  <span class="icon left"><i class="mdi mdi-email-arrow-left-outline"></i></span>
+                  <span class="icon left"><i class="mdi mdi-email-arrow-left"></i></span>
                 </div>
               </div>
             </div>
@@ -122,12 +122,12 @@
               <div class="field">
                 <div class="control icons-left">
                   <input
-                    class="email"
-                    type="text"
+                    class="input"
+                    type="class"
                     name="rto"
                     placeholder="Reply To"
                   />
-                  <span class="icon left"><i class="mdi mdi-email-arrow-right-outline"></i></span>
+                  <span class="icon left"><i class="mdi mdi-email-arrow-right"></i></span>
                 </div>
               </div>
             </div>
@@ -160,14 +160,17 @@
                         <p class="text-green-500">1 day ago</p>
                       </div>
                     </div>
-                    <div class="flex align-center justify-end">
+                    <div class="flex items-center justify-end px-2">
                         <span class="mr-2 text-green-500">Select:</span>
                         <input type="radio" name="template" value="1">
                         <span class="check"></span>
                     </div>
                 </header>
                 <div class="card-content">
-                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                  <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                  <div class="text-right">
+                    <a href="#" class="button">View Template</a>
+                  </div>
                 </div>
             </label>
             <label class="form-card card">
@@ -179,14 +182,17 @@
                         <p class="text-green-500">1 day ago</p>
                       </div>
                     </div>
-                    <div class="flex align-center justify-end">
+                    <div class="flex items-center justify-end px-2">
                         <span class="mr-2 text-green-500">Select:</span>
                         <input type="radio" name="template" value="2">
                         <span class="check"></span>
                     </div>
                 </header>
                 <div class="card-content">
-                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                  <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                  <div class="text-right">
+                    <a href="#" class="button">View Template</a>
+                  </div>
                 </div>
             </label>
             <label class="form-card card">
@@ -198,14 +204,17 @@
                         <p class="text-green-500">1 day ago</p>
                       </div>
                     </div>
-                    <div class="flex align-center justify-end">
+                    <div class="flex items-center justify-end px-2">
                         <span class="mr-2 text-green-500">Select:</span>
                         <input type="radio" name="template" value="3">
                         <span class="check"></span>
                     </div>
                 </header>
                 <div class="card-content">
-                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                  <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                  <div class="text-right">
+                    <a href="#" class="button">View Template</a>
+                  </div>
                 </div>
             </label>
             <label class="form-card card">
@@ -217,14 +226,17 @@
                         <p class="text-green-500">1 day ago</p>
                       </div>
                     </div>
-                    <div class="flex align-center justify-end">
+                    <div class="flex items-center justify-end px-2">
                         <span class="mr-2 text-green-500">Select:</span>
                         <input type="radio" name="template" value="4">
                         <span class="check"></span>
                     </div>
                 </header>
                 <div class="card-content">
-                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                  <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                  <div class="text-right">
+                    <a href="#" class="button">View Template</a>
+                  </div>
                 </div>
             </label>
         </div>
@@ -239,88 +251,100 @@
             <label class="form-card card">
                 <header class="card-header">
                     <div class="card-header-title">
-                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <span class="icon"><i class="mdi mdi-account-group mr-4"></i></span>
                       <div class="leading-tight text-xs">
                         Group Name - 1
                         <p class="text-green-500">1 day ago</p>
                       </div>
                     </div>
-                    <div class="flex align-center justify-end">
+                    <div class="flex items-center justify-end px-2">
                         <span class="mr-2 text-green-500">Select:</span>
                         <input type="radio" name="group" value="1">
                         <span class="check"></span>
                     </div>
                 </header>
                 <div class="card-content">
-                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                    <div class="text-right">
+                      <a href="#" class="button">View Group</a>
+                    </div>
                 </div>
             </label>
             <label class="form-card card">
                 <header class="card-header">
                     <div class="card-header-title">
-                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <span class="icon"><i class="mdi mdi-account-group mr-4"></i></span>
                       <div class="leading-tight text-xs">
                         Group Name - 2
                         <p class="text-green-500">1 day ago</p>
                       </div>
                     </div>
-                    <div class="flex align-center justify-end">
+                    <div class="flex items-center justify-end px-2">
                         <span class="mr-2 text-green-500">Select:</span>
                         <input type="radio" name="group" value="2">
                         <span class="check"></span>
                     </div>
                 </header>
                 <div class="card-content">
-                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                  <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                  <div class="text-right">
+                    <a href="#" class="button">View Group</a>
+                  </div>
                 </div>
             </label>
             <label class="form-card card">
                 <header class="card-header">
                     <div class="card-header-title">
-                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <span class="icon"><i class="mdi mdi-account-group mr-4"></i></span>
                       <div class="leading-tight text-xs">
                         Group Name - 3
                         <p class="text-green-500">1 day ago</p>
                       </div>
                     </div>
-                    <div class="flex align-center justify-end">
+                    <div class="flex items-center justify-end px-2">
                         <span class="mr-2 text-green-500">Select:</span>
                         <input type="radio" name="group" value="3">
                         <span class="check"></span>
                     </div>
                 </header>
                 <div class="card-content">
-                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                  <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                  <div class="text-right">
+                    <a href="#" class="button">View Group</a>
+                  </div>
                 </div>
             </label>
             <label class="form-card card">
                 <header class="card-header">
                     <div class="card-header-title">
-                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <span class="icon"><i class="mdi mdi-account-group mr-4"></i></span>
                       <div class="leading-tight text-xs">
                         Group Name - 4
                         <p class="text-green-500">1 day ago</p>
                       </div>
                     </div>
-                    <div class="flex align-center justify-end">
+                    <div class="flex items-center justify-end px-2">
                         <span class="mr-2 text-green-500">Select:</span>
                         <input type="radio" name="group" value="4">
                         <span class="check"></span>
                     </div>
                 </header>
                 <div class="card-content">
-                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                  <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/group.png');"></div>
+                  <div class="text-right">
+                    <a href="#" class="button">View Group</a>
+                  </div>
                 </div>
             </label>
         </div>
         <div class="my-6 text-end">
+          <button type="button" class="button" onclick="step(2);">Back</button>
           <button
             type="submit"
             class="button flex items-center gap-2 justify-center bg-green-500 text-white mr-2"
           >
             <i class="mdi mdi-open-in-new mdi-24px"></i> Save Campaign
           </button>
-          <button type="button" class="button" onclick="step(2);">Back</button>
         </div>
       </div>
     </form>

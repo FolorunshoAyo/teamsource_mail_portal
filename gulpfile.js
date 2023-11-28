@@ -97,8 +97,8 @@ const concatHtml = file => {
     'src/html/parts/bottom-scripts.html'
   )
 
-  if (file === 'index') {
-    sources.push('src/html/parts/bottom-scripts-home.html')
+  if (file === 'index' || file === 'campaign') {
+    sources.push('src/html/parts/bottom-scripts-admin.html')
   }
 
   sources.push('src/html/parts/bottom.html')
@@ -122,8 +122,9 @@ const concatHtml = file => {
     'template-builder-originate': 'Create New Email Template | TeamSend',
     'email-templates': 'Email Templates | TeamSend',
     'all-campaign': 'All Campaigns | TeamSend',
-    'new-capmaign': 'New Campaign | TeamSend',
-    'campaigns': 'Email Campaign Details | Teamsend'
+    'new-campaign': 'New Campaign | TeamSend',
+    campaign: 'Email Campaign Details | Teamsend',
+    group: 'Group Details | Teamsend'
   }
 
   const titleStringsLong = {
@@ -138,8 +139,9 @@ const concatHtml = file => {
     'template-builder-originate': 'Create New Email Template',
     'email-templates': 'Email Templates',
     'all-campaign': 'All Campaigns',
-    'new-capmaign': 'New Campaign',
-    'campaigns': 'Email Campaign Details'
+    'new-campaign': 'New Campaign',
+    campaign: 'Email Campaign Details',
+    group: 'Group Details'
   }
 
   const subMenuLinks = {
@@ -152,7 +154,7 @@ const concatHtml = file => {
     'template-builder-originate': "email-builder",
     'email-templates': "email-builder",
     'all-campaigns': "campaigns",
-    'new-campaign': "campaigns"
+    'new-campaign': "campaigns" 
   }
 
   const titleStringReplacement = titleStrings[file] ? titleStrings[file] : ''
@@ -207,6 +209,7 @@ exports.default = series(
     () => concatHtml('all-campaigns'),
     () => concatHtml('new-campaign'),
     () => concatHtml('campaign'),
+    () => concatHtml('group'),
     processJsMain,
     processJsMainMin,
     processJsChartSample,

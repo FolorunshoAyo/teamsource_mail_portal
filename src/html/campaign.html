@@ -1,17 +1,17 @@
 <section class="main-section section">
-    <div class="p-4 shadow-sm rounded-sm">
+    <div class="p-4 bg-white shadow-sm rounded-sm">
         <div class="flex my-4 items-center justify-between">
-            <h3 class="font-3xl font-bold text-green-600">Campaign Name</h3>
+            <h3 class="text-2xl font-bold text-green-600">Campaign Name</h3>
             <div class="flex flex-col gap-2">
                 <div class="flex items-center gap-2">
-                    <span class="text-white px-2 py-4 rounded-sm bg-yellow-600 text-sm shadow">Draft</span>
-                    <span class="text-white bg-green-600 px-2 py-4 rounded-sm text-sm shadow">Active</span>
+                    <span class="w-1/2 text-center font-bold text-lg text-white p-2 rounded-sm bg-yellow-600 text-sm shadow">Draft</span>
+                    <span class="w-1/2 text-center font-bold text-lg text-white bg-green-600 p-2 rounded-sm text-sm shadow">Active</span>
                 </div>
-                <p class="font-semibold">Date Sent:<span class="text-green-600">November 1, 2023</span></p>
+                <p class="font-semibold">Date Sent: <span class="text-green-600">November 1, 2023</span></p>
             </div>
         </div>
         <div>
-           <table class="border-collapse">
+           <table class="campaign-details-table">
                 <tbody>
                     <tr>
                         <td><b class="font-lg">Campaign Description</b></td>
@@ -40,7 +40,7 @@
                     <tr>
                         <td><b class="font-lg">Template </b></td>
                         <td>
-                            <a class="flex items-center font-lg cursor-pointer hover:text-green-600">
+                            <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
                                 Template <i class="ml-2 mdi mdi-open-in-new"></i>
                             </a>
                         </td>
@@ -48,21 +48,188 @@
                     <tr>
                         <td><b class="font-lg">Overview</b></td>
                         <td>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quo eveniet cupiditate deleniti tempora repellendus facere inventore exercitationem et. Aperiam!</p>
+                            <p>This campaign performed well with a high open rate and decent click-through rate.</p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Group Name
+                            <b class="font-lg">Group Name</b>
                         </td>
                         <td>
-                            <a class="flex items-center font-lg cursor-pointer hover:text-green-600">
+                            <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
                                 Group Name <i class="ml-2 mdi mdi-open-in-new"></i>
                             </a>
                         </td>
                     </tr>
                 </tbody>
            </table> 
+        </div>
+        <div class="card my-6">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span class="icon"><i class="mdi mdi-chart-timeline"></i></span>
+                Campaign Report
+              </p>
+              <a href="#" class="card-header-icon">
+                <span class="icon"><i class="mdi mdi-reload"></i></span>
+              </a>
+            </header>
+        
+            <div class="card-content">
+              <div class="chart-area mb-4">
+                <div class="h-full">
+                  <div id="single-campaign-report-stats"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="text-end my-4">
+            <button class="button"><i class="mdi mdi-reload"></i>
+                Resend to undelivered recipients</button>
+        </div>
+        <div class="card has-table mb-6">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
+                All Sent Mails
+              </p>
+              <a href="#" class="card-header-icon">
+                <span class="icon"><i class="mdi mdi-reload"></i></span>
+              </a>
+            </header>
+            <div class="card-content">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Log ID</th>
+                    <th>Contact Name</th>
+                    <th>Contact Email</th>
+                    <th>Message</th>
+                    <th>Sent at</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="table-pagination">
+                <div class="flex items-center justify-between">
+                  <nav class="pagination my-6">
+                    <ul>
+                      <li>
+                        <a href="#" class="active">Previous</a>
+                      </li>
+                      <li>
+                        <a href="#">1</a>
+                      </li>
+                      <li>
+                        <a href="#">2</a>
+                      </li>
+                      <li>
+                        <a href="#">3</a>
+                      </li>
+                      <li>
+                        <a href="#" >4</a>
+                      </li>
+                      <li>
+                        <a href="#">5</a>
+                      </li>
+                      <li>
+                        <a href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <small>Page 1 of 10</small>
+                </div>
+              </div>
+            </div>
         </div>
     </div>
 </section>

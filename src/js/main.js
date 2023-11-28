@@ -86,7 +86,7 @@ document.getElementById("see-more-report")?.addEventListener("click", function (
 
 
 /* New Group Step Functionality*/
-let stepsELs = document.querySelectorAll("#new-group-form .step") || document.querySelectorAll("#new-group-form .step");
+let stepsELs = document.querySelectorAll("form .step");
 let progressEls = document.querySelectorAll("ol.progress li");
 
 progressEls = Array.from(progressEls);

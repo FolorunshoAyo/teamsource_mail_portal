@@ -119,13 +119,15 @@
   }
 }
 
-#new-group-form .step.active{
+#new-group-form .step.active,
+#new-campaign-form .step.active{
   animation: fadeIn 0.5s ease-in-out;
   order: 0;
   display: block;
 }
 
-#new-group-form .step{
+#new-group-form .step,
+#new-campaign-form .step{
   flex: 0 0 100%;
   order: 1;
   display: none;

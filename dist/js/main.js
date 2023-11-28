@@ -78,7 +78,7 @@ Array.from(document.getElementsByClassName('--jb-notification-dismiss')).forEach
 });
 
 /* New Group Step Functionality*/
-var stepsELs = document.querySelectorAll("#new-group-form .step") || document.querySelectorAll("#new-group-form .step");
+var stepsELs = document.querySelectorAll("form .step");
 var progressEls = document.querySelectorAll("ol.progress li");
 progressEls = Array.from(progressEls);
 stepsELs = Array.from(stepsELs);
