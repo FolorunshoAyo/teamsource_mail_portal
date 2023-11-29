@@ -77,7 +77,7 @@ Array.from(document.getElementsByClassName('--jb-notification-dismiss')).forEach
   }
 });
 
-/* New Group Step Functionality*/
+/* Multi Form Step Functionality*/
 var stepsELs = document.querySelectorAll("form .step");
 var progressEls = document.querySelectorAll("ol.progress li");
 progressEls = Array.from(progressEls);
@@ -99,4 +99,37 @@ function step(step) {
   //Set target step to active
   progressEls[currStep].classList.add("active");
   stepsELs[currStep].classList.add("active");
+}
+if (document.getElementById("campaign-datetime")) {
+  var now = new Date();
+
+  // Set the rounding intervals in minutes (30 for ':30', 60 for ':00')
+  var roundingInterval30min = 30;
+  var roundingInterval1hr = 60;
+
+  // Calculate the difference to the next rounding interval
+  var remainder30min = roundingInterval30min - now.getMinutes() % roundingInterval30min;
+  var remainder1hr = roundingInterval1hr - now.getMinutes() % roundingInterval1hr;
+
+  // Determine the appropriate rounding interval
+  var roundingInterval = remainder30min < remainder1hr ? roundingInterval30min : roundingInterval1hr;
+
+  // Add the remainder to the current time
+  now.setMinutes(now.getMinutes() + remainder30min);
+  if (now.getMinutes() === 0) {
+    now.setHours(now.getHours() + 1);
+    now.setMinutes(0);
+  }
+  var minDate = now.toISOString().split('T')[0];
+  var minTime = now.toISOString().slice(11, 16);
+  console.log("MinDate: ", minDate);
+  console.log("MinTime: ", minTime);
+
+  /* Date and Time Picker Functionality */
+  flatpickr("#campaign-datetime", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: minDate,
+    minTime: minTime
+  });
 }

@@ -85,7 +85,7 @@ document.getElementById("see-more-report")?.addEventListener("click", function (
 })
 
 
-/* New Group Step Functionality*/
+/* Multi Form Step Functionality*/
 let stepsELs = document.querySelectorAll("form .step");
 let progressEls = document.querySelectorAll("ol.progress li");
 
@@ -110,4 +110,41 @@ function step(step){
   //Set target step to active
   progressEls[currStep].classList.add("active");
   stepsELs[currStep].classList.add("active");
+}
+
+if(document.getElementById("campaign-datetime")){
+  const now = new Date();
+
+  // Set the rounding intervals in minutes (30 for ':30', 60 for ':00')
+  const roundingInterval30min = 30;
+  const roundingInterval1hr = 60;
+
+  // Calculate the difference to the next rounding interval
+  const remainder30min = roundingInterval30min - (now.getMinutes() % roundingInterval30min);
+  const remainder1hr = roundingInterval1hr - (now.getMinutes() % roundingInterval1hr);
+
+  // Determine the appropriate rounding interval
+  const roundingInterval = (remainder30min < remainder1hr) ? roundingInterval30min : roundingInterval1hr;
+
+  // Add the remainder to the current time
+  now.setMinutes(now.getMinutes() + remainder30min);
+
+  if (now.getMinutes() === 0) {
+    now.setHours(now.getHours() + 1);
+    now.setMinutes(0);
+  }
+
+  const minDate = now.toISOString().split('T')[0];
+  const minTime = now.toISOString().slice(11, 16);
+
+  console.log("MinDate: ", minDate);
+  console.log("MinTime: ", minTime);
+
+  /* Date and Time Picker Functionality */
+  flatpickr("#campaign-datetime", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate,
+    minTime
+  });
 }

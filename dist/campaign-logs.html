@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profile | TeamSend</title>
+  <title></title>
 
   <!-- Flatpickr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -107,7 +107,7 @@
           <span class="navbar-item gap-1">
             <span class="text-green-500">Amount:</span>NGN 15,000
           </span>
-          <a href="profile.html" class="navbar-item active">
+          <a href="profile.html" class="navbar-item">
             <span class="icon"><i class="mdi mdi-account"></i></span>
             <span>Profile</span>
           </a>
@@ -249,11 +249,11 @@
     </ul>
     <p class="menu-label">Campaigns</p>
     <ul class="menu-list">
-      <li class="--set-active-all-campaigns-html">
+      <li class="--set-active-all-campaigns-html active">
         <a class="dropdown">
           <span class="icon"><i class="mdi mdi-xml"></i></span>
           <span class="menu-item-label">Campaigns</span>
-          <span class="icon"><i class="mdi mdi-plus"></i></span>
+          <span class="icon"><i class="mdi mdi-minus"></i></span>
         </a>
         <ul>
           <li class="--set-active-all-campaigns-html">
@@ -286,7 +286,7 @@
               <span>Mail Logs</span>
             </a>
           </li>
-          <li class="--set-active-campaign-logs-html">
+          <li class="active">
             <a href="campaign-logs.html">
               <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>Campaign Logs</span>
@@ -309,7 +309,7 @@
           <span class="menu-item-label">Forms</span>
         </a>
       </li>
-      <li class="active">
+      <li class="--set-active-profile-html">
         <a href="profile.html">
           <span class="icon"><i class="mdi mdi-account-circle"></i></span>
           <span class="menu-item-label">Profile</span>
@@ -368,7 +368,7 @@
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
       <li>Admin</li>
-      <li>Profile | TeamSend</li>
+      <li></li>
     </ul>
   </div>
 </section>
@@ -376,141 +376,151 @@
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <h1 class="title">
-      Profile | TeamSend
+      Campaign Logs
     </h1>
   </div>
 </section>
 
-  <section class="section main-section">
-    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 mb-6">
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">
-            <span class="icon"><i class="mdi mdi-account-circle"></i></span>
-            Edit Profile
-          </p>
-        </header>
-        <div class="card-content">
-          <form>
+<section class="section main-section">
+    <div class="bg-white rounded-sm p-4 shadow-sm">
+        <form class="mb-4 flex flex-col gap-2 sm:flex-row sm:gap-0 sm:justify-between sm:items-center">
             <div class="field">
-              <label class="label">Avatar</label>
-              <div class="field-body">
-                <div class="field file">
-                  <label class="upload control">
-                    <a class="button blue">
-                      Upload
-                    </a>
-                    <input type="file">
-                  </label>
-                </div>
-              </div>
-            </div>
-            <hr>
-            <div class="field">
-              <label class="label">Name</label>
-              <div class="field-body">
-                <div class="field">
-                  <div class="control">
-                    <input type="text" autocomplete="on" name="name" value="John Doe" class="input" required>
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>Campaign One</option>
+                      <option>Campaign Two</option>
+                      <option>Campaign Three</option>
+                    </select>
                   </div>
-                  <p class="help">Required. Your name</p>
                 </div>
-              </div>
             </div>
             <div class="field">
-              <label class="label">E-mail</label>
-              <div class="field-body">
-                <div class="field">
-                  <div class="control">
-                    <input type="email" autocomplete="on" name="email" value="user@example.com" class="input" required>
-                  </div>
-                  <p class="help">Required. Your e-mail</p>
-                </div>
+              <div class="control icons-left">
+                <input class="input" type="text" placeholder="Search campaign logs ....">
+                <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
               </div>
             </div>
-            <hr>
-            <div class="field">
-              <div class="control">
-                <button type="submit" class="button green">
-                  Submit
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">
-            <span class="icon"><i class="mdi mdi-account"></i></span>
-            Profile
-          </p>
-        </header>
-        <div class="card-content">
-          <div class="image w-48 h-48 mx-auto">
-            <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
-          </div>
-          <hr>
-          <div class="field">
-            <label class="label">Name</label>
-            <div class="control">
-              <input type="text" readonly value="John Doe" class="input is-static">
-            </div>
-          </div>
-          <hr>
-          <div class="field">
-            <label class="label">E-mail</label>
-            <div class="control">
-              <input type="text" readonly value="user@example.com" class="input is-static">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-lock"></i></span>
-          Change Password
-        </p>
-      </header>
-      <div class="card-content">
-        <form>
-          <div class="field">
-            <label class="label">Current password</label>
-            <div class="control">
-              <input type="password" name="password_current" autocomplete="current-password" class="input" required>
-            </div>
-            <p class="help">Required. Your current password</p>
-          </div>
-          <hr>
-          <div class="field">
-            <label class="label">New password</label>
-            <div class="control">
-              <input type="password" autocomplete="new-password" name="password" class="input" required>
-            </div>
-            <p class="help">Required. New password</p>
-          </div>
-          <div class="field">
-            <label class="label">Confirm password</label>
-            <div class="control">
-              <input type="password" autocomplete="new-password" name="password_confirmation" class="input" required>
-            </div>
-            <p class="help">Required. New password one more time</p>
-          </div>
-          <hr>
-          <div class="field">
-            <div class="control">
-              <button type="submit" class="button green">
-                Submit
-              </button>
-            </div>
-          </div>
         </form>
-      </div>
+        <div class="card has-table mb-6">
+            <header class="card-header">
+              <p class="card-header-title">
+                <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
+                Campaign Logs
+              </p>
+              <a href="#" class="card-header-icon">
+                <span class="icon"><i class="mdi mdi-reload"></i></span>
+              </a>
+            </header>
+            <div class="card-content">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Log ID</th>
+                    <th>Campaign Name</th>
+                    <th>Contact Name</th>
+                    <th>Contact Email</th>
+                    <th>Message</th>
+                    <th>Sent at</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Campaign Name">Campaign One</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Campaign Name">Campaign One</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Campaign Name">Campaign One</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Campaign Name">Campaign One</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                  <tr>
+                    <td data-label="Log ID">20</td>
+                    <td data-label="Campaign Name">Campaign One</td>
+                    <td data-label="Contact Name">Adebisi Emmanuel</td>
+                    <td data-label="Contact Name">adebisiemmanuel@gmail.com</td>
+                    <td data-label="Message">
+                        <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                            View Sent Mail <i class="ml-2 mdi mdi-open-in-new"></i>
+                        </a>
+                    </td>
+                    <td data-label="Created">3 days ago</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="table-pagination">
+                <div class="flex items-center justify-between">
+                  <nav class="pagination my-6">
+                    <ul>
+                      <li>
+                        <a href="#" class="active">Previous</a>
+                      </li>
+                      <li>
+                        <a href="#">1</a>
+                      </li>
+                      <li>
+                        <a href="#">2</a>
+                      </li>
+                      <li>
+                        <a href="#">3</a>
+                      </li>
+                      <li>
+                        <a href="#" >4</a>
+                      </li>
+                      <li>
+                        <a href="#">5</a>
+                      </li>
+                      <li>
+                        <a href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <small>Page 1 of 10</small>
+                </div>
+              </div>
+            </div>
+        </div>
     </div>
-  </section>
-
+</section>
 <footer class="footer">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
     <div class="flex items-center justify-start space-x-3">

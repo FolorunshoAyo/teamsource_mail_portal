@@ -53,15 +53,15 @@
     @apply relative;
   }
 
-  .input, .textarea, .select select, .file-cta, .file-name {
+  .input, .fl-input, .textarea, .select select, .file-cta, .file-name {
     @apply px-3 py-2 border border-green-400 rounded;
   }
 
-  .input, .select select, .file-cta, .file-name {
+  .input, .fl-input, .select select, .file-cta, .file-name {
     @apply h-10;
   }
 
-  .input, .textarea, .select select {
+  .input, .fl-input, .textarea, .select select {
     @apply w-full max-w-full focus:ring focus:ring-green-500 focus:outline-none bg-white;
   }
 
@@ -77,7 +77,9 @@
     @apply absolute top-0 z-10 w-10 h-10;
   }
 
-  .control.icons-left .input, .control.icons-left .select select {
+  .control.icons-left .input,
+  .control.icons-left .fl-input,
+  .control.icons-left .select select {
     @apply pl-10;
   }
 
@@ -131,4 +133,9 @@
   flex: 0 0 100%;
   order: 1;
   display: none;
+}
+
+/* flickr */
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay{
+  @apply bg-green-500 border-green-500
 }

@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>All Campaigns | TeamSend</title>
 
+  <!-- Flatpickr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <!-- Tailwind is included -->
-  <link rel="stylesheet" href="css/main.css?v=1701163948312">
+  <link rel="stylesheet" href="css/main.css?v=1701268196742">
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="https://teamsource.net/wp-content/uploads/2023/05/TeamSource-Favicon.png"/>
@@ -266,10 +268,10 @@
               <span>Add New</span>
             </a>
           </li>
-          <li class="--set-active-email-schedule-html">
-            <a href="email-schedule.html">
+          <li class="--set-active-all-schedules-html">
+            <a href="all-schedules.html">
               <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
-              <span>Schedule</span>
+              <span>Schedules</span>
             </a>
           </li>
           <li class="--set-active-email-tracker-html">
@@ -278,10 +280,16 @@
               <span>Tracker</span>
             </a>
           </li>
-          <li class="--set-active-email-logs-html">
-            <a href="email-logs.html">
+          <li class="--set-active-mail-logs-html">
+            <a href="mail-logs.html">
               <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
-              <span>Logs</span>
+              <span>Mail Logs</span>
+            </a>
+          </li>
+          <li class="--set-active-campaign-logs-html">
+            <a href="campaign-logs.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Campaign Logs</span>
             </a>
           </li>
         </ul>
@@ -356,12 +364,11 @@
     </ul> -->
   </div>
 </aside>
-
 <section class="is-title-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
       <li>Admin</li>
-      <li></li>
+      <li>All Campaigns | TeamSend</li>
     </ul>
   </div>
 </section>
@@ -369,7 +376,7 @@
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <h1 class="title">
-      
+      All Campaigns
     </h1>
   </div>
 </section>
@@ -431,145 +438,12 @@
                         <p>Some Desc</p>
                     </td>
                     <td data-label="Total Emails">20</td>
-                    <td data-label="Template">Template Name</td>
-                    <td data-label="Status">
-                        <div class="flex items-center text-red-600">
-                            <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
-                        </div>
+                    <td data-label="Sent To">20</td>
+                    <td data-label="Template">
+                      <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        View Template <i class="ml-2 mdi mdi-open-in-new"></i>
+                      </a>
                     </td>
-                    <td data-label="Created">3 days ago</td>
-                    <td class="actions-cell">
-                      <div class="buttons right nowrap">
-                        <a
-                          class="button green"
-                          href="javascript:void(0)"
-                        >
-                          <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
-                        </a>
-                        <a
-                        class="button yellow"
-                        href="javscript:void(0)"
-                        >
-                            <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
-                        </a>
-                        <a
-                          class="button red"
-                          href="javscript:void(0)"
-                        >
-                          <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="image-cell">
-                      <div class="image">
-                        <img
-                          src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                          class="rounded-full"
-                        />
-                      </div>
-                    </td>
-                    <td data-label="Capmaign Name">
-                        <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
-                            Campaign Name
-                        </a>
-                        <p>Some Desc</p>
-                    </td>
-                    <td data-label="Total Emails">20</td>
-                    <td data-label="Template">Template Name</td>
-                    <td data-label="Status">
-                        <div class="flex items-center text-red-600">
-                            <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
-                        </div>
-                    </td>
-                    <td data-label="Created">3 days ago</td>
-                    <td class="actions-cell">
-                      <div class="buttons right nowrap">
-                        <a
-                          class="button green"
-                          href="javascript:void(0)"
-                        >
-                          <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
-                        </a>
-                        <a
-                        class="button yellow"
-                        href="javscript:void(0)"
-                        >
-                            <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
-                        </a>
-                        <a
-                          class="button red"
-                          href="javscript:void(0)"
-                        >
-                          <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="image-cell">
-                      <div class="image">
-                        <img
-                          src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                          class="rounded-full"
-                        />
-                      </div>
-                    </td>
-                    <td data-label="Capmaign Name">
-                        <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
-                            Campaign Name
-                        </a>
-                        <p>Some Desc</p>
-                    </td>
-                    <td data-label="Total Emails">20</td>
-                    <td data-label="Template">Template Name</td>
-                    <td data-label="Status">
-                        <div class="flex items-center text-red-600">
-                            <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
-                        </div>
-                    </td>
-                    <td data-label="Created">3 days ago</td>
-                    <td class="actions-cell">
-                      <div class="buttons right nowrap">
-                        <a
-                          class="button green"
-                          href="javascript:void(0)"
-                        >
-                          <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
-                        </a>
-                        <a
-                        class="button yellow"
-                        href="javscript:void(0)"
-                        >
-                            <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
-                        </a>
-                        <a
-                          class="button red"
-                          href="javscript:void(0)"
-                        >
-                          <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
-                        </a>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="image-cell">
-                      <div class="image">
-                        <img
-                          src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                          class="rounded-full"
-                        />
-                      </div>
-                    </td>
-                    <td data-label="Capmaign Name">
-                        <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
-                            Campaign Name
-                        </a>
-                        <p>Some Desc</p>
-                    </td>
-                    <td data-label="Total Emails">20</td>
-                    <td data-label="Template">Template Name</td>
                     <td data-label="Status">
                         <div class="flex items-center text-red-600">
                             <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
@@ -691,19 +565,35 @@
     <section class="modal-card-body">
       <form id="new-contact-form">
         <div class="field spaced">
-          <label class="label">Name <span class="text-red-600">*</span></label>
+          <label class="label">First Name <span class="text-red-600">*</span></label>
           <div class="control icons-left">
             <input
               class="input"
               type="text"
-              name="full_name"
-              placeholder="Ex. John Doe"
+              name="fname"
+              placeholder="Ex. John"
             />
             <span class="icon is-small left"
               ><i class="mdi mdi-account"></i
             ></span>
           </div>
-          <p class="help">Please enter contact's full name</p>
+          <p class="help">Please enter contact's first name</p>
+        </div>
+
+        <div class="field spaced">
+          <label class="label">Last Name <span class="text-red-600">*</span></label>
+          <div class="control icons-left">
+            <input
+              class="input"
+              type="text"
+              name="lname"
+              placeholder="Ex. Doe"
+            />
+            <span class="icon is-small left"
+              ><i class="mdi mdi-account"></i
+            ></span>
+          </div>
+          <p class="help">Please enter contact's last name</p>
         </div>
 
         <div class="field spaced">
@@ -993,20 +883,37 @@
     <section class="modal-card-body">
       <form id="new-contact-form">
         <div class="field spaced">
-          <label class="label">Name <span class="text-red-600">*</span></label>
+          <label class="label">First Name <span class="text-red-600">*</span></label>
           <div class="control icons-left">
             <input
               class="input"
               type="text"
-              name="full_name"
-              value="Adebisi Emmanuel"
+              name="fname"
+              value="Emmanuel"
               placeholder="Ex. John Doe"
             />
             <span class="icon is-small left"
               ><i class="mdi mdi-account"></i
             ></span>
           </div>
-          <p class="help">Please enter contact's full name</p>
+          <p class="help">Please enter contact's first name</p>
+        </div>
+
+        <div class="field spaced">
+          <label class="label">Last Name <span class="text-red-600">*</span></label>
+          <div class="control icons-left">
+            <input
+              class="input"
+              type="text"
+              name="lname"
+              value="Adebisi"
+              placeholder="Ex. John Doe"
+            />
+            <span class="icon is-small left"
+              ><i class="mdi mdi-account"></i
+            ></span>
+          </div>
+          <p class="help">Please enter contact's last name</p>
         </div>
 
         <div class="field spaced">
@@ -1275,7 +1182,7 @@
             </div>
           </div>
           <div class="control">
-            <input class="input" type="text" placeholder="xxx-xxx">
+            <input class="input" value="8146176262" type="text" placeholder="xxx-xxx">
           </div>
           <p class="help">Please enter contact's phone</p>
         </div>
@@ -1444,10 +1351,59 @@
   </div>
 </div>
 
+<div id="new-campaign-schedule-modal" class="modal">
+  <div class="modal-background --jb-modal-close"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Add New Campaign Schedule</p>
+    </header>
+    <section class="modal-card-body">
+      <form id="new-contact-form">
+        <div class="field">
+          <label class="label">Select Campaign</label>
+          <div class="control">
+            <div class="select">
+              <select>
+                <option>Campaign one</option>
+                <option>Campaign two</option>
+                <option>Campaign three</option>
+              </select>
+            </div>
+          </div>
+          <p class="help">
+            <b>NB: Only Campaigns in Draft can be selected </b> 
+          </p>
+        </div>
+
+        <div class="field spaced">
+          <label class="label">Set Date/Time</label>
+          <div class="control icons-left">
+            <input
+              class="fl-input"
+              type="text"
+              name="campaign-datetime"
+              id="campaign-datetime"
+              placeholder="___---___"
+            />
+            <span class="icon is-small left"
+              ><i class="mdi mdi-account"></i
+            ></span>
+          </div>
+        </div>
+  
+      </form>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button">Save</button>
+      <button class="button red --jb-modal-close">Cancel</button>
+    </footer>
+  </div>
+</div>
 </div>
 
 <!-- Scripts below are for demo only -->
-<script type="text/javascript" src="js/main.min.js?v=1701163948312"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script type="text/javascript" src="js/main.min.js?v=1701268196742"></script>
 
 
 <!-- <script>
@@ -1462,10 +1418,9 @@
   fbq('init', '658339141622648');
   fbq('track', 'PageView');
 </script> -->
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=658339141622648&ev=PageView&noscript=1"/></noscript>
+<!-- <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=658339141622648&ev=PageView&noscript=1"/></noscript> -->
 
 <!-- Icons below are for demo only. Feel free to use any icon pack. Docs: https://bulma.io/documentation/elements/icon/ -->
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.9.95/css/materialdesignicons.min.css">
-
 </body>
 </html>
