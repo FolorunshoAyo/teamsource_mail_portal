@@ -46,8 +46,7 @@ td.checkbox-cell, th.checkbox-cell {
 }
 
 td.progress-cell progress {
-  @apply flex w-2/5 self-center
-    lg:w-full;
+  @apply flex w-full self-center;
 }
 
 td.image-cell {
@@ -67,6 +66,6 @@ td.image-cell .image {
 }
 
 /* Campaign details table styling */
-.campaign-details-table td{
+.details-table td{
   @apply justify-start
 }

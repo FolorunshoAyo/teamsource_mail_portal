@@ -67,12 +67,15 @@ const concatHtml = file => {
 
   const adminPageFiles = [
     'admin-index',
+    'admin-organisations',
+    'admin-organisation',
+    'admin-contacts',
     'admin-agents',
     'admin-groups',
     'admin-emails',
     'admin-users',
     'admin-plans',
-    'admin-campaigns'
+    'admin-campaigns',
   ];
 
   if (formScreenFiles.indexOf(file) > -1) {
@@ -107,7 +110,7 @@ const concatHtml = file => {
     'src/html/parts/bottom-scripts.html'
   )
 
-  if (file === 'index' || file === "admin-index" || file === 'campaign') {
+  if (file === 'index' || file === "admin-index" || file === 'campaign' || file === 'admin-organisation') {
     sources.push('src/html/parts/bottom-scripts-admin.html')
   }
 
@@ -138,8 +141,10 @@ const concatHtml = file => {
     'all-schedules': 'All Schedules | Teamsend',
     'email-tracker': 'Email Tracker | Teamsend',
     'mail-logs': 'Mail Logs | Teamsend',
-    'admin-index': 'Admin Dashboard | Teamsend',
-
+    'admin-index': 'Admin Dashboard | Teamsend Admin',
+    'admin-organisations': 'Organisations | Teamsend Admin',
+    'admin-organisation': 'Organisation Details | Teamsend Admin',
+    'admin-contacts': 'Contacts | Teamsend Admin'
   }
 
   const titleStringsLong = {
@@ -162,6 +167,9 @@ const concatHtml = file => {
     'mail-logs': 'Mail Logs',
     'campaign-logs': 'Campaign Logs',
     'admin-index': 'Admin Dashboard',
+    'admin-organisations': 'Organisations',
+    'admin-organisation': 'Organisation Details',
+    'admin-contacts': 'Contacts'
   }
 
   const subMenuLinks = {
@@ -239,6 +247,9 @@ exports.default = series(
     () => concatHtml('mail-logs'),
     () => concatHtml('campaign-logs'),
     () => concatHtml('admin-index'),
+    () => concatHtml('admin-organisations'),
+    () => concatHtml('admin-organisation'),
+    () => concatHtml('admin-contacts'),
     processJsMain,
     processJsMainMin,
     processJsChartSample,

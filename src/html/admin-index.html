@@ -215,100 +215,8 @@
         </div>
       </div>
     </div>
-  
-    <!-- Limit Report -->
-    <div class="mb-6 flex flex-col sm:flex-row gap-4">
-      <div class="card w-full sm:w-1/2">
-        <header class="card-header">
-          <p class="card-header-title">
-            <span class="icon"><i class="mdi mdi-chart-timeline"></i></span>
-            Limit Report
-          </p>
-          <a href="#" class="card-header-icon">
-            <span class="icon"><i class="mdi mdi-reload"></i></span>
-          </a>
-        </header>
-  
-        <div class="card-content">
-          <div class="chart-area mb-4">
-            <div class="box p-5">
-              <div class="flex flex-col md:flex-row md:items-center gap-4">
-                <div>
-                  Total Emails: 100
-                  <br />
-                  Sent Emails: 80
-                  <br />
-                  Available Emails: 20
-                </div>
-  
-                <div>
-                  <div style="position: relative">
-                    <div id="chart-emails-dashboard"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="text-base text-gray-600 mt-1">Campaign Email Usage</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card w-full sm:w-1/2">
-        <header class="card-header">
-          <p class="card-header-title">
-            <span class="icon"><i class="mdi mdi-credit-card-outline"></i></span>
-            Payment History
-          </p>
-          <a href="#" class="card-header-icon">
-            <span class="icon"><i class="mdi mdi-reload"></i></span>
-          </a>
-        </header>
-        <div class="card-content">
-          <div class="mt-5">
-            <div class="shadow-sm rounded-sm px-4 py-4 mb-3 flex items-center">
-              <div
-                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
-              >
-                <span class="text-4xl text-green-500">2</span>
-              </div>
-              <div class="ml-4 mr-auto">
-                <div class="font-medium tooltip">#20237908</div>
-                <div class="font-medium tooltip">MONTHLY</div>
-                <div class="text-gray-600 text-xs tooltip">
-                  2023-11-10 21:10:08
-                </div>
-              </div>
-              <div
-                class="py-1 px-2 rounded-full text-xs cursor-pointer font-medium tooltip text-red-600"
-              >
-                NOT PAID
-              </div>
-            </div>
-            <div class="shadow-sm rounded-sm px-4 py-4 mb-3 flex items-center">
-              <div
-                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
-              >
-                <span class="text-4xl text-green-500">1</span>
-              </div>
-              <div class="ml-4 mr-auto">
-                <div class="font-medium tooltip">#20237818</div>
-                <div class="font-medium tooltip">FREE</div>
-                <div class="text-gray-600 text-xs tooltip">
-                  2023-11-07 10:36:13
-                </div>
-              </div>
-              <div
-                class="py-1 px-2 rounded-full text-xs cursor-pointer font-medium tooltip text-green-800"
-              >
-                PAID
-              </div>
-            </div>
-            <a href="#" class="button w-full">View More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="notification blue">
+
+    <div class="notification blue hidden">
       <div
         class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0"
       >
@@ -325,436 +233,7 @@
       </div>
     </div>
   
-    <div class="card has-table hidden">
-      <header class="card-header">
-        <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
-          Weekly Top Senders
-        </p>
-        <a href="#" class="card-header-icon">
-          <span class="icon"><i class="mdi mdi-reload"></i></span>
-        </a>
-      </header>
-      <div class="card-content">
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Company</th>
-              <th>City</th>
-              <th>Progress</th>
-              <th>Created</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="Name">Rebecca Bauch</td>
-              <td data-label="Company">Daugherty-Daniel</td>
-              <td data-label="City">South Cory</td>
-              <td data-label="Progress" class="progress-cell">
-                <progress max="100" value="79">79</progress>
-              </td>
-              <td data-label="Created">
-                <small class="text-gray-500" title="Oct 25, 2021"
-                  >Oct 25, 2021</small
-                >
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <button
-                    class="button small green --jb-modal"
-                    data-target="sample-modal-2"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </button>
-                  <button
-                    class="button small red --jb-modal"
-                    data-target="sample-modal"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/felicita-yundt.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="Name">Felicita Yundt</td>
-              <td data-label="Company">Johns-Weissnat</td>
-              <td data-label="City">East Ariel</td>
-              <td data-label="Progress" class="progress-cell">
-                <progress max="100" value="67">67</progress>
-              </td>
-              <td data-label="Created">
-                <small class="text-gray-500" title="Jan 8, 2021"
-                  >Jan 8, 2021</small
-                >
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <button
-                    class="button small green --jb-modal"
-                    data-target="sample-modal-2"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </button>
-                  <button
-                    class="button small red --jb-modal"
-                    data-target="sample-modal"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/mr-larry-satterfield-v.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="Name">Mr. Larry Satterfield V</td>
-              <td data-label="Company">Hyatt Ltd</td>
-              <td data-label="City">Windlerburgh</td>
-              <td data-label="Progress" class="progress-cell">
-                <progress max="100" value="16">16</progress>
-              </td>
-              <td data-label="Created">
-                <small class="text-gray-500" title="Dec 18, 2021"
-                  >Dec 18, 2021</small
-                >
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <button
-                    class="button small green --jb-modal"
-                    data-target="sample-modal-2"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </button>
-                  <button
-                    class="button small red --jb-modal"
-                    data-target="sample-modal"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/mr-broderick-kub.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="Name">Mr. Broderick Kub</td>
-              <td data-label="Company">Kshlerin, Bauch and Ernser</td>
-              <td data-label="City">New Kirstenport</td>
-              <td data-label="Progress" class="progress-cell">
-                <progress max="100" value="71">71</progress>
-              </td>
-              <td data-label="Created">
-                <small class="text-gray-500" title="Sep 13, 2021"
-                  >Sep 13, 2021</small
-                >
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <button
-                    class="button small green --jb-modal"
-                    data-target="sample-modal-2"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </button>
-                  <button
-                    class="button small red --jb-modal"
-                    data-target="sample-modal"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/barry-weber.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="Name">Barry Weber</td>
-              <td data-label="Company">Schulist, Mosciski and Heidenreich</td>
-              <td data-label="City">East Violettestad</td>
-              <td data-label="Progress" class="progress-cell">
-                <progress max="100" value="80">80</progress>
-              </td>
-              <td data-label="Created">
-                <small class="text-gray-500" title="Jul 24, 2021"
-                  >Jul 24, 2021</small
-                >
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <button
-                    class="button small green --jb-modal"
-                    data-target="sample-modal-2"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </button>
-                  <button
-                    class="button small red --jb-modal"
-                    data-target="sample-modal"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/bert-kautzer-md.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="Name">Bert Kautzer MD</td>
-              <td data-label="Company">Gerhold and Sons</td>
-              <td data-label="City">Mayeport</td>
-              <td data-label="Progress" class="progress-cell">
-                <progress max="100" value="62">62</progress>
-              </td>
-              <td data-label="Created">
-                <small class="text-gray-500" title="Mar 30, 2021"
-                  >Mar 30, 2021</small
-                >
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <button
-                    class="button small green --jb-modal"
-                    data-target="sample-modal-2"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </button>
-                  <button
-                    class="button small red --jb-modal"
-                    data-target="sample-modal"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/lonzo-steuber.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="Name">Lonzo Steuber</td>
-              <td data-label="Company">Skiles Ltd</td>
-              <td data-label="City">Marilouville</td>
-              <td data-label="Progress" class="progress-cell">
-                <progress max="100" value="17">17</progress>
-              </td>
-              <td data-label="Created">
-                <small class="text-gray-500" title="Feb 12, 2021"
-                  >Feb 12, 2021</small
-                >
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <button
-                    class="button small green --jb-modal"
-                    data-target="sample-modal-2"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </button>
-                  <button
-                    class="button small red --jb-modal"
-                    data-target="sample-modal"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/jonathon-hahn.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="Name">Jonathon Hahn</td>
-              <td data-label="Company">Flatley Ltd</td>
-              <td data-label="City">Billiemouth</td>
-              <td data-label="Progress" class="progress-cell">
-                <progress max="100" value="74">74</progress>
-              </td>
-              <td data-label="Created">
-                <small class="text-gray-500" title="Dec 30, 2021"
-                  >Dec 30, 2021</small
-                >
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <button
-                    class="button small green --jb-modal"
-                    data-target="sample-modal-2"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </button>
-                  <button
-                    class="button small red --jb-modal"
-                    data-target="sample-modal"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/ryley-wuckert.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="Name">Ryley Wuckert</td>
-              <td data-label="Company">Heller-Little</td>
-              <td data-label="City">Emeraldtown</td>
-              <td data-label="Progress" class="progress-cell">
-                <progress max="100" value="54">54</progress>
-              </td>
-              <td data-label="Created">
-                <small class="text-gray-500" title="Jun 28, 2021"
-                  >Jun 28, 2021</small
-                >
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <button
-                    class="button small green --jb-modal"
-                    data-target="sample-modal-2"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </button>
-                  <button
-                    class="button small red --jb-modal"
-                    data-target="sample-modal"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/sienna-hayes.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="Name">Sienna Hayes</td>
-              <td data-label="Company">Conn, Jerde and Douglas</td>
-              <td data-label="City">Jonathanfort</td>
-              <td data-label="Progress" class="progress-cell">
-                <progress max="100" value="55">55</progress>
-              </td>
-              <td data-label="Created">
-                <small class="text-gray-500" title="Mar 7, 2021"
-                  >Mar 7, 2021</small
-                >
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <button
-                    class="button small green --jb-modal"
-                    data-target="sample-modal-2"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </button>
-                  <button
-                    class="button small red --jb-modal"
-                    data-target="sample-modal"
-                    type="button"
-                  >
-                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="table-pagination">
-          <div class="flex items-center justify-between">
-            <div class="buttons">
-              <button type="button" class="button active">1</button>
-              <button type="button" class="button">2</button>
-              <button type="button" class="button">3</button>
-            </div>
-            <small>Page 1 of 3</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="card has-table mb-6">
+    <div class="card has-table">
       <header class="card-header">
         <p class="card-header-title">
           <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
@@ -771,9 +250,11 @@
               <th></th>
               <th>Name</th>
               <th>Organisation</th>
+              <th>City</th>
               <th>Total Campaigns Created</th>
-              <th>Total Mails Sent</th>
-              <th>Action</th>
+              <th>Emails Sent (This Month)</th>
+              <th>Created</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -786,10 +267,18 @@
                   />
                 </div>
               </td>
-              <td data-label="Name">Adebisi Emmanuel</td>
-              <td data-label="Organisation">Organisation</td>
-              <td data-label="Campaigns Created">5</td>
-              <td data-label="Mails Sent">800</td>
+              <td data-label="Name">Rebecca Bauch</td>
+              <td data-label="Organisation">Daugherty-Daniel</td>
+              <td data-label="City">South Cory</td>
+              <td data-label="Total Campaigns Created">20</td>
+              <td data-label="Emails Sent (This Month)" class="progress-cell">
+                <progress max="100" value="79">80</progress>
+              </td>
+              <td data-label="Created">
+                <small class="text-gray-500" title="Oct 25, 2021"
+                  >Oct 25, 2021</small
+                >
+              </td>
               <td class="actions-cell">
                 <div class="buttons right nowrap">
                   <button
@@ -799,16 +288,217 @@
                   >
                     <span class="icon"><i class="mdi mdi-eye"></i></span>
                   </button>
-                  <button
+                  <!-- <button
                     class="button small red --jb-modal"
                     data-target="sample-modal"
                     type="button"
                   >
                     <span class="icon"><i class="mdi mdi-trash-can"></i></span>
-                  </button>
+                  </button> -->
                 </div>
               </td>
             </tr>
+            <tr>
+              <td class="image-cell">
+                <div class="image">
+                  <img
+                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                    class="rounded-full"
+                  />
+                </div>
+              </td>
+              <td data-label="Name">Rebecca Bauch</td>
+              <td data-label="Organisation">Daugherty-Daniel</td>
+              <td data-label="City">South Cory</td>
+              <td data-label="Total Campaigns Created">20</td>
+              <td data-label="Emails Sent (This Month)" class="progress-cell">
+                <progress max="100" value="79">80</progress>
+              </td>
+              <td data-label="Created">
+                <small class="text-gray-500" title="Oct 25, 2021"
+                  >Oct 25, 2021</small
+                >
+              </td>
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <button
+                    class="button small green --jb-modal"
+                    data-target="sample-modal-2"
+                    type="button"
+                  >
+                    <span class="icon"><i class="mdi mdi-eye"></i></span>
+                  </button>
+                  <!-- <button
+                    class="button small red --jb-modal"
+                    data-target="sample-modal"
+                    type="button"
+                  >
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button> -->
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="image-cell">
+                <div class="image">
+                  <img
+                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                    class="rounded-full"
+                  />
+                </div>
+              </td>
+              <td data-label="Name">Rebecca Bauch</td>
+              <td data-label="Organisation">Daugherty-Daniel</td>
+              <td data-label="City">South Cory</td>
+              <td data-label="Total Campaigns Created">20</td>
+              <td data-label="Emails Sent (This Month)" class="progress-cell">
+                <progress max="100" value="79">80</progress>
+              </td>
+              <td data-label="Created">
+                <small class="text-gray-500" title="Oct 25, 2021"
+                  >Oct 25, 2021</small
+                >
+              </td>
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <button
+                    class="button small green --jb-modal"
+                    data-target="sample-modal-2"
+                    type="button"
+                  >
+                    <span class="icon"><i class="mdi mdi-eye"></i></span>
+                  </button>
+                  <!-- <button
+                    class="button small red --jb-modal"
+                    data-target="sample-modal"
+                    type="button"
+                  >
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button> -->
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="image-cell">
+                <div class="image">
+                  <img
+                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                    class="rounded-full"
+                  />
+                </div>
+              </td>
+              <td data-label="Name">Rebecca Bauch</td>
+              <td data-label="Organisation">Daugherty-Daniel</td>
+              <td data-label="City">South Cory</td>
+              <td data-label="Total Campaigns Created">20</td>
+              <td data-label="Emails Sent (This Month)" class="progress-cell">
+                <progress max="100" value="79">80</progress>
+              </td>
+              <td data-label="Created">
+                <small class="text-gray-500" title="Oct 25, 2021"
+                  >Oct 25, 2021</small
+                >
+              </td>
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <button
+                    class="button small green --jb-modal"
+                    data-target="sample-modal-2"
+                    type="button"
+                  >
+                    <span class="icon"><i class="mdi mdi-eye"></i></span>
+                  </button>
+                  <!-- <button
+                    class="button small red --jb-modal"
+                    data-target="sample-modal"
+                    type="button"
+                  >
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button> -->
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="image-cell">
+                <div class="image">
+                  <img
+                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                    class="rounded-full"
+                  />
+                </div>
+              </td>
+              <td data-label="Name">Rebecca Bauch</td>
+              <td data-label="Organisation">Daugherty-Daniel</td>
+              <td data-label="City">South Cory</td>
+              <td data-label="Total Campaigns Created">20</td>
+              <td data-label="Emails Sent (This Month)" class="progress-cell">
+                <progress max="100" value="79">80</progress>
+              </td>
+              <td data-label="Created">
+                <small class="text-gray-500" title="Oct 25, 2021"
+                  >Oct 25, 2021</small
+                >
+              </td>
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <button
+                    class="button small green --jb-modal"
+                    data-target="sample-modal-2"
+                    type="button"
+                  >
+                    <span class="icon"><i class="mdi mdi-eye"></i></span>
+                  </button>
+                  <!-- <button
+                    class="button small red --jb-modal"
+                    data-target="sample-modal"
+                    type="button"
+                  >
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button> -->
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="image-cell">
+                <div class="image">
+                  <img
+                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                    class="rounded-full"
+                  />
+                </div>
+              </td>
+              <td data-label="Name">Rebecca Bauch</td>
+              <td data-label="Organisation">Daugherty-Daniel</td>
+              <td data-label="City">South Cory</td>
+              <td data-label="Total Campaigns Created">20</td>
+              <td data-label="Emails Sent (This Month)" class="progress-cell">
+                <progress max="100" value="79">80</progress>
+              </td>
+              <td data-label="Created">
+                <small class="text-gray-500" title="Oct 25, 2021"
+                  >Oct 25, 2021</small
+                >
+              </td>
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <button
+                    class="button small green --jb-modal"
+                    data-target="sample-modal-2"
+                    type="button"
+                  >
+                    <span class="icon"><i class="mdi mdi-eye"></i></span>
+                  </button>
+                  <!-- <button
+                    class="button small red --jb-modal"
+                    data-target="sample-modal"
+                    type="button"
+                  >
+                    <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                  </button> -->
+                </div>
+              </td>
+            </tr>
+            
           </tbody>
         </table>
         <div class="table-pagination">
@@ -843,7 +533,130 @@
         </div>
       </div>
     </div>
-  
+
+    <div class="my-4 flex flex-col md:flex-row gap-4">
+      <div class="w-full md:w-1/2">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              <span class="icon"><i class="mdi mdi-chart-timeline"></i></span>
+              Last Sent Mail
+            </p>
+            <a href="#" class="card-header-icon">
+              <span class="icon"><i class="mdi mdi-reload"></i></span>
+            </a>
+          </header>
+          <div class="card-content">
+            <div class="mb-4 shadow-sm rounded-sm p-4 flex items-center gap-2">
+              <div
+                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              >
+                <span class="text-4xl text-green-500">4</span>
+              </div>
+              <div class="w-full">
+                <p class="font-sm font-semibold">adebisiemmanuel@gmail.com</p>
+                <span class="font-xs">4 November, 2022 </span>
+              </div>
+            </div>
+            <div class="mb-4 shadow-sm rounded-sm p-4 flex items-center gap-2">
+              <div
+                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              >
+                <span class="text-4xl text-green-500">3</span>
+              </div>
+              <div class="w-full">
+                <p class="font-sm font-semibold">adebisiemmanuel@gmail.com</p>
+                <span class="font-xs">4 November, 2022 </span>
+              </div>
+            </div>
+            <div class="mb-4 shadow-sm rounded-sm p-4 flex items-center gap-2">
+              <div
+                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              >
+                <span class="text-4xl text-green-500">2</span>
+              </div>
+              <div class="w-full">
+                <p class="font-sm font-semibold">adebisiemmanuel@gmail.com</p>
+                <span class="font-xs">4 November, 2022 </span>
+              </div>
+            </div>
+            <div class="mb-4 shadow-sm rounded-sm p-4 flex items-center gap-2">
+              <div
+                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              >
+                <span class="text-4xl text-green-500">1</span>
+              </div>
+              <div class="w-full">
+                <p class="font-sm font-semibold">adebisiemmanuel@gmail.com</p>
+                <span class="font-xs">4 November, 2022 </span>
+              </div>
+            </div>
+            <div class="text-right mb-2">
+              <a href="#" class="button w-full">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              <span class="icon"><i class="mdi mdi-chart-timeline"></i></span>
+              Last Campaign
+            </p>
+            <a href="#" class="card-header-icon">
+              <span class="icon"><i class="mdi mdi-reload"></i></span>
+            </a>
+          </header>
+          <div class="card-content">
+            <div class="mb-4 shadow-sm rounded-sm p-4 flex items-center gap-2">
+              <div
+                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              >
+                <span class="text-4xl text-green-500">4</span>
+              </div>
+              <div class="w-full">
+                <p class="font-base font-semibold">Campaign name</p>
+              </div>
+            </div>
+            <div class="mb-4 shadow-sm rounded-sm p-4 flex items-center gap-2">
+              <div
+                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              >
+                <span class="text-4xl text-green-500">3</span>
+              </div>
+              <div class="w-full">
+                <p class="font-base font-semibold">Campaign name</p>
+              </div>
+            </div>
+            <div class="mb-4 shadow-sm rounded-sm p-4 flex items-center gap-2">
+              <div
+                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              >
+                <span class="text-4xl text-green-500">2</span>
+              </div>
+              <div class="w-full">
+                <p class="font-base font-semibold">Campaign name</p>
+              </div>
+            </div>
+            <div class="mb-4 shadow-sm rounded-sm p-4 flex items-center gap-2">
+              <div
+                class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              >
+                <span class="text-4xl text-green-500">1</span>
+              </div>
+              <div class="w-full">
+                <p class="font-base font-semibold">Campaign name</p>
+              </div>
+            </div>
+            <div class="text-right mb-2">
+              <a href="#" class="button w-full">View More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="mb-4">
       <span class="text-lg font-semibold flex items-center"
         ><i class="mdi mdi-eye-circle-outline mdi-24px mr-2"></i> Logs</span
