@@ -1,13 +1,40 @@
 <section class="section main-section">
+  <div class="my-6 flex flex-col items-center sm:justify-between sm:flex-row gap-4">
+    <button class="button --jb-modal" data-target="new-agent-modal">
+        <i class="mdi mdi-plus"></i>
+        Add New Agent
+    </button>
+    <form>
+        <div class="field">
+          <div class="control icons-left">
+            <input class="input" type="text" placeholder="Search Agents....">
+            <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
+          </div>
+        </div>
+    </form>
+  </div>
   <div class="card has-table">
     <header class="card-header">
       <p class="card-header-title">
         <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
         Agents
       </p>
-      <a href="#" class="card-header-icon">
-        <span class="icon"><i class="mdi mdi-reload"></i></span>
-      </a>
+      <div class="tools inline-flex items-center space-x-2">
+        <span class="font-semibold">Show:</span>
+        <div>
+          <div class="control">
+            <div class="select">
+              <select>
+                <option>25</option>
+                <option>50</option>
+                <option>100</option>
+              </select>
+            </div>
+        </div>
+        <a href="#" class="card-header-icon">
+          <span class="icon"><i class="mdi mdi-reload"></i></span>
+        </a>
+      </div>
     </header>
     <div class="card-content">
       <table>

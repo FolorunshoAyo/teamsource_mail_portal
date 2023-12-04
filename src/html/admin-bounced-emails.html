@@ -1,14 +1,27 @@
-<section class="section main-section">
-    <div class="my-6 flex flex-col items-center sm:flex-row sm:justify-end">
-        <form>
-            <div class="field">
-              <div class="control icons-left">
-                <input class="input" type="text" placeholder="Search Bounced Emails....">
-                <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
+<section class="section main-sectin">
+    <form class="mb-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <label class="label">Select Organisation:</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>All</option>
+                  <option>TeamSource Technologies</option>
+                  <option>Gibadi Inc</option>
+                  <option>Powerpro Inc</option>
+                </select>
               </div>
             </div>
-        </form>
-    </div>
+          </div>
+          <div class="self-end">
+            <div class="control icons-left">
+              <input class="input" type="text" placeholder="Search groups ....">
+              <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
+            </div>
+          </div>
+        </div>
+    </form>
     <div class="card has-table mb-6">
         <header class="card-header">
           <p class="card-header-title">
@@ -40,6 +53,7 @@
                 <th>Email</th>
                 <th>Campaign ID</th>
                 <th>Created</th>
+                <th>Created By</th>
               </tr>
             </thead>
             <tbody>
@@ -58,6 +72,11 @@
                 <td data-label="Campaign ID">10</td>
                 <td data-label="Created">
                    3 weeks ago
+                </td>
+                <td data-label="Created by">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
                 </td>
               </tr>
             </tbody>

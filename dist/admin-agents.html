@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacts | Teamsend Admin</title>
+  <title>Agents | Teamsend Admin</title>
 
   <!-- Flatpickr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -160,7 +160,7 @@
     </ul>
     <p class="menu-label">Contacts</p>
     <ul class="menu-list">
-      <li class="active">
+      <li class="--set-active-admin-contacts-html">
         <a href="admin-contacts.html">
           <span class="icon"
             ><i class="mdi mdi-contactless-payment"></i
@@ -353,7 +353,7 @@
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
       <li>Admin</li>
-      <li>Contacts | Teamsend Admin</li>
+      <li>Agents | Teamsend Admin</li>
     </ul>
   </div>
 </section>
@@ -361,274 +361,471 @@
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <h1 class="title">
-      Contacts
+      Agents | Teamsend Admin
     </h1>
   </div>
 </section>
 
-<section class="section main-section">
+<section class="main-section section">
     <form class="mb-4">
-      <div class="flex items-center justify-between">
-        <div>
-          <label class="label">Select Organisation:</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option>All</option>
-                <option>TeamSource Technologies</option>
-                <option>Gibadi Inc</option>
-                <option>Powerpro Inc</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="self-end">
-          <div class="control icons-left">
-            <input class="input" type="text" placeholder="Search contacts ....">
-            <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
-          </div>
-        </div>
-      </div>
-    </form>
-    <div class="card has-table">
-      <header class="card-header">
-        <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
-          All Contacts
-        </p>
-        <div class="tools inline-flex items-center space-x-2">
-          <span class="font-semibold">Show:</span>
+        <div class="flex items-center justify-between">
           <div>
+            <label class="label">Select Organisation:</label>
             <div class="control">
               <div class="select">
                 <select>
-                  <option>25</option>
-                  <option>50</option>
-                  <option>100</option>
+                  <option>All</option>
+                  <option>TeamSource Technologies</option>
+                  <option>Gibadi Inc</option>
+                  <option>Powerpro Inc</option>
                 </select>
               </div>
             </div>
           </div>
-          <a href="#" class="card-header-icon" title="reload">
-            <span class="icon"><i class="mdi mdi-reload mdi-24px"></i></span>
-          </a>
-          <a href="#" class="card-header-icon" title="send test mail">
-            <span class="icon"><i class="mdi mdi-send mdi-24px"></i></span>
-          </a>
-          <a href="#" class="card-header-icon" title="Export CSV">
-            <span class="icon"><i class="mdi mdi-file-document-outline mdi-24px"></i></span>
-          </a>
-        </div>
-        <p class="ml-2 flex items-center p-2">
-          <span class="text-green-500">Total: <span id="email-count">6</span> email(s)</span>
-        </p>
-      </header>
-      <div class="card-content">
-        <table>
-          <thead>
-            <tr>
-              <th class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </th>
-              <th class="image-cell"></th>
-              <th>User</th>
-              <th>Email</th>
-              <th>Phone Number</th>
-              <th>Created</th>
-              <th>Created By</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="table-pagination">
-          <div class="flex items-center justify-between">
-            <nav class="pagination my-6">
-              <ul>
-                <li>
-                  <a href="#" class="active">Previous</a>
-                </li>
-                <li>
-                  <a href="#">1</a>
-                </li>
-                <li>
-                  <a href="#">2</a>
-                </li>
-                <li>
-                  <a href="#">3</a>
-                </li>
-                <li>
-                  <a href="#" >4</a>
-                </li>
-                <li>
-                  <a href="#">5</a>
-                </li>
-                <li>
-                  <a href="#">Next</a>
-                </li>
-              </ul>
-            </nav>
-            <small>Page 1 of 10</small>
+          <div class="self-end">
+            <div class="control icons-left">
+              <input class="input" type="text" placeholder="Search agents ....">
+              <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="card empty hidden">
-      <div class="card-content">
-        <div>
-          <span class="icon large text-green-500"
-            ><i class="mdi mdi-emoticon-sad mdi-48px"></i
-          ></span>
+    </form>
+    <div class="card has-table">
+        <header class="card-header">
+          <p class="card-header-title">
+            <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
+            Agents
+          </p>
+          <div class="tools inline-flex items-center space-x-2">
+            <span class="font-semibold">Show:</span>
+            <div>
+              <div class="control">
+                <div class="select">
+                  <select>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="card-header-icon">
+              <span class="icon"><i class="mdi mdi-reload"></i></span>
+            </a>
+          </div>
+        </header>
+        <div class="card-content">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Total Campaigns Created</th>
+                <th>Total Mails Sent</th>
+                <th>Created By</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Name">Adebisi Emmanuel</td>
+                <td data-label="Campaigns Created">5</td>
+                <td data-label="Mails Sent">800</td>
+                <td data-label="Created By">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button
+                      class="button small green --jb-modal"
+                      data-target="view-agent-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button
+                      class="button small red --jb-modal"
+                      data-target="sample-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Name">Name #2</td>
+                <td data-label="Campaigns Created">5</td>
+                <td data-label="Mails Sent">800</td>
+                <td data-label="Created By">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button
+                      class="button small green --jb-modal"
+                      data-target="view-agent-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button
+                      class="button small red --jb-modal"
+                      data-target="sample-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Name">Name #3</td>
+                <td data-label="Campaigns Created">5</td>
+                <td data-label="Mails Sent">800</td>
+                <td data-label="Created By">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button
+                      class="button small green --jb-modal"
+                      data-target="sample-modal-2"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button
+                      class="button small red --jb-modal"
+                      data-target="sample-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Name">Name #4</td>
+                <td data-label="Campaigns Created">5</td>
+                <td data-label="Mails Sent">800</td>
+                <td data-label="Created By">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button
+                      class="button small green --jb-modal"
+                      data-target="view-agent-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button
+                      class="button small red --jb-modal"
+                      data-target="sample-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Name">Name #5</td>
+                <td data-label="Campaigns Created">5</td>
+                <td data-label="Mails Sent">800</td>
+                <td data-label="Created By">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button
+                      class="button small green --jb-modal"
+                      data-target="view-agent-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button
+                      class="button small red --jb-modal"
+                      data-target="sample-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Name">Name #6</td>
+                <td data-label="Campaigns Created">5</td>
+                <td data-label="Mails Sent">800</td>
+                <td data-label="Created By">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button
+                      class="button small green --jb-modal"
+                      data-target="view-agent-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button
+                      class="button small red --jb-modal"
+                      data-target="sample-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Name">Name #7</td>
+                <td data-label="Campaigns Created">5</td>
+                <td data-label="Mails Sent">800</td>
+                <td data-label="Created By">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button
+                      class="button small green --jb-modal"
+                      data-target="view-agent-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button
+                      class="button small red --jb-modal"
+                      data-target="sample-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Name">Name #8</td>
+                <td data-label="Campaigns Created">5</td>
+                <td data-label="Mails Sent">800</td>
+                <td data-label="Created By">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button
+                      class="button small green --jb-modal"
+                      data-target="view-agent-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button
+                      class="button small red --jb-modal"
+                      data-target="sample-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Name">Adebisi Emmanuel</td>
+                <td data-label="Campaigns Created">5</td>
+                <td data-label="Mails Sent">800</td>
+                <td data-label="Created By">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button
+                      class="button small green --jb-modal"
+                      data-target="view-agent-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button
+                      class="button small red --jb-modal"
+                      data-target="sample-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Name">Name #9</td>
+                <td data-label="Campaigns Created">5</td>
+                <td data-label="Mails Sent">800</td>
+                <td data-label="Created By">
+                    <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                        Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                    </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <button
+                      class="button small green --jb-modal"
+                      data-target="view-agent-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye"></i></span>
+                    </button>
+                    <button
+                      class="button small red --jb-modal"
+                      data-target="sample-modal"
+                      type="button"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table-pagination">
+            <div class="flex items-center justify-between">
+              <nav class="pagination my-6">
+                <ul>
+                  <li>
+                    <a href="#">Previous</a>
+                  </li>
+                  <li>
+                    <a href="#" class="active">1</a>
+                  </li>
+                  <li>
+                    <a href="#">2</a>
+                  </li>
+                  <li>
+                    <a href="#">3</a>
+                  </li>
+                  <li>
+                    <a href="#">4</a>
+                  </li>
+                  <li>
+                    <a href="#">5</a>
+                  </li>
+                  <li>
+                    <a href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+              <small>Page 1 of 10</small>
+            </div>
+          </div>
         </div>
-        <p>Nothing's here…</p>
-      </div>
-      <hr />
-      <div class="text-end p-4">
-        <button class="--jb-modal button w-1/4 md:w-1/2" data-target="new-contact-modal">Add New Contact</button>
-      </div>
+        <hr />
+        <div class="text-end p-4">
+          <button class="button w-1/4 md:w-1/2 --jb-modal" data-target="new-agent-modal">Add New Agent</button>
+        </div>
     </div>
-  </section>
-  
+</section>
 <footer class="footer">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
     <div class="flex items-center justify-start space-x-3">

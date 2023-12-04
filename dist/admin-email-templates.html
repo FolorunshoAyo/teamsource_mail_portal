@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacts | Teamsend Admin</title>
+  <title></title>
 
   <!-- Flatpickr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -160,7 +160,7 @@
     </ul>
     <p class="menu-label">Contacts</p>
     <ul class="menu-list">
-      <li class="active">
+      <li class="--set-active-admin-contacts-html">
         <a href="admin-contacts.html">
           <span class="icon"
             ><i class="mdi mdi-contactless-payment"></i
@@ -214,7 +214,7 @@
     </ul>
     <p class="menu-label">Email Templates</p>
     <ul class="menu-list">
-      <li class="--set-active-admin-email-templates-html">
+      <li class="active">
         <a href="admin-email-templates.html">
           <span class="icon"
             ><i class="mdi mdi-account-group-outline"></i
@@ -353,7 +353,7 @@
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
       <li>Admin</li>
-      <li>Contacts | Teamsend Admin</li>
+      <li></li>
     </ul>
   </div>
 </section>
@@ -361,274 +361,187 @@
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <h1 class="title">
-      Contacts
+      
     </h1>
   </div>
 </section>
 
 <section class="section main-section">
-    <form class="mb-4">
-      <div class="flex items-center justify-between">
-        <div>
-          <label class="label">Select Organisation:</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option>All</option>
-                <option>TeamSource Technologies</option>
-                <option>Gibadi Inc</option>
-                <option>Powerpro Inc</option>
-              </select>
+    <div class="bg-white shadow-sm rounded-sm p-6">
+        <form class="mb-4">
+            <div class="flex items-center justify-between">
+                <div>
+                    <label class="label">Select Organisation:</label>
+                    <div class="control">
+                      <div class="select">
+                        <select>
+                          <option>All</option>
+                          <option>TeamSource Technologies</option>
+                          <option>Gibadi Inc</option>
+                          <option>Powerpro Inc</option>
+                        </select>
+                      </div>
+                    </div>
+                </div>
+                <span class="text-green-600 font-semi-bold">
+                    Email Templates (14)
+                </span>
             </div>
-          </div>
-        </div>
-        <div class="self-end">
-          <div class="control icons-left">
-            <input class="input" type="text" placeholder="Search contacts ....">
-            <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
-          </div>
-        </div>
-      </div>
-    </form>
-    <div class="card has-table">
-      <header class="card-header">
-        <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
-          All Contacts
-        </p>
-        <div class="tools inline-flex items-center space-x-2">
-          <span class="font-semibold">Show:</span>
-          <div>
-            <div class="control">
-              <div class="select">
-                <select>
-                  <option>25</option>
-                  <option>50</option>
-                  <option>100</option>
-                </select>
-              </div>
+        </form>
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div class="card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Template Name
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex relative">
+                        <a href="javasript:void(0)" class="flex-1 card-header-icon --jb-navbar-menu-toggle" data-target="template-menu-1">
+                            <span class="icon"><i class="mdi mdi-dots-vertical"></i></span>
+                        </a>
+                        <div class="template-menu absolute w-max top-12 right-0 shadow bg-white rounded-sm" id="template-menu-1">
+                            <a href="#" class="navbar-item gap-1">
+                                <i class="mdi mdi-eye-outline"></i> Preview
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                </div>
             </div>
-          </div>
-          <a href="#" class="card-header-icon" title="reload">
-            <span class="icon"><i class="mdi mdi-reload mdi-24px"></i></span>
-          </a>
-          <a href="#" class="card-header-icon" title="send test mail">
-            <span class="icon"><i class="mdi mdi-send mdi-24px"></i></span>
-          </a>
-          <a href="#" class="card-header-icon" title="Export CSV">
-            <span class="icon"><i class="mdi mdi-file-document-outline mdi-24px"></i></span>
-          </a>
+            <div class="card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Template Name
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex relative">
+                        <a href="javasript:void(0)" class="flex-1 card-header-icon --jb-navbar-menu-toggle" data-target="template-menu-1">
+                            <span class="icon"><i class="mdi mdi-dots-vertical"></i></span>
+                        </a>
+                        <div class="template-menu absolute w-max top-12 right-0 shadow bg-white rounded-sm" id="template-menu-1">
+                            <a href="#" class="navbar-item gap-1">
+                                <i class="mdi mdi-eye-outline"></i> Preview
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                </div>
+            </div>
+            <div class="card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Template Name
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex relative">
+                        <a href="javasript:void(0)" class="flex-1 card-header-icon --jb-navbar-menu-toggle" data-target="template-menu-1">
+                            <span class="icon"><i class="mdi mdi-dots-vertical"></i></span>
+                        </a>
+                        <div class="template-menu absolute w-max top-12 right-0 shadow bg-white rounded-sm" id="template-menu-1">
+                            <a href="#" class="navbar-item gap-1">
+                                <i class="mdi mdi-eye-outline"></i> Preview
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                </div>
+            </div>
+            <div class="card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Template Name
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex relative">
+                        <a href="javasript:void(0)" class="flex-1 card-header-icon --jb-navbar-menu-toggle" data-target="template-menu-1">
+                            <span class="icon"><i class="mdi mdi-dots-vertical"></i></span>
+                        </a>
+                        <div class="template-menu absolute w-max top-12 right-0 shadow bg-white rounded-sm" id="template-menu-1">
+                            <a href="#" class="navbar-item gap-1">
+                                <i class="mdi mdi-eye-outline"></i> Preview
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                </div>
+            </div>
+            <div class="card">
+                <header class="card-header">
+                    <div class="card-header-title">
+                      <span class="icon"><i class="mdi mdi-xml mr-4"></i></span>
+                      <div class="leading-tight text-xs">
+                        Template Name
+                        <p class="text-green-500">1 day ago</p>
+                      </div>
+                    </div>
+                    <div class="flex relative">
+                        <a href="javasript:void(0)" class="flex-1 card-header-icon --jb-navbar-menu-toggle" data-target="template-menu-1">
+                            <span class="icon"><i class="mdi mdi-dots-vertical"></i></span>
+                        </a>
+                        <div class="template-menu absolute w-max top-12 right-0 shadow bg-white rounded-sm" id="template-menu-1">
+                            <a href="#" class="navbar-item gap-1">
+                                <i class="mdi mdi-eye-outline"></i> Preview
+                            </a>
+                        </div>
+                    </div>
+                </header>
+                <div class="card-content">
+                    <div class="w-full h-40 bg-no-repeat bg-contain bg-center mb-2" style="background-image: url('https://fullaccess.maildoll.com/not_found/no-preview.png');"></div>
+                </div>
+            </div>
         </div>
-        <p class="ml-2 flex items-center p-2">
-          <span class="text-green-500">Total: <span id="email-count">6</span> email(s)</span>
-        </p>
-      </header>
-      <div class="card-content">
-        <table>
-          <thead>
-            <tr>
-              <th class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </th>
-              <th class="image-cell"></th>
-              <th>User</th>
-              <th>Email</th>
-              <th>Phone Number</th>
-              <th>Created</th>
-              <th>Created By</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
         <div class="table-pagination">
-          <div class="flex items-center justify-between">
-            <nav class="pagination my-6">
-              <ul>
-                <li>
-                  <a href="#" class="active">Previous</a>
-                </li>
-                <li>
-                  <a href="#">1</a>
-                </li>
-                <li>
-                  <a href="#">2</a>
-                </li>
-                <li>
-                  <a href="#">3</a>
-                </li>
-                <li>
-                  <a href="#" >4</a>
-                </li>
-                <li>
-                  <a href="#">5</a>
-                </li>
-                <li>
-                  <a href="#">Next</a>
-                </li>
-              </ul>
-            </nav>
-            <small>Page 1 of 10</small>
-          </div>
+            <div class="flex items-center justify-between">
+                <nav class="pagination my-6">
+                    <ul>
+                      <li>
+                        <a href="#" class="active">Previous</a>
+                      </li>
+                      <li>
+                        <a href="#">1</a>
+                      </li>
+                      <li>
+                        <a href="#">2</a>
+                      </li>
+                      <li>
+                        <a href="#">3</a>
+                      </li>
+                      <li>
+                        <a href="#" >4</a>
+                      </li>
+                      <li>
+                        <a href="#">5</a>
+                      </li>
+                      <li>
+                        <a href="#">Next</a>
+                      </li>
+                    </ul>
+                </nav>
+                <small>Page 1 of 10</small>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="card empty hidden">
-      <div class="card-content">
-        <div>
-          <span class="icon large text-green-500"
-            ><i class="mdi mdi-emoticon-sad mdi-48px"></i
-          ></span>
-        </div>
-        <p>Nothing's here…</p>
-      </div>
-      <hr />
-      <div class="text-end p-4">
-        <button class="--jb-modal button w-1/4 md:w-1/2" data-target="new-contact-modal">Add New Contact</button>
-      </div>
-    </div>
-  </section>
-  
+</section>
 <footer class="footer">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
     <div class="flex items-center justify-start space-x-3">

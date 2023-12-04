@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacts | Teamsend Admin</title>
+  <title>Payments | Teamsend Admin</title>
 
   <!-- Flatpickr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -160,7 +160,7 @@
     </ul>
     <p class="menu-label">Contacts</p>
     <ul class="menu-list">
-      <li class="active">
+      <li class="--set-active-admin-contacts-html">
         <a href="admin-contacts.html">
           <span class="icon"
             ><i class="mdi mdi-contactless-payment"></i
@@ -353,7 +353,7 @@
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
       <li>Admin</li>
-      <li>Contacts | Teamsend Admin</li>
+      <li>Payments | Teamsend Admin</li>
     </ul>
   </div>
 </section>
@@ -361,12 +361,13 @@
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <h1 class="title">
-      Contacts
+      Payments
     </h1>
   </div>
 </section>
 
 <section class="section main-section">
+  <div class="p-4 bg-white shadow-sm rounded-sm">
     <form class="mb-4">
       <div class="flex items-center justify-between">
         <div>
@@ -384,17 +385,23 @@
         </div>
         <div class="self-end">
           <div class="control icons-left">
-            <input class="input" type="text" placeholder="Search contacts ....">
-            <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
+            <input
+              class="input"
+              type="text"
+              placeholder="Search payments ...."
+            />
+            <span class="icon left"
+              ><i class="mdi mdi-magnify mdi-24px"></i
+            ></span>
           </div>
         </div>
       </div>
     </form>
-    <div class="card has-table">
+    <div class="card has-table mb-6">
       <header class="card-header">
         <p class="card-header-title">
           <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
-          All Contacts
+          All Payments
         </p>
         <div class="tools inline-flex items-center space-x-2">
           <span class="font-semibold">Show:</span>
@@ -407,175 +414,138 @@
                   <option>100</option>
                 </select>
               </div>
-            </div>
           </div>
-          <a href="#" class="card-header-icon" title="reload">
-            <span class="icon"><i class="mdi mdi-reload mdi-24px"></i></span>
-          </a>
-          <a href="#" class="card-header-icon" title="send test mail">
-            <span class="icon"><i class="mdi mdi-send mdi-24px"></i></span>
-          </a>
-          <a href="#" class="card-header-icon" title="Export CSV">
-            <span class="icon"><i class="mdi mdi-file-document-outline mdi-24px"></i></span>
+          <a href="#" class="card-header-icon">
+            <span class="icon"><i class="mdi mdi-reload"></i></span>
           </a>
         </div>
-        <p class="ml-2 flex items-center p-2">
-          <span class="text-green-500">Total: <span id="email-count">6</span> email(s)</span>
-        </p>
       </header>
       <div class="card-content">
         <table>
           <thead>
             <tr>
-              <th class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </th>
-              <th class="image-cell"></th>
-              <th>User</th>
-              <th>Email</th>
-              <th>Phone Number</th>
-              <th>Created</th>
-              <th>Created By</th>
-              <th>Action</th>
+              <th></th>
+              <th>Purchase ID</th>
+              <th>Invoice No</th>
+              <th>Plan Name</th>
+              <th>Status</th>
+              <th>Date</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
+              <td class="flex items-center justify-center">
+                <i class="mdi mdi-cash mdi-24px"></i>
               </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
+              <td data-label="Purchase ID">1</td>
+              <td data-label="Inoice No">#20237908</td>
+              <td data-label="Plan Name">Monthly</td>
+              <td data-label="Status">
+                <div class="flex items-center text-red-600">
+                  <i class="mdi mdi-close-box-outline"></i> NOT PAID
                 </div>
               </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
+              <td data-label="Date">2023-12-03 17:01:07</td>
               <td class="actions-cell">
                 <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
+                  <a class="button green" href="javascript:void(0)">
+                    <span class="icon"
+                      ><i class="mdi mdi-download-outline"></i
+                    ></span> Download Invoice
+                    </a>
                 </div>
               </td>
             </tr>
             <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
+              <td class="flex items-center justify-center">
+                <i class="mdi mdi-cash mdi-24px"></i>
               </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
+              <td data-label="Purchase ID">1</td>
+              <td data-label="Inoice No">#20237908</td>
+              <td data-label="Plan Name">Monthly</td>
+              <td data-label="Status">
+                <div class="flex items-center text-red-600">
+                  <i class="mdi mdi-close-box-outline"></i> NOT PAID
                 </div>
               </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
+              <td data-label="Date">2023-12-03 17:01:07</td>
               <td class="actions-cell">
                 <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
+                  <a class="button green" href="javascript:void(0)">
+                    <span class="icon"
+                      ><i class="mdi mdi-download-outline"></i
+                    ></span> Download Invoice
+                    </a>
                 </div>
               </td>
             </tr>
             <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
+              <td class="flex items-center justify-center">
+                <i class="mdi mdi-cash mdi-24px"></i>
               </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
+              <td data-label="Purchase ID">1</td>
+              <td data-label="Inoice No">#20237908</td>
+              <td data-label="Plan Name">Monthly</td>
+              <td data-label="Status">
+                <div class="flex items-center text-red-600">
+                  <i class="mdi mdi-close-box-outline"></i> NOT PAID
                 </div>
               </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
+              <td data-label="Date">2023-12-03 17:01:07</td>
               <td class="actions-cell">
                 <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
+                  <a class="button green" href="javascript:void(0)">
+                    <span class="icon"
+                      ><i class="mdi mdi-download-outline"></i
+                    ></span> Download Invoice
+                    </a>
                 </div>
               </td>
             </tr>
             <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
+              <td class="flex items-center justify-center">
+                <i class="mdi mdi-cash mdi-24px"></i>
               </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
+              <td data-label="Purchase ID">1</td>
+              <td data-label="Inoice No">#20237908</td>
+              <td data-label="Plan Name">Monthly</td>
+              <td data-label="Status">
+                <div class="flex items-center text-red-600">
+                  <i class="mdi mdi-check-circle-outline"></i> PAID
                 </div>
               </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
+              <td data-label="Date">2023-12-03 17:01:07</td>
               <td class="actions-cell">
                 <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
+                  <a class="button green" href="javascript:void(0)">
+                    <span class="icon"
+                      ><i class="mdi mdi-download-outline"></i
+                    ></span> Download Invoice
+                    </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="flex items-center justify-center">
+                <i class="mdi mdi-cash mdi-24px"></i>
+              </td>
+              <td data-label="Purchase ID">1</td>
+              <td data-label="Inoice No">#20237908</td>
+              <td data-label="Plan Name">Monthly</td>
+              <td data-label="Status">
+                <div class="flex items-center text-red-600">
+                  <i class="mdi mdi-close-box-outline"></i> NOT PAID
+                </div>
+              </td>
+              <td data-label="Date">2023-12-03 17:01:07</td>
+              <td class="actions-cell">
+                <div class="buttons right nowrap">
+                  <a class="button green" href="javascript:void(0)">
+                    <span class="icon"
+                      ><i class="mdi mdi-download-outline"></i
+                    ></span> Download Invoice
+                    </a>
                 </div>
               </td>
             </tr>
@@ -586,10 +556,10 @@
             <nav class="pagination my-6">
               <ul>
                 <li>
-                  <a href="#" class="active">Previous</a>
+                  <a href="#">Previous</a>
                 </li>
                 <li>
-                  <a href="#">1</a>
+                  <a href="#" class="active">1</a>
                 </li>
                 <li>
                   <a href="#">2</a>
@@ -598,7 +568,7 @@
                   <a href="#">3</a>
                 </li>
                 <li>
-                  <a href="#" >4</a>
+                  <a href="#">4</a>
                 </li>
                 <li>
                   <a href="#">5</a>
@@ -613,22 +583,9 @@
         </div>
       </div>
     </div>
-    <div class="card empty hidden">
-      <div class="card-content">
-        <div>
-          <span class="icon large text-green-500"
-            ><i class="mdi mdi-emoticon-sad mdi-48px"></i
-          ></span>
-        </div>
-        <p>Nothing's here…</p>
-      </div>
-      <hr />
-      <div class="text-end p-4">
-        <button class="--jb-modal button w-1/4 md:w-1/2" data-target="new-contact-modal">Add New Contact</button>
-      </div>
-    </div>
-  </section>
-  
+  </div>
+</section>
+
 <footer class="footer">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
     <div class="flex items-center justify-start space-x-3">

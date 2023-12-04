@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contacts | Teamsend Admin</title>
+  <title>Groups | Teamsend Admin</title>
 
   <!-- Flatpickr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -49,230 +49,246 @@
 <div id="app">
 
 <nav id="navbar-main" class="navbar is-fixed-top">
-    <div class="navbar-brand">
-      <a class="navbar-item mobile-aside-button">
-        <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
-      </a>
-      <!-- <div class="navbar-item">
-        <div class="control"><input placeholder="Search everywhere..." class="input"></div>
-      </div> -->
-    </div>
-    <div class="navbar-brand is-right">
-      <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
-        <span class="icon"><i class="mdi mdi-dots-vertical mdi-24px"></i></span>
-      </a>
-    </div>
-    <div class="navbar-menu" id="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-item dropdown has-divider">
-          <a class="navbar-link relative">
-            <span class="hidden absolute top-2 right-0 inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75"></span>
-            <span class="icon"><i class="mdi mdi-bell"></i></span>
-            <span>Notification</span>
-            <span class="icon">
-              <i class="mdi mdi-chevron-down"></i>
-            </span>
-          </a>
-          <div class="navbar-dropdown notifications">
-            <a href="profile.html" class="navbar-item flex items-center gap-4">
-              <i class="mdi mdi-email-outline mdi-24px"></i>
-              <div>
-                <span class="font-medium md:font-sm">New Email Campaign Created</span>
-                <div class="w-full truncate text-gray-600">28 minutes ago</div>
-              </div>
-            </a>
-            <a href="profile.html" class="navbar-item flex items-center gap-4">
-              <i class="mdi mdi-bell-outline mdi-24px"></i>
-              <div>
-                <span class="font-medium">New User Sign In</span>
-                <div class="w-full truncate text-gray-600">28 minutes ago</div>
-              </div>
-            </a>
-            <hr>
-            <a href="#" class="navbar-link text-center">see all notifications</a>
-          </div>
-        </div>
-        <div class="navbar-item dropdown has-divider has-user-avatar">
-          <a class="navbar-link">
-            <div class="user-avatar">
-              <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
+  <div class="navbar-brand">
+    <a class="navbar-item mobile-aside-button">
+      <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+    </a>
+    <!-- <div class="navbar-item">
+      <div class="control"><input placeholder="Search everywhere..." class="input"></div>
+    </div> -->
+  </div>
+  <div class="navbar-brand is-right">
+    <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
+      <span class="icon"><i class="mdi mdi-dots-vertical mdi-24px"></i></span>
+    </a>
+  </div>
+  <div class="navbar-menu" id="navbar-menu">
+    <div class="navbar-end">
+      <div class="navbar-item dropdown has-divider">
+        <a class="navbar-link relative">
+          <span class="hidden absolute top-2 right-0 inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75"></span>
+          <span class="icon"><i class="mdi mdi-bell"></i></span>
+          <span>Notification</span>
+          <span class="icon">
+            <i class="mdi mdi-chevron-down"></i>
+          </span>
+        </a>
+        <div class="navbar-dropdown notifications">
+          <a href="profile.html" class="navbar-item flex items-center gap-4">
+            <i class="mdi mdi-email-outline mdi-24px"></i>
+            <div>
+              <span class="font-medium md:font-sm">New Email Campaign Created</span>
+              <div class="w-full truncate text-gray-600">28 minutes ago</div>
             </div>
-            <div class="is-user-name"><span>John Doe</span></div>
-            <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
           </a>
-          <div class="navbar-dropdown">
-            <a href="profile.html" class="navbar-item">
-              <span class="icon"><i class="mdi mdi-account"></i></span>
-              <span>Profile</span>
-            </a>
-            <a class="navbar-item">
-              <span class="icon"><i class="mdi mdi-lock"></i></span>
-              <span>Reset Password</span>
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              <span class="icon"><i class="mdi mdi-logout"></i></span>
-              <span>Log Out</span>
-            </a>
+          <a href="profile.html" class="navbar-item flex items-center gap-4">
+            <i class="mdi mdi-bell-outline mdi-24px"></i>
+            <div>
+              <span class="font-medium">Your limit has been upgraded</span>
+              <div class="w-full truncate text-gray-600">28 minutes ago</div>
+            </div>
+          </a>
+          <hr>
+          <a href="#" class="navbar-link text-center">see all notifications</a>
+        </div>
+      </div>
+      <div class="navbar-item dropdown has-divider has-user-avatar">
+        <a class="navbar-link">
+          <div class="user-avatar">
+            <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
           </div>
+          <div class="is-user-name"><span>John Doe</span></div>
+          <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
+        </a>
+        <div class="navbar-dropdown">
+          <span class="navbar-item gap-1">
+            <span class="text-green-500">Account Type:</span>Customer
+          </span>
+          <span class="navbar-item gap-1">
+            <span class="text-green-500">Amount:</span>NGN 15,000
+          </span>
+          <a href="profile.html" class="navbar-item">
+            <span class="icon"><i class="mdi mdi-account"></i></span>
+            <span>Profile</span>
+          </a>
+          <a class="navbar-item">
+            <span class="icon"><i class="mdi mdi-lock"></i></span>
+            <span>Reset Password</span>
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            <span class="icon"><i class="mdi mdi-logout"></i></span>
+            <span>Log Out</span>
+          </a>
         </div>
       </div>
     </div>
-  </nav>
-  
+  </div>
+</nav>
+
 <aside class="aside is-placed-left is-expanded">
   <div class="aside-tools">
     <div>
-      Team<b class="font-bold">Send</b> <span class="font-lg">Admin</span>
+      Team<b class="font-bold">Send</b>
     </div>
   </div>
   <div class="menu is-menu-main">
-    <p class="menu-label">Dashboard</p>
+    <p class="menu-label">General</p>
     <ul class="menu-list">
-      <li class="--set-active-admin-index-html">
-        <a href="admin-index.html">
+      <li class="--set-active-index-html">
+        <a href="index.html">
           <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
           <span class="menu-item-label">Dashboard</span>
         </a>
       </li>
     </ul>
-    <p class="menu-label">Organisations</p>
-    <ul class="menu-list">
-      <li class="--set-active-admin-organisations-html">
-        <a href="admin-organisations.html">
-          <span class="icon"
-            ><i class="mdi mdi-account-group-outline"></i
-          ></span>
-          <span class="menu-item-label">Organisations</span>
-        </a>
-      </li>
-    </ul>
     <p class="menu-label">Agents</p>
     <ul class="menu-list">
-      <li class="--set-active-admin-organisations-html">
-        <a href="admin-agents.html">
-          <span class="icon"
-            ><i class="mdi mdi-account-group-outline"></i
-          ></span>
+      <li class="--set-active-agents-html">
+        <a href="agents.html">
+          <span class="icon"><i class="mdi mdi-account-group-outline"></i></span>
           <span class="menu-item-label">Agents</span>
         </a>
       </li>
     </ul>
     <p class="menu-label">Contacts</p>
     <ul class="menu-list">
-      <li class="active">
-        <a href="admin-contacts.html">
-          <span class="icon"
-            ><i class="mdi mdi-contactless-payment"></i
-          ></span>
+      <li class="--set-active-all-contacts-html">
+        <a class="dropdown">
+          <span class="icon"><i class="mdi mdi-contactless-payment"></i></span>
           <span class="menu-item-label">Contacts</span>
+          <span class="icon"><i class="mdi mdi-plus"></i></span>
         </a>
+        <ul>
+          <li class="--set-active-all-contacts-html">
+            <a href="all-contacts.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>All Contacts</span>
+            </a>
+          </li>
+          <li class="--set-active-bulk-upload-html">
+            <a href="bulk-upload.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Bulk Import/Export</span>
+            </a>
+          </li>
+        </ul>
       </li>
     </ul>
     <p class="menu-label">Groups</p>
     <ul class="menu-list">
-      <li class="--set-active-admin-groups-html">
-        <a href="admin-groups.html">
-          <span class="icon"
-            ><i class="mdi mdi-account-group-outline"></i
-          ></span>
+      <li class="--set-active-all-groups-html">
+        <a class="dropdown">
+          <span class="icon"><i class="mdi mdi-account-group"></i></span>
           <span class="menu-item-label">Groups</span>
+          <span class="icon"><i class="mdi mdi-plus"></i></span>
         </a>
+        <ul>
+          <li class="--set-active-all-groups-html">
+            <a href="all-groups.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>All Groups</span>
+            </a>
+          </li>
+          <li class="--set-active-new-group-html">
+            <a href="new-group.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Add New</span>
+            </a>
+          </li>
+        </ul>
       </li>
     </ul>
     <p class="menu-label">Emails</p>
     <ul class="menu-list">
-      <li
-        class="--set-active-check-bounce-html"
-      >
+      <li class="--set-active-check-bounce-html">
         <a class="dropdown">
-          <span class="icon"><i class="mdi mdi-email-multiple"></i></span>
+          <span class="icon"><i class="mdi mdi-email-fast-outline"></i></span>
           <span class="menu-item-label">Emails</span>
-          <span class="icon"
-            ><i class="mdi mdi-plus"></i
-          ></span>
+          <span class="icon"><i class="mdi mdi-plus"></i></span>
         </a>
         <ul>
           <li class="--set-active-check-bounce-html">
             <a href="check-bounce.html">
-              <span class="icon"
-                ><i class="mdi mdi mdi-format-align-left"></i
-              ></span>
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>Check Bounce</span>
             </a>
           </li>
-          <li class="--set-active-admin-bounced-emails-html">
-            <a href="admin-bounced-emails.html">
-              <span class="icon"
-                ><i class="mdi mdi mdi-format-align-left"></i
-              ></span>
+          <li class="--set-active-bounced-emails-html">
+            <a href="bounced-emails.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>Bounced Emails</span>
             </a>
           </li>
         </ul>
       </li>
     </ul>
-    <p class="menu-label">Email Templates</p>
+    <p class="menu-label">Email Builder</p>
     <ul class="menu-list">
-      <li class="--set-active-admin-email-templates-html">
-        <a href="admin-email-templates.html">
-          <span class="icon"
-            ><i class="mdi mdi-account-group-outline"></i
-          ></span>
-          <span class="menu-item-label">Email Templates</span>
+      <li class="--set-active-email-templates-html">
+        <a class="dropdown">
+          <span class="icon"><i class="mdi mdi-xml"></i></span>
+          <span class="menu-item-label">Email Builder</span>
+          <span class="icon"><i class="mdi mdi-plus"></i></span>
         </a>
+        <ul>
+          <li class="--set-active-template-builder-originate-html">
+            <a href="template-builder-originate.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Create Email Template</span>
+            </a>
+          </li>
+          <li class="--set-active-email-templates-html">
+            <a href="email-templates.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>All Email Templates</span>
+            </a>
+          </li>
+        </ul>
       </li>
     </ul>
     <p class="menu-label">Campaigns</p>
     <ul class="menu-list">
-      <li
-        class="--set-active-admin-all-campaigns-html --set-admin-active-email-tracker-html"
-      >
+      <li class="--set-active-all-campaigns-html">
         <a class="dropdown">
           <span class="icon"><i class="mdi mdi-xml"></i></span>
           <span class="menu-item-label">Campaigns</span>
-          <span class="icon"
-            ><i class="mdi mdi-plus"></i
-          ></span>
+          <span class="icon"><i class="mdi mdi-plus"></i></span>
         </a>
         <ul>
-          <li class="--set-active-admin-campaigns-html">
-            <a href="admin-all-campaigns.html">
-              <span class="icon"
-                ><i class="mdi mdi mdi-format-align-left"></i
-              ></span>
+          <li class="--set-active-all-campaigns-html">
+            <a href="all-campaigns.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>All Campaigns</span>
             </a>
           </li>
-          <li class="--set-active-admin-all-schedules-html">
-            <a href="admin-all-schedules.html">
-              <span class="icon"
-                ><i class="mdi mdi mdi-format-align-left"></i
-              ></span>
+          <li class="--set-active-new-campaign-html">
+            <a href="new-campaign.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span>Add New</span>
+            </a>
+          </li>
+          <li class="--set-active-all-schedules-html">
+            <a href="all-schedules.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>Schedules</span>
             </a>
           </li>
-          <li class="--set-active-admin-email-tracker-html">
-            <a href="admin-email-tracker.html">
-              <span class="icon"
-                ><i class="mdi mdi mdi-format-align-left"></i
-              ></span>
+          <li class="--set-active-email-tracker-html">
+            <a href="email-tracker.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>Tracker</span>
             </a>
           </li>
-          <li class="--set-active-admin-mail-logs-html">
-            <a href="admin-mail-logs.html">
-              <span class="icon"
-                ><i class="mdi mdi mdi-format-align-left"></i
-              ></span>
+          <li class="--set-active-mail-logs-html">
+            <a href="mail-logs.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>Mail Logs</span>
             </a>
           </li>
-          <li class="--set-active-admin-campaign-logs-html">
-            <a href="admin-campaign-logs.html">
-              <span class="icon"
-                ><i class="mdi mdi mdi-format-align-left"></i
-              ></span>
+          <li class="--set-active-campaign-logs-html">
+            <a href="campaign-logs.html">
+              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>Campaign Logs</span>
             </a>
           </li>
@@ -280,80 +296,79 @@
       </li>
     </ul>
     <!-- <p class="menu-label">Examples</p>
-      <ul class="menu-list">
-        <li class="--set-active-tables-html">
-          <a href="tables.html">
-            <span class="icon"><i class="mdi mdi-table"></i></span>
-            <span class="menu-item-label">Tables</span>
-          </a>
-        </li>
-        <li class="--set-active-forms-html">
-          <a href="forms.html">
-            <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
-            <span class="menu-item-label">Forms</span>
-          </a>
-        </li>
-        <li class="--set-active-profile-html">
-          <a href="profile.html">
-            <span class="icon"><i class="mdi mdi-account-circle"></i></span>
-            <span class="menu-item-label">Profile</span>
-          </a>
-        </li>
-        <li>
-          <a href="login.html">
-            <span class="icon"><i class="mdi mdi-lock"></i></span>
-            <span class="menu-item-label">Login</span>
-          </a>
-        </li>
-        <li>
-          <a class="dropdown">
-            <span class="icon"><i class="mdi mdi-view-list"></i></span>
-            <span class="menu-item-label">Submenus</span>
-            <span class="icon"><i class="mdi mdi-plus"></i></span>
-          </a>
-          <ul>
-            <li>
-              <a href="#void">
-                <span>Sub-item One</span>
-              </a>
-            </li>
-            <li>
-              <a href="#void">
-                <span>Sub-item Two</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul> -->
+    <ul class="menu-list">
+      <li class="--set-active-tables-html">
+        <a href="tables.html">
+          <span class="icon"><i class="mdi mdi-table"></i></span>
+          <span class="menu-item-label">Tables</span>
+        </a>
+      </li>
+      <li class="--set-active-forms-html">
+        <a href="forms.html">
+          <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
+          <span class="menu-item-label">Forms</span>
+        </a>
+      </li>
+      <li class="--set-active-profile-html">
+        <a href="profile.html">
+          <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+          <span class="menu-item-label">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="login.html">
+          <span class="icon"><i class="mdi mdi-lock"></i></span>
+          <span class="menu-item-label">Login</span>
+        </a>
+      </li>
+      <li>
+        <a class="dropdown">
+          <span class="icon"><i class="mdi mdi-view-list"></i></span>
+          <span class="menu-item-label">Submenus</span>
+          <span class="icon"><i class="mdi mdi-plus"></i></span>
+        </a>
+        <ul>
+          <li>
+            <a href="#void">
+              <span>Sub-item One</span>
+            </a>
+          </li>
+          <li>
+            <a href="#void">
+              <span>Sub-item Two</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul> -->
     <!-- <p class="menu-label">About</p>
-      <ul class="menu-list">
-        <li>
-          <a href="https://justboil.me" onclick="alert('Coming soon'); return false" target="_blank" class="has-icon">
-            <span class="icon"><i class="mdi mdi-credit-card-outline"></i></span>
-            <span class="menu-item-label">Premium Demo</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://justboil.me/tailwind-admin-templates" class="has-icon">
-            <span class="icon"><i class="mdi mdi-help-circle"></i></span>
-            <span class="menu-item-label">About</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/justboil/admin-one-tailwind" class="has-icon">
-            <span class="icon"><i class="mdi mdi-github-circle"></i></span>
-            <span class="menu-item-label">GitHub</span>
-          </a>
-        </li>
-      </ul> -->
+    <ul class="menu-list">
+      <li>
+        <a href="https://justboil.me" onclick="alert('Coming soon'); return false" target="_blank" class="has-icon">
+          <span class="icon"><i class="mdi mdi-credit-card-outline"></i></span>
+          <span class="menu-item-label">Premium Demo</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://justboil.me/tailwind-admin-templates" class="has-icon">
+          <span class="icon"><i class="mdi mdi-help-circle"></i></span>
+          <span class="menu-item-label">About</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/justboil/admin-one-tailwind" class="has-icon">
+          <span class="icon"><i class="mdi mdi-github-circle"></i></span>
+          <span class="menu-item-label">GitHub</span>
+        </a>
+      </li>
+    </ul> -->
   </div>
 </aside>
-
 <section class="is-title-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
       <li>Admin</li>
-      <li>Contacts | Teamsend Admin</li>
+      <li>Groups | Teamsend Admin</li>
     </ul>
   </div>
 </section>
@@ -361,274 +376,257 @@
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <h1 class="title">
-      Contacts
+      Groups
     </h1>
   </div>
 </section>
 
-<section class="section main-section">
+<section class="main-section section">
     <form class="mb-4">
-      <div class="flex items-center justify-between">
-        <div>
-          <label class="label">Select Organisation:</label>
-          <div class="control">
-            <div class="select">
-              <select>
-                <option>All</option>
-                <option>TeamSource Technologies</option>
-                <option>Gibadi Inc</option>
-                <option>Powerpro Inc</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="self-end">
-          <div class="control icons-left">
-            <input class="input" type="text" placeholder="Search contacts ....">
-            <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
-          </div>
-        </div>
-      </div>
-    </form>
-    <div class="card has-table">
-      <header class="card-header">
-        <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
-          All Contacts
-        </p>
-        <div class="tools inline-flex items-center space-x-2">
-          <span class="font-semibold">Show:</span>
+        <div class="flex items-center justify-between">
           <div>
+            <label class="label">Select Organisation:</label>
             <div class="control">
               <div class="select">
                 <select>
-                  <option>25</option>
-                  <option>50</option>
-                  <option>100</option>
+                  <option>All</option>
+                  <option>TeamSource Technologies</option>
+                  <option>Gibadi Inc</option>
+                  <option>Powerpro Inc</option>
                 </select>
               </div>
             </div>
           </div>
-          <a href="#" class="card-header-icon" title="reload">
-            <span class="icon"><i class="mdi mdi-reload mdi-24px"></i></span>
-          </a>
-          <a href="#" class="card-header-icon" title="send test mail">
-            <span class="icon"><i class="mdi mdi-send mdi-24px"></i></span>
-          </a>
-          <a href="#" class="card-header-icon" title="Export CSV">
-            <span class="icon"><i class="mdi mdi-file-document-outline mdi-24px"></i></span>
-          </a>
-        </div>
-        <p class="ml-2 flex items-center p-2">
-          <span class="text-green-500">Total: <span id="email-count">6</span> email(s)</span>
-        </p>
-      </header>
-      <div class="card-content">
-        <table>
-          <thead>
-            <tr>
-              <th class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </th>
-              <th class="image-cell"></th>
-              <th>User</th>
-              <th>Email</th>
-              <th>Phone Number</th>
-              <th>Created</th>
-              <th>Created By</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="checkbox-cell">
-                <label class="checkbox">
-                  <input type="checkbox">
-                  <span class="check"></span>
-                </label>
-              </td>
-              <td class="image-cell">
-                <div class="image">
-                  <img
-                    src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                    class="rounded-full"
-                  />
-                </div>
-              </td>
-              <td data-label="User">Adebisi Emmanuel</td>
-              <td data-label="Email">adebisiemmanuel@gmail.com</td>
-              <td data-label="Phone Number">+2347011111000</td>
-              <td data-label="Created">1 week ago</td>
-              <td data-label="Created By">
-                <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
-                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
-                </a>
-              </td>
-              <td class="actions-cell">
-                <div class="buttons right nowrap">
-                  <a
-                    class="button small green --jb-modal" data-target="view-contact-modal"
-                  >
-                    <span class="icon"><i class="mdi mdi-eye"></i></span>
-                  </a>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="table-pagination">
-          <div class="flex items-center justify-between">
-            <nav class="pagination my-6">
-              <ul>
-                <li>
-                  <a href="#" class="active">Previous</a>
-                </li>
-                <li>
-                  <a href="#">1</a>
-                </li>
-                <li>
-                  <a href="#">2</a>
-                </li>
-                <li>
-                  <a href="#">3</a>
-                </li>
-                <li>
-                  <a href="#" >4</a>
-                </li>
-                <li>
-                  <a href="#">5</a>
-                </li>
-                <li>
-                  <a href="#">Next</a>
-                </li>
-              </ul>
-            </nav>
-            <small>Page 1 of 10</small>
+          <div class="self-end">
+            <div class="control icons-left">
+              <input class="input" type="text" placeholder="Search groups ....">
+              <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="card empty hidden">
-      <div class="card-content">
-        <div>
-          <span class="icon large text-green-500"
-            ><i class="mdi mdi-emoticon-sad mdi-48px"></i
-          ></span>
+    </form>
+    <div class="card has-table mb-6">
+        <header class="card-header">
+          <p class="card-header-title">
+            <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
+            All Groups
+          </p>
+          <div class="tools inline-flex items-center space-x-2">
+            <span class="font-semibold">Show:</span>
+            <div>
+              <div class="control">
+                <div class="select">
+                  <select>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                  </select>
+                </div>
+            </div>
+            <a href="#" class="card-header-icon">
+              <span class="icon"><i class="mdi mdi-reload"></i></span>
+            </a>
+          </div>
+        </header>
+        <div class="card-content">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Group Name</th>
+                <th>Contacts</th>
+                <th>Status</th>
+                <th>Created</th>
+                <th>Created By</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Group Name">
+                    <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
+                        Group Name
+                    </a>
+                    <p>Some Desc</p>
+                </td>
+                <td data-label="Contacts">20</td>
+                <td data-label="Status">
+                    <div class="flex items-center text-red-600">
+                        <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
+                    </div>
+                </td>
+                <td data-label="Created">3 days ago</td>
+                <td data-label="Created By">
+                  <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                  </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <a
+                      class="button green"
+                      href="javascript:void(0)"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
+                    </a>
+                    <a
+                    class="button yellow"
+                    href="javscript:void(0)"
+                    >
+                        <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                    </a>
+                    <a
+                      class="button red"
+                      href="javscript:void(0)"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Group Name">
+                    <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
+                        Group Name
+                    </a>
+                    <p>Some Desc</p>
+                </td>
+                <td data-label="Contacts">20</td>
+                <td data-label="Status">
+                    <div class="flex items-center text-red-600">
+                        <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
+                    </div>
+                </td>
+                <td data-label="Created">3 days ago</td>
+                <td data-label="Created By">
+                  <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                  </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <a
+                      class="button green"
+                      href="javascript:void(0)"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
+                    </a>
+                    <a
+                    class="button yellow"
+                    href="javscript:void(0)"
+                    >
+                        <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                    </a>
+                    <a
+                      class="button red"
+                      href="javscript:void(0)"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Group Name">
+                    <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
+                        Group Name
+                    </a>
+                    <p>Some Desc</p>
+                </td>
+                <td data-label="Contacts">20</td>
+                <td data-label="Status">
+                    <div class="flex items-center text-red-600">
+                        <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
+                    </div>
+                </td>
+                <td data-label="Created">3 days ago</td>
+                <td data-label="Created By">
+                  <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                  </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <a
+                      class="button green"
+                      href="javascript:void(0)"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
+                    </a>
+                    <a
+                    class="button yellow"
+                    href="javscript:void(0)"
+                    >
+                        <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                    </a>
+                    <a
+                      class="button red"
+                      href="javscript:void(0)"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="table-pagination">
+            <div class="flex items-center justify-between">
+              <nav class="pagination my-6">
+                <ul>
+                  <li>
+                    <a href="#">Previous</a>
+                  </li>
+                  <li>
+                    <a href="#" class="active">1</a>
+                  </li>
+                  <li>
+                    <a href="#">2</a>
+                  </li>
+                  <li>
+                    <a href="#">3</a>
+                  </li>
+                  <li>
+                    <a href="#">4</a>
+                  </li>
+                  <li>
+                    <a href="#">5</a>
+                  </li>
+                  <li>
+                    <a href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+              <small>Page 1 of 10</small>
+            </div>
+          </div>
         </div>
-        <p>Nothing's here…</p>
-      </div>
-      <hr />
-      <div class="text-end p-4">
-        <button class="--jb-modal button w-1/4 md:w-1/2" data-target="new-contact-modal">Add New Contact</button>
-      </div>
     </div>
-  </section>
-  
+</section>
 <footer class="footer">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
     <div class="flex items-center justify-start space-x-3">

@@ -1,9 +1,24 @@
 <section class="section main-section">
     <form class="mb-4">
-      <div class="field">
-        <div class="control icons-left">
-          <input class="input" type="text" placeholder="Search contacts ....">
-          <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
+      <div class="flex items-center justify-between">
+        <div>
+          <label class="label">Select Organisation:</label>
+          <div class="control">
+            <div class="select">
+              <select>
+                <option>All</option>
+                <option>TeamSource Technologies</option>
+                <option>Gibadi Inc</option>
+                <option>Powerpro Inc</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="self-end">
+          <div class="control icons-left">
+            <input class="input" type="text" placeholder="Search contacts ....">
+            <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
+          </div>
         </div>
       </div>
     </form>
@@ -14,6 +29,18 @@
           All Contacts
         </p>
         <div class="tools inline-flex items-center space-x-2">
+          <span class="font-semibold">Show:</span>
+          <div>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>25</option>
+                  <option>50</option>
+                  <option>100</option>
+                </select>
+              </div>
+            </div>
+          </div>
           <a href="#" class="card-header-icon" title="reload">
             <span class="icon"><i class="mdi mdi-reload mdi-24px"></i></span>
           </a>
@@ -75,7 +102,7 @@
               <td class="actions-cell">
                 <div class="buttons right nowrap">
                   <a
-                    class="button small green --jb-modal" data-target="edit-contact-modal"
+                    class="button small green --jb-modal" data-target="view-contact-modal"
                   >
                     <span class="icon"><i class="mdi mdi-eye"></i></span>
                   </a>
@@ -109,7 +136,7 @@
               <td class="actions-cell">
                 <div class="buttons right nowrap">
                   <a
-                    class="button small green --jb-modal" data-target="edit-contact-modal"
+                    class="button small green --jb-modal" data-target="view-contact-modal"
                   >
                     <span class="icon"><i class="mdi mdi-eye"></i></span>
                   </a>
@@ -143,7 +170,7 @@
               <td class="actions-cell">
                 <div class="buttons right nowrap">
                   <a
-                    class="button small green --jb-modal" data-target="edit-contact-modal"
+                    class="button small green --jb-modal" data-target="view-contact-modal"
                   >
                     <span class="icon"><i class="mdi mdi-eye"></i></span>
                   </a>
@@ -177,7 +204,7 @@
               <td class="actions-cell">
                 <div class="buttons right nowrap">
                   <a
-                    class="button small green --jb-modal" data-target="edit-contact-modal"
+                    class="button small green --jb-modal" data-target="view-contact-modal"
                   >
                     <span class="icon"><i class="mdi mdi-eye"></i></span>
                   </a>
@@ -216,6 +243,20 @@
             <small>Page 1 of 10</small>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="card empty hidden">
+      <div class="card-content">
+        <div>
+          <span class="icon large text-green-500"
+            ><i class="mdi mdi-emoticon-sad mdi-48px"></i
+          ></span>
+        </div>
+        <p>Nothing's here…</p>
+      </div>
+      <hr />
+      <div class="text-end p-4">
+        <button class="--jb-modal button w-1/4 md:w-1/2" data-target="new-contact-modal">Add New Contact</button>
       </div>
     </div>
   </section>

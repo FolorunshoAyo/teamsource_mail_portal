@@ -1,19 +1,27 @@
-<section class="section main-section">
-  <div class="p-6 bg-white shadow-sm rounded-sm">
-    <div class="my-6 flex flex-col items-center sm:justify-between sm:flex-row gap-4">
-      <a class="button" href="new-group.html">
-          <i class="mdi mdi-plus"></i>
-          Add New Group
-      </a>
-      <form>
-          <div class="field">
+<section class="main-section section">
+    <form class="mb-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <label class="label">Select Organisation:</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>All</option>
+                  <option>TeamSource Technologies</option>
+                  <option>Gibadi Inc</option>
+                  <option>Powerpro Inc</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="self-end">
             <div class="control icons-left">
-              <input class="input" type="text" placeholder="Search Groups....">
+              <input class="input" type="text" placeholder="Search groups ....">
               <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
             </div>
           </div>
-      </form>
-    </div>
+        </div>
+    </form>
     <div class="card has-table mb-6">
         <header class="card-header">
           <p class="card-header-title">
@@ -46,6 +54,7 @@
                 <th>Contacts</th>
                 <th>Status</th>
                 <th>Created</th>
+                <th>Created By</th>
                 <th></th>
               </tr>
             </thead>
@@ -72,6 +81,11 @@
                     </div>
                 </td>
                 <td data-label="Created">3 days ago</td>
+                <td data-label="Created By">
+                  <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                  </a>
+                </td>
                 <td class="actions-cell">
                   <div class="buttons right nowrap">
                     <a
@@ -112,11 +126,66 @@
                 </td>
                 <td data-label="Contacts">20</td>
                 <td data-label="Status">
-                    <div class="flex items-center text-green-600">
-                        <i class="mdi mdi-checkbox-multiple-outline"></i> Active
+                    <div class="flex items-center text-red-600">
+                        <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
                     </div>
                 </td>
                 <td data-label="Created">3 days ago</td>
+                <td data-label="Created By">
+                  <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                  </a>
+                </td>
+                <td class="actions-cell">
+                  <div class="buttons right nowrap">
+                    <a
+                      class="button green"
+                      href="javascript:void(0)"
+                    >
+                      <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
+                    </a>
+                    <a
+                    class="button yellow"
+                    href="javscript:void(0)"
+                    >
+                        <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
+                    </a>
+                    <a
+                      class="button red"
+                      href="javscript:void(0)"
+                    >
+                      <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="image-cell">
+                  <div class="image">
+                    <img
+                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
+                      class="rounded-full"
+                    />
+                  </div>
+                </td>
+                <td data-label="Group Name">
+                    <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
+                        Group Name
+                    </a>
+                    <p>Some Desc</p>
+                </td>
+                <td data-label="Contacts">20</td>
+                <td data-label="Status">
+                    <div class="flex items-center text-red-600">
+                        <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
+                    </div>
+                </td>
+                <td data-label="Created">3 days ago</td>
+                <td data-label="Created By">
+                  <a href="javascript:void(0)" class="flex items-center font-lg cursor-pointer hover:text-green-600 transition duration-300">
+                    Organisation Name <i class="ml-2 mdi mdi-open-in-new"></i>
+                  </a>
+                </td>
                 <td class="actions-cell">
                   <div class="buttons right nowrap">
                     <a
@@ -144,15 +213,34 @@
           </table>
           <div class="table-pagination">
             <div class="flex items-center justify-between">
-              <div class="buttons">
-                <button type="button" class="button active">1</button>
-                <button type="button" class="button">2</button>
-                <button type="button" class="button">3</button>
-              </div>
-              <small>Page 1 of 3</small>
+              <nav class="pagination my-6">
+                <ul>
+                  <li>
+                    <a href="#">Previous</a>
+                  </li>
+                  <li>
+                    <a href="#" class="active">1</a>
+                  </li>
+                  <li>
+                    <a href="#">2</a>
+                  </li>
+                  <li>
+                    <a href="#">3</a>
+                  </li>
+                  <li>
+                    <a href="#">4</a>
+                  </li>
+                  <li>
+                    <a href="#">5</a>
+                  </li>
+                  <li>
+                    <a href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+              <small>Page 1 of 10</small>
             </div>
           </div>
         </div>
     </div>
-  </div>
 </section>
