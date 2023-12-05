@@ -1,6 +1,6 @@
 {
-  "name": "admin-one-tailwind",
-  "version": "1.0.1",
+  "name": "teamsend mail portal frontend",
+  "version": "1.0.0",
   "scripts": {
     "build:dev": "NODE_ENV=development gulp",
     "build": "NODE_ENV=production gulp",

@@ -9,7 +9,7 @@
   <!-- Flatpickr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <!-- Tailwind is included -->
-  <link rel="stylesheet" href="css/main.css?v=1701705076166">
+  <link rel="stylesheet" href="css/main.css?v=1701774451660">
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="https://teamsource.net/wp-content/uploads/2023/05/TeamSource-Favicon.png"/>
@@ -49,246 +49,230 @@
 <div id="app">
 
 <nav id="navbar-main" class="navbar is-fixed-top">
-  <div class="navbar-brand">
-    <a class="navbar-item mobile-aside-button">
-      <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
-    </a>
-    <!-- <div class="navbar-item">
-      <div class="control"><input placeholder="Search everywhere..." class="input"></div>
-    </div> -->
-  </div>
-  <div class="navbar-brand is-right">
-    <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
-      <span class="icon"><i class="mdi mdi-dots-vertical mdi-24px"></i></span>
-    </a>
-  </div>
-  <div class="navbar-menu" id="navbar-menu">
-    <div class="navbar-end">
-      <div class="navbar-item dropdown has-divider">
-        <a class="navbar-link relative">
-          <span class="hidden absolute top-2 right-0 inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75"></span>
-          <span class="icon"><i class="mdi mdi-bell"></i></span>
-          <span>Notification</span>
-          <span class="icon">
-            <i class="mdi mdi-chevron-down"></i>
-          </span>
-        </a>
-        <div class="navbar-dropdown notifications">
-          <a href="profile.html" class="navbar-item flex items-center gap-4">
-            <i class="mdi mdi-email-outline mdi-24px"></i>
-            <div>
-              <span class="font-medium md:font-sm">New Email Campaign Created</span>
-              <div class="w-full truncate text-gray-600">28 minutes ago</div>
-            </div>
+    <div class="navbar-brand">
+      <a class="navbar-item mobile-aside-button">
+        <span class="icon"><i class="mdi mdi-forwardburger mdi-24px"></i></span>
+      </a>
+      <!-- <div class="navbar-item">
+        <div class="control"><input placeholder="Search everywhere..." class="input"></div>
+      </div> -->
+    </div>
+    <div class="navbar-brand is-right">
+      <a class="navbar-item --jb-navbar-menu-toggle" data-target="navbar-menu">
+        <span class="icon"><i class="mdi mdi-dots-vertical mdi-24px"></i></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item dropdown has-divider">
+          <a class="navbar-link relative">
+            <span class="hidden absolute top-2 right-0 inline-flex h-2 w-2 rounded-full bg-green-400 opacity-75"></span>
+            <span class="icon"><i class="mdi mdi-bell"></i></span>
+            <span>Notification</span>
+            <span class="icon">
+              <i class="mdi mdi-chevron-down"></i>
+            </span>
           </a>
-          <a href="profile.html" class="navbar-item flex items-center gap-4">
-            <i class="mdi mdi-bell-outline mdi-24px"></i>
-            <div>
-              <span class="font-medium">Your limit has been upgraded</span>
-              <div class="w-full truncate text-gray-600">28 minutes ago</div>
-            </div>
-          </a>
-          <hr>
-          <a href="#" class="navbar-link text-center">see all notifications</a>
-        </div>
-      </div>
-      <div class="navbar-item dropdown has-divider has-user-avatar">
-        <a class="navbar-link">
-          <div class="user-avatar">
-            <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
+          <div class="navbar-dropdown notifications">
+            <a href="profile.html" class="navbar-item flex items-center gap-4">
+              <i class="mdi mdi-email-outline mdi-24px"></i>
+              <div>
+                <span class="font-medium md:font-sm">New Email Campaign Created</span>
+                <div class="w-full truncate text-gray-600">28 minutes ago</div>
+              </div>
+            </a>
+            <a href="profile.html" class="navbar-item flex items-center gap-4">
+              <i class="mdi mdi-bell-outline mdi-24px"></i>
+              <div>
+                <span class="font-medium">New User Sign In</span>
+                <div class="w-full truncate text-gray-600">28 minutes ago</div>
+              </div>
+            </a>
+            <hr>
+            <a href="#" class="navbar-link text-center">see all notifications</a>
           </div>
-          <div class="is-user-name"><span>John Doe</span></div>
-          <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
-        </a>
-        <div class="navbar-dropdown">
-          <span class="navbar-item gap-1">
-            <span class="text-green-500">Account Type:</span>Customer
-          </span>
-          <span class="navbar-item gap-1">
-            <span class="text-green-500">Amount:</span>NGN 15,000
-          </span>
-          <a href="profile.html" class="navbar-item">
-            <span class="icon"><i class="mdi mdi-account"></i></span>
-            <span>Profile</span>
+        </div>
+        <div class="navbar-item dropdown has-divider has-user-avatar">
+          <a class="navbar-link">
+            <div class="user-avatar">
+              <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe" class="rounded-full">
+            </div>
+            <div class="is-user-name"><span>John Doe</span></div>
+            <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
           </a>
-          <a class="navbar-item">
-            <span class="icon"><i class="mdi mdi-lock"></i></span>
-            <span>Reset Password</span>
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            <span class="icon"><i class="mdi mdi-logout"></i></span>
-            <span>Log Out</span>
-          </a>
+          <div class="navbar-dropdown">
+            <a href="profile.html" class="navbar-item">
+              <span class="icon"><i class="mdi mdi-account"></i></span>
+              <span>Profile</span>
+            </a>
+            <a class="navbar-item">
+              <span class="icon"><i class="mdi mdi-lock"></i></span>
+              <span>Reset Password</span>
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item">
+              <span class="icon"><i class="mdi mdi-logout"></i></span>
+              <span>Log Out</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</nav>
-
+  </nav>
+  
 <aside class="aside is-placed-left is-expanded">
   <div class="aside-tools">
     <div>
-      Team<b class="font-bold">Send</b>
+      Team<b class="font-bold">Send</b> <span class="font-lg">Admin</span>
     </div>
   </div>
   <div class="menu is-menu-main">
-    <p class="menu-label">General</p>
+    <p class="menu-label">Dashboard</p>
     <ul class="menu-list">
-      <li class="--set-active-index-html">
-        <a href="index.html">
+      <li class="--set-active-admin-index-html">
+        <a href="admin-index.html">
           <span class="icon"><i class="mdi mdi-desktop-mac"></i></span>
           <span class="menu-item-label">Dashboard</span>
         </a>
       </li>
     </ul>
+    <p class="menu-label">Organisations</p>
+    <ul class="menu-list">
+      <li class="--set-active-admin-organisations-html">
+        <a href="admin-organisations.html">
+          <span class="icon"
+            ><i class="mdi mdi-account-group-outline"></i
+          ></span>
+          <span class="menu-item-label">Organisations</span>
+        </a>
+      </li>
+    </ul>
     <p class="menu-label">Agents</p>
     <ul class="menu-list">
-      <li class="--set-active-agents-html">
-        <a href="agents.html">
-          <span class="icon"><i class="mdi mdi-account-group-outline"></i></span>
+      <li class="--set-active-admin-agents-html">
+        <a href="admin-agents.html">
+          <span class="icon"
+            ><i class="mdi mdi-account-group-outline"></i
+          ></span>
           <span class="menu-item-label">Agents</span>
         </a>
       </li>
     </ul>
     <p class="menu-label">Contacts</p>
     <ul class="menu-list">
-      <li class="--set-active-all-contacts-html">
-        <a class="dropdown">
-          <span class="icon"><i class="mdi mdi-contactless-payment"></i></span>
+      <li class="--set-active-admin-contacts-html">
+        <a href="admin-contacts.html">
+          <span class="icon"
+            ><i class="mdi mdi-contactless-payment"></i
+          ></span>
           <span class="menu-item-label">Contacts</span>
-          <span class="icon"><i class="mdi mdi-plus"></i></span>
         </a>
-        <ul>
-          <li class="--set-active-all-contacts-html">
-            <a href="all-contacts.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
-              <span>All Contacts</span>
-            </a>
-          </li>
-          <li class="--set-active-bulk-upload-html">
-            <a href="bulk-upload.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
-              <span>Bulk Import/Export</span>
-            </a>
-          </li>
-        </ul>
       </li>
     </ul>
     <p class="menu-label">Groups</p>
     <ul class="menu-list">
-      <li class="--set-active-all-groups-html">
-        <a class="dropdown">
-          <span class="icon"><i class="mdi mdi-account-group"></i></span>
+      <li class="active">
+        <a href="admin-groups.html">
+          <span class="icon"
+            ><i class="mdi mdi-account-group-outline"></i
+          ></span>
           <span class="menu-item-label">Groups</span>
-          <span class="icon"><i class="mdi mdi-plus"></i></span>
         </a>
-        <ul>
-          <li class="--set-active-all-groups-html">
-            <a href="all-groups.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
-              <span>All Groups</span>
-            </a>
-          </li>
-          <li class="--set-active-new-group-html">
-            <a href="new-group.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
-              <span>Add New</span>
-            </a>
-          </li>
-        </ul>
       </li>
     </ul>
     <p class="menu-label">Emails</p>
     <ul class="menu-list">
-      <li class="--set-active-check-bounce-html">
+      <li
+        class="--set-active-check-bounce-html"
+      >
         <a class="dropdown">
-          <span class="icon"><i class="mdi mdi-email-fast-outline"></i></span>
+          <span class="icon"><i class="mdi mdi-email-multiple"></i></span>
           <span class="menu-item-label">Emails</span>
-          <span class="icon"><i class="mdi mdi-plus"></i></span>
+          <span class="icon"
+            ><i class="mdi mdi-plus"></i
+          ></span>
         </a>
         <ul>
           <li class="--set-active-check-bounce-html">
             <a href="check-bounce.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+              <span class="icon"
+                ><i class="mdi mdi mdi-format-align-left"></i
+              ></span>
               <span>Check Bounce</span>
             </a>
           </li>
-          <li class="--set-active-bounced-emails-html">
-            <a href="bounced-emails.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+          <li class="--set-active-admin-bounced-emails-html">
+            <a href="admin-bounced-emails.html">
+              <span class="icon"
+                ><i class="mdi mdi mdi-format-align-left"></i
+              ></span>
               <span>Bounced Emails</span>
             </a>
           </li>
         </ul>
       </li>
     </ul>
-    <p class="menu-label">Email Builder</p>
+    <p class="menu-label">Email Templates</p>
     <ul class="menu-list">
-      <li class="--set-active-email-templates-html">
-        <a class="dropdown">
-          <span class="icon"><i class="mdi mdi-xml"></i></span>
-          <span class="menu-item-label">Email Builder</span>
-          <span class="icon"><i class="mdi mdi-plus"></i></span>
+      <li class="--set-active-admin-email-templates-html">
+        <a href="admin-email-templates.html">
+          <span class="icon"
+            ><i class="mdi mdi-account-group-outline"></i
+          ></span>
+          <span class="menu-item-label">Email Templates</span>
         </a>
-        <ul>
-          <li class="--set-active-template-builder-originate-html">
-            <a href="template-builder-originate.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
-              <span>Create Email Template</span>
-            </a>
-          </li>
-          <li class="--set-active-email-templates-html">
-            <a href="email-templates.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
-              <span>All Email Templates</span>
-            </a>
-          </li>
-        </ul>
       </li>
     </ul>
     <p class="menu-label">Campaigns</p>
     <ul class="menu-list">
-      <li class="--set-active-all-campaigns-html">
+      <li
+        class="--set-active-admin-all-campaigns-html --set-admin-active-email-tracker-html"
+      >
         <a class="dropdown">
           <span class="icon"><i class="mdi mdi-xml"></i></span>
           <span class="menu-item-label">Campaigns</span>
-          <span class="icon"><i class="mdi mdi-plus"></i></span>
+          <span class="icon"
+            ><i class="mdi mdi-plus"></i
+          ></span>
         </a>
         <ul>
-          <li class="--set-active-all-campaigns-html">
-            <a href="all-campaigns.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+          <li class="--set-active-admin-campaigns-html">
+            <a href="admin-all-campaigns.html">
+              <span class="icon"
+                ><i class="mdi mdi mdi-format-align-left"></i
+              ></span>
               <span>All Campaigns</span>
             </a>
           </li>
-          <li class="--set-active-new-campaign-html">
-            <a href="new-campaign.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
-              <span>Add New</span>
-            </a>
-          </li>
-          <li class="--set-active-all-schedules-html">
-            <a href="all-schedules.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+          <li class="--set-active-admin-all-schedules-html">
+            <a href="admin-all-schedules.html">
+              <span class="icon"
+                ><i class="mdi mdi mdi-format-align-left"></i
+              ></span>
               <span>Schedules</span>
             </a>
           </li>
-          <li class="--set-active-email-tracker-html">
-            <a href="email-tracker.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+          <li class="--set-active-admin-email-tracker-html">
+            <a href="admin-email-tracker.html">
+              <span class="icon"
+                ><i class="mdi mdi mdi-format-align-left"></i
+              ></span>
               <span>Tracker</span>
             </a>
           </li>
-          <li class="--set-active-mail-logs-html">
-            <a href="mail-logs.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+          <li class="--set-active-admin-mail-logs-html">
+            <a href="admin-mail-logs.html">
+              <span class="icon"
+                ><i class="mdi mdi mdi-format-align-left"></i
+              ></span>
               <span>Mail Logs</span>
             </a>
           </li>
-          <li class="--set-active-campaign-logs-html">
-            <a href="campaign-logs.html">
-              <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
+          <li class="--set-active-admin-campaign-logs-html">
+            <a href="admin-campaign-logs.html">
+              <span class="icon"
+                ><i class="mdi mdi mdi-format-align-left"></i
+              ></span>
               <span>Campaign Logs</span>
             </a>
           </li>
@@ -296,74 +280,75 @@
       </li>
     </ul>
     <!-- <p class="menu-label">Examples</p>
-    <ul class="menu-list">
-      <li class="--set-active-tables-html">
-        <a href="tables.html">
-          <span class="icon"><i class="mdi mdi-table"></i></span>
-          <span class="menu-item-label">Tables</span>
-        </a>
-      </li>
-      <li class="--set-active-forms-html">
-        <a href="forms.html">
-          <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
-          <span class="menu-item-label">Forms</span>
-        </a>
-      </li>
-      <li class="--set-active-profile-html">
-        <a href="profile.html">
-          <span class="icon"><i class="mdi mdi-account-circle"></i></span>
-          <span class="menu-item-label">Profile</span>
-        </a>
-      </li>
-      <li>
-        <a href="login.html">
-          <span class="icon"><i class="mdi mdi-lock"></i></span>
-          <span class="menu-item-label">Login</span>
-        </a>
-      </li>
-      <li>
-        <a class="dropdown">
-          <span class="icon"><i class="mdi mdi-view-list"></i></span>
-          <span class="menu-item-label">Submenus</span>
-          <span class="icon"><i class="mdi mdi-plus"></i></span>
-        </a>
-        <ul>
-          <li>
-            <a href="#void">
-              <span>Sub-item One</span>
-            </a>
-          </li>
-          <li>
-            <a href="#void">
-              <span>Sub-item Two</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul> -->
+      <ul class="menu-list">
+        <li class="--set-active-tables-html">
+          <a href="tables.html">
+            <span class="icon"><i class="mdi mdi-table"></i></span>
+            <span class="menu-item-label">Tables</span>
+          </a>
+        </li>
+        <li class="--set-active-forms-html">
+          <a href="forms.html">
+            <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
+            <span class="menu-item-label">Forms</span>
+          </a>
+        </li>
+        <li class="--set-active-profile-html">
+          <a href="profile.html">
+            <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+            <span class="menu-item-label">Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="login.html">
+            <span class="icon"><i class="mdi mdi-lock"></i></span>
+            <span class="menu-item-label">Login</span>
+          </a>
+        </li>
+        <li>
+          <a class="dropdown">
+            <span class="icon"><i class="mdi mdi-view-list"></i></span>
+            <span class="menu-item-label">Submenus</span>
+            <span class="icon"><i class="mdi mdi-plus"></i></span>
+          </a>
+          <ul>
+            <li>
+              <a href="#void">
+                <span>Sub-item One</span>
+              </a>
+            </li>
+            <li>
+              <a href="#void">
+                <span>Sub-item Two</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul> -->
     <!-- <p class="menu-label">About</p>
-    <ul class="menu-list">
-      <li>
-        <a href="https://justboil.me" onclick="alert('Coming soon'); return false" target="_blank" class="has-icon">
-          <span class="icon"><i class="mdi mdi-credit-card-outline"></i></span>
-          <span class="menu-item-label">Premium Demo</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://justboil.me/tailwind-admin-templates" class="has-icon">
-          <span class="icon"><i class="mdi mdi-help-circle"></i></span>
-          <span class="menu-item-label">About</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/justboil/admin-one-tailwind" class="has-icon">
-          <span class="icon"><i class="mdi mdi-github-circle"></i></span>
-          <span class="menu-item-label">GitHub</span>
-        </a>
-      </li>
-    </ul> -->
+      <ul class="menu-list">
+        <li>
+          <a href="https://justboil.me" onclick="alert('Coming soon'); return false" target="_blank" class="has-icon">
+            <span class="icon"><i class="mdi mdi-credit-card-outline"></i></span>
+            <span class="menu-item-label">Premium Demo</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://justboil.me/tailwind-admin-templates" class="has-icon">
+            <span class="icon"><i class="mdi mdi-help-circle"></i></span>
+            <span class="menu-item-label">About</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/justboil/admin-one-tailwind" class="has-icon">
+            <span class="icon"><i class="mdi mdi-github-circle"></i></span>
+            <span class="menu-item-label">GitHub</span>
+          </a>
+        </li>
+      </ul> -->
   </div>
 </aside>
+
 <section class="is-title-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
@@ -413,19 +398,20 @@
           </p>
           <div class="tools inline-flex items-center space-x-2">
             <span class="font-semibold">Show:</span>
-            <div>
-              <div class="control">
-                <div class="select">
-                  <select>
-                    <option>25</option>
-                    <option>50</option>
-                    <option>100</option>
-                  </select>
-                </div>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option>25</option>
+                  <option>50</option>
+                  <option>100</option>
+                </select>
+              </div>
             </div>
-            <a href="#" class="card-header-icon">
-              <span class="icon"><i class="mdi mdi-reload"></i></span>
-            </a>
+            <div>
+              <a href="#" class="card-header-icon">
+                <span class="icon"><i class="mdi mdi-reload"></i></span>
+              </a>
+            </div>
           </div>
         </header>
         <div class="card-content">
@@ -1843,7 +1829,7 @@
 
 <!-- Scripts below are for demo only -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script type="text/javascript" src="js/main.min.js?v=1701705076166"></script>
+<script type="text/javascript" src="js/main.min.js?v=1701774451660"></script>
 
 
 <!-- <script>

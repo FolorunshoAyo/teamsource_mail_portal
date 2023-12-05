@@ -75,6 +75,9 @@ const concatHtml = file => {
     'admin-bounced-emails',
     'admin-email-templates',
     'admin-notifications',
+    'admin-groups',
+    'admin-all-campaigns',
+    'admin-all-schedules',
     'admin-agents',
     'admin-payments',
     'admin-users',
@@ -114,7 +117,7 @@ const concatHtml = file => {
     'src/html/parts/bottom-scripts.html'
   )
 
-  if (file === 'index' || file === "admin-index" || file === 'campaign' || file === 'admin-organisation') {
+  if (file === 'index' || file === "email-tracker" || file === "admin-index" || file === 'campaign' || file === 'admin-organisation') {
     sources.push('src/html/parts/bottom-scripts-admin.html')
   }
 
@@ -159,6 +162,8 @@ const concatHtml = file => {
     'admin-bounced-emails': 'Bounced Emails | Teamsend Admin',
     'admin-emails-templates': 'Emails Templates | Teamsend Admin',
     'admin-agents': 'Agents | Teamsend Admin',
+    'admin-all-campaigns': 'Campaigns | Teamsend Admin',
+    'admin-all-schedules': 'Schedules | Teamsend Admin'
   }
 
   const titleStringsLong = {
@@ -191,7 +196,9 @@ const concatHtml = file => {
     'admin-groups': 'Groups',
     'admin-bounced-emails': 'Bounced Emails',
     'admin-emails-templates': 'Emails Templates',
-    'admin-agents': 'Agents | Teamsend Admin'
+    'admin-agents': 'Agents',
+    'admin-all-campaigns': 'Campaigns',
+    'admin-all-schedules': 'Schedules'
   }
 
   const subMenuLinks = {
@@ -282,6 +289,8 @@ exports.default = series(
     () => concatHtml('admin-email-templates'),
     () => concatHtml('admin-bounced-emails'),
     () => concatHtml('admin-agents'),
+    () => concatHtml('admin-all-campaigns'),
+    () => concatHtml('admin-all-schedules'),
     processJsMain,
     processJsMainMin,
     processJsChartSample,
