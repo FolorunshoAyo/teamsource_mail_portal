@@ -78,6 +78,9 @@ const concatHtml = file => {
     'admin-groups',
     'admin-all-campaigns',
     'admin-all-schedules',
+    'admin-email-tracker',
+    'admin-mail-logs',
+    'admin-campaign-logs',
     'admin-agents',
     'admin-payments',
     'admin-users',
@@ -163,7 +166,10 @@ const concatHtml = file => {
     'admin-emails-templates': 'Emails Templates | Teamsend Admin',
     'admin-agents': 'Agents | Teamsend Admin',
     'admin-all-campaigns': 'Campaigns | Teamsend Admin',
-    'admin-all-schedules': 'Schedules | Teamsend Admin'
+    'admin-all-schedules': 'Schedules | Teamsend Admin',
+    'admin-email-tracker': 'Email Tracker | Teamsend Admin',
+    'admin-mail-logs': 'Mail Logs | Teamsend Admin',
+    'admin-campaign-logs': 'Campaign Logs | Teamsend Admin',
   }
 
   const titleStringsLong = {
@@ -198,7 +204,10 @@ const concatHtml = file => {
     'admin-emails-templates': 'Emails Templates',
     'admin-agents': 'Agents',
     'admin-all-campaigns': 'Campaigns',
-    'admin-all-schedules': 'Schedules'
+    'admin-all-schedules': 'Schedules',
+    'admin-email-tracker': 'Email Tracker',
+    'admin-mail-logs': 'Mail Logs',
+    'admin-campaign-logs': 'Mail Logs',
   }
 
   const subMenuLinks = {
@@ -216,6 +225,11 @@ const concatHtml = file => {
     'email-tracker': "campaigns",
     'mail-logs': 'campaigns',
     'campaign-logs': 'campaigns',
+    'admin-all-campaigns': 'campaigns',
+    'admin-all-schedules': 'campaigns',
+    'admin-email-tracker': 'campaigns',
+    'admin-campaign-logs': 'campaigns',
+    'admin-mail-logs': 'campaigns',
   }
 
   const titleStringReplacement = titleStrings[file] ? titleStrings[file] : ''
@@ -291,6 +305,9 @@ exports.default = series(
     () => concatHtml('admin-agents'),
     () => concatHtml('admin-all-campaigns'),
     () => concatHtml('admin-all-schedules'),
+    () => concatHtml('admin-email-tracker'),
+    () => concatHtml('admin-mail-logs'),
+    () => concatHtml('admin-campaign-logs'),
     processJsMain,
     processJsMainMin,
     processJsChartSample,
