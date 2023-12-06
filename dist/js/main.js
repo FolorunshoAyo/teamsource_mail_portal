@@ -133,3 +133,26 @@ if (document.getElementById("campaign-datetime")) {
     minTime: minTime
   });
 }
+
+/* Tabs functionality */
+Array.from(document.querySelectorAll('[id^="tab-"]')).forEach(function (elA) {
+  var tabBtns = Array.from(elA.querySelectorAll(".tabs-section ul li a"));
+  var tabContent = Array.from(elA.querySelectorAll(".tab-content div[data-tab-content]"));
+  console.log(tabBtns);
+  console.log(tabContent);
+  tabBtns.forEach(function (btn) {
+    btn.addEventListener("click", function (el) {
+      var tabBtn = el.currentTarget;
+      //// Clear all active tab btns and content
+      tabBtns.forEach(function (btn) {
+        btn.classList.remove("active");
+      });
+      tabContent.forEach(function (content) {
+        content.classList.remove("active");
+      });
+      var tabSelected = parseInt(tabBtn.dataset.tabTarget);
+      tabBtn.classList.add("active");
+      tabContent[tabSelected - 1].classList.add("active");
+    });
+  });
+});

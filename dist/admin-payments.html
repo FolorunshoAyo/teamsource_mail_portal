@@ -9,7 +9,7 @@
   <!-- Flatpickr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <!-- Tailwind is included -->
-  <link rel="stylesheet" href="css/main.css?v=1701790466190">
+  <link rel="stylesheet" href="css/main.css?v=1701874996451">
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
   <link rel="icon" type="image/png" sizes="32x32" href="https://teamsource.net/wp-content/uploads/2023/05/TeamSource-Favicon.png"/>
@@ -101,13 +101,16 @@
             <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
           </a>
           <div class="navbar-dropdown">
-            <a href="profile.html" class="navbar-item">
+            <span class="navbar-item gap-1">
+              <span class="text-green-500">Account Type:</span>Admin
+            </span>
+            <a href="admin-profile.html" class="navbar-item">
               <span class="icon"><i class="mdi mdi-account"></i></span>
               <span>Profile</span>
             </a>
-            <a class="navbar-item">
+            <a href="change-password.html" class="navbar-item --set-change-password-html">
               <span class="icon"><i class="mdi mdi-lock"></i></span>
-              <span>Reset Password</span>
+              <span>Change Password</span>
             </a>
             <hr class="navbar-divider">
             <a class="navbar-item">
@@ -177,6 +180,17 @@
             ><i class="mdi mdi-account-group-outline"></i
           ></span>
           <span class="menu-item-label">Groups</span>
+        </a>
+      </li>
+    </ul>
+    <p class="menu-label">Subscription plans</p>
+    <ul class="menu-list">
+      <li class="--set-active-admin-subscription-plans-html">
+        <a href="admin-subscription-plans.html">
+          <span class="icon"
+            ><i class="mdi mdi-contactless-payment"></i
+          ></span>
+          <span class="menu-item-label">Subscription Plans</span>
         </a>
       </li>
     </ul>
@@ -1803,7 +1817,7 @@
 
 <!-- Scripts below are for demo only -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script type="text/javascript" src="js/main.min.js?v=1701790466190"></script>
+<script type="text/javascript" src="js/main.min.js?v=1701874996451"></script>
 
 
 <!-- <script>

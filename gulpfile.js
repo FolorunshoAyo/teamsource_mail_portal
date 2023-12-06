@@ -81,11 +81,8 @@ const concatHtml = file => {
     'admin-email-tracker',
     'admin-mail-logs',
     'admin-campaign-logs',
-    'admin-agents',
-    'admin-payments',
-    'admin-users',
-    'admin-plans',
-    'admin-campaigns',
+    'admin-profile',
+    'admin-subscription-plans',
   ];
 
   if (formScreenFiles.indexOf(file) > -1) {
@@ -114,13 +111,13 @@ const concatHtml = file => {
       'src/html/parts/sample-modal.html'
     )
   }
-
+  
   sources.push(
     'src/html/parts/app-close.html',
     'src/html/parts/bottom-scripts.html'
   )
 
-  if (file === 'index' || file === "email-tracker" || file === "admin-index" || file === 'campaign' || file === 'admin-organisation') {
+  if (file === 'index' || file === "email-tracker" || file === "admin-index" || file === 'campaign' || file === 'admin-organisation' || file === 'admin-email-tracker') {
     sources.push('src/html/parts/bottom-scripts-admin.html')
   }
 
@@ -132,6 +129,7 @@ const concatHtml = file => {
     forms: 'Forms | TeamSend',
     profile: 'Profile | TeamSend',
     login: 'Login | TeamSend',
+    plans: 'Subscription Plans | TeamSend',
     "account-details": 'New Account | TeamSend',
     "forgot-password": 'Forgot Password | TeamSend',
     'mail-sent': 'Mail Sent | TeamSend',
@@ -154,7 +152,10 @@ const concatHtml = file => {
     'campaign-logs': 'Campaign Logs | Teamsend',
     'notifications': 'Notifications | Teamsend',
     'payment-details': 'Payment Details | Teamsend',
+    'profile-template': 'Profile Template | Teamsend',
+    'change-password': 'Change Password | Teamsend',
     'payments': 'Payments | Teamsend',
+    'agent-profile': 'Agent Profile | Teamsend',
     'admin-index': 'Admin Dashboard | Teamsend Admin',
     'admin-organisations': 'Organisations | Teamsend Admin',
     'admin-organisation': 'Organisation Details | Teamsend Admin',
@@ -170,11 +171,14 @@ const concatHtml = file => {
     'admin-email-tracker': 'Email Tracker | Teamsend Admin',
     'admin-mail-logs': 'Mail Logs | Teamsend Admin',
     'admin-campaign-logs': 'Campaign Logs | Teamsend Admin',
+    'admin-profile': 'Admin Profile | Teamsend Admin',
+    'admin-subscription-plans': 'Subscription Plans & Limits | Teamsend Admin'
   }
 
   const titleStringsLong = {
     tables: 'Responsive Tables',
     agents: 'Agents',
+    plans: 'Subscription Plans',
     'all-contacts': "Contacts",
     'bulk-upload': "Bulk Export Import Contacts",
     'new-group': "New Group",
@@ -193,6 +197,10 @@ const concatHtml = file => {
     'campaign-logs': 'Campaign Logs',
     'notifications': 'Notifications',
     'payment-details': 'Payment Details',
+    'profile': 'Profile',
+    'profile-template': 'Profile Template',
+    'change-password': 'Change Password',
+    'agent-profile': 'Agent Profile',
     'payments': 'Payments',
     'admin-index': 'Admin Dashboard',
     'admin-organisations': 'Organisations',
@@ -208,6 +216,7 @@ const concatHtml = file => {
     'admin-email-tracker': 'Email Tracker',
     'admin-mail-logs': 'Mail Logs',
     'admin-campaign-logs': 'Mail Logs',
+    'admin-subscription-plans': 'Subscription Plans & Limits'
   }
 
   const subMenuLinks = {
@@ -273,6 +282,7 @@ exports.default = series(
     () => concatHtml('forgot-password'),
     () => concatHtml('mail-sent'),
     () => concatHtml('agents'),
+    () => concatHtml('plans'),
     () => concatHtml('all-contacts'),
     () => concatHtml('bulk-upload'),
     () => concatHtml('all-groups'),
@@ -290,8 +300,11 @@ exports.default = series(
     () => concatHtml('mail-logs'),
     () => concatHtml('campaign-logs'),
     () => concatHtml('notifications'),
+    () => concatHtml('change-password'),
     () => concatHtml('payments'),
+    () => concatHtml('profile-template'),
     () => concatHtml('payment-details'),
+    () => concatHtml('agent-profile'),
     () => concatHtml('payments'),
     () => concatHtml('admin-index'),
     () => concatHtml('admin-organisations'),
@@ -308,6 +321,8 @@ exports.default = series(
     () => concatHtml('admin-email-tracker'),
     () => concatHtml('admin-mail-logs'),
     () => concatHtml('admin-campaign-logs'),
+    () => concatHtml('admin-profile'),
+    () => concatHtml('admin-subscription-plans'),
     processJsMain,
     processJsMainMin,
     processJsChartSample,

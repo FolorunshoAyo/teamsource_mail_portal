@@ -1,0 +1,33 @@
+.tabs-section{
+    @apply text-sm font-medium text-center text-gray-500 border-b border-gray-200 my-4
+}
+
+.tab-list{
+    @apply flex flex-wrap -mb-px
+}
+
+.tab{
+    @apply inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300
+}
+
+.tab.active{
+    @apply inline-block p-4 text-green-600 border-b-2 border-green-600 rounded-t-lg
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.tab-content div[data-tab-content]{
+    display: none;
+}
+
+.tab-content div.active{
+    display: block;
+    animation: fadeIn 0.5s ease-in-out     
+}

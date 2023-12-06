@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>All Groups | TeamSend</title>
+  <title>Subscription Plans | TeamSend</title>
 
   <!-- Flatpickr -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -177,14 +177,14 @@
     </ul>
     <p class="menu-label">Groups</p>
     <ul class="menu-list">
-      <li class="active">
+      <li class="--set-active-all-groups-html">
         <a class="dropdown">
           <span class="icon"><i class="mdi mdi-account-group"></i></span>
           <span class="menu-item-label">Groups</span>
-          <span class="icon"><i class="mdi mdi-minus"></i></span>
+          <span class="icon"><i class="mdi mdi-plus"></i></span>
         </a>
         <ul>
-          <li class="active">
+          <li class="--set-active-all-groups-html">
             <a href="all-groups.html">
               <span class="icon"><i class="mdi mdi mdi-format-align-left"></i></span>
               <span>All Groups</span>
@@ -368,7 +368,7 @@
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <ul>
       <li>Admin</li>
-      <li>All Groups | TeamSend</li>
+      <li>Subscription Plans | TeamSend</li>
     </ul>
   </div>
 </section>
@@ -376,170 +376,187 @@
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
     <h1 class="title">
-      All Groups
+      Subscription Plans
     </h1>
   </div>
 </section>
 
-<section class="section main-section">
-  <div class="p-6 bg-white shadow-sm rounded-sm">
-    <div class="my-6 flex flex-col items-center sm:justify-between sm:flex-row gap-4">
-      <a class="button" href="new-group.html">
-          <i class="mdi mdi-plus"></i>
-          Add New Group
-      </a>
-      <form>
-          <div class="field">
-            <div class="control icons-left">
-              <input class="input" type="text" placeholder="Search Groups....">
-              <span class="icon left"><i class="mdi mdi-magnify mdi-24px"></i></span>
-            </div>
-          </div>
-      </form>
-    </div>
-    <div class="card has-table mb-6">
-        <header class="card-header">
-          <p class="card-header-title">
-            <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
-            All Groups
-          </p>
-          <div class="tools inline-flex items-center space-x-2">
-            <span class="font-semibold">Show:</span>
-            <div class="control">
-              <div class="select">
-                <select>
-                  <option>25</option>
-                  <option>50</option>
-                  <option>100</option>
-                </select>
+<section class="main-section section">
+  <div class="p-4 rounded-sm bg-white shadow-sm">
+    <div id="tab-plans">
+      <div class="tabs-section">
+        <ul class="tab-list">
+          <li class="mr-2">
+            <a href="#" class="tab active" data-tab-target="1">Free</a>
+          </li>
+          <li class="mr-2">
+            <a href="#" class="tab" data-tab-target="2">Monthly</a>
+          </li>
+          <li class="mr-2">
+            <a href="#" class="tab" data-tab-target="3">Yearly</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content">
+        <div data-tab-content class="active">
+          <div class="flex wrap gap-2">
+            <div
+              class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow"
+            >
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                Free
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Lorem Ipsum is simply a dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry
+              </p>
+              <div class="flex align-items-center my-3">
+                <h4 class="text-2xl">₦0.00</h4>
+                <p class="mt-2 ml-2">/Month</p>
               </div>
-            </div>
-            <div>
-              <a href="#" class="card-header-icon">
-                <span class="icon"><i class="mdi mdi-reload"></i></span>
-              </a>
-            </div>
-          </div>
-        </header>
-        <div class="card-content">
-          <table>
-            <thead>
-              <tr>
-                <th></th>
-                <th>Group Name</th>
-                <th>Contacts</th>
-                <th>Status</th>
-                <th>Created</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="image-cell">
-                  <div class="image">
-                    <img
-                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                      class="rounded-full"
-                    />
-                  </div>
-                </td>
-                <td data-label="Group Name">
-                    <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
-                        Group Name
-                    </a>
-                    <p>Some Desc</p>
-                </td>
-                <td data-label="Contacts">20</td>
-                <td data-label="Status">
-                    <div class="flex items-center text-red-600">
-                        <i class="mdi mdi-close-box-multiple-outline"></i> Inactive
-                    </div>
-                </td>
-                <td data-label="Created">3 days ago</td>
-                <td class="actions-cell">
-                  <div class="buttons right nowrap">
-                    <a
-                      class="button green"
-                      href="javascript:void(0)"
-                    >
-                      <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
-                    </a>
-                    <a
-                    class="button yellow"
-                    href="javscript:void(0)"
-                    >
-                        <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
-                    </a>
-                    <a
-                      class="button red"
-                      href="javscript:void(0)"
-                    >
-                      <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="image-cell">
-                  <div class="image">
-                    <img
-                      src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg"
-                      class="rounded-full"
-                    />
-                  </div>
-                </td>
-                <td data-label="Group Name">
-                    <a class="font-medium whitespace-no-wrap inline-block" href="javascript:void(0)">
-                        Group Name
-                    </a>
-                    <p>Some Desc</p>
-                </td>
-                <td data-label="Contacts">20</td>
-                <td data-label="Status">
-                    <div class="flex items-center text-green-600">
-                        <i class="mdi mdi-checkbox-multiple-outline"></i> Active
-                    </div>
-                </td>
-                <td data-label="Created">3 days ago</td>
-                <td class="actions-cell">
-                  <div class="buttons right nowrap">
-                    <a
-                      class="button green"
-                      href="javascript:void(0)"
-                    >
-                      <span class="icon"><i class="mdi mdi-eye mdi-24px"></i></span>
-                    </a>
-                    <a
-                    class="button yellow"
-                    href="javscript:void(0)"
-                    >
-                        <span class="icon"><i class="mdi mdi-square-edit-outline mdi-24px"></i></span>
-                    </a>
-                    <a
-                      class="button red"
-                      href="javscript:void(0)"
-                    >
-                      <span class="icon"><i class="mdi mdi-trash-can mdi-24px"></i></span>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="table-pagination">
-            <div class="flex items-center justify-between">
-              <div class="buttons">
-                <button type="button" class="button active">1</button>
-                <button type="button" class="button">2</button>
-                <button type="button" class="button">3</button>
+              <ul class="list-unstyled">
+                <li class="flex items-center mb-3">
+                  <i class="mdi mdi-check text-green-600 mr-2"></i>
+                  <span>500 Emails</span>
+                </li>
+                <li class="flex align-items-center mb-3">
+                  <i class="mdi mdi-check text-green-600 mr-2"></i>
+                  <span>5 Emails</span>
+                </li>
+              </ul>
+              <div>
+                <a href="#" class="button w-full"> Select Plan </a>
               </div>
-              <small>Page 1 of 3</small>
             </div>
           </div>
         </div>
+        <div data-tab-content>
+          <div class="flex wrap gap-2">
+            <div
+              class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow"
+            >
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                Monthly
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Lorem Ipsum is simply a dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry
+              </p>
+              <div class="flex align-items-center my-3">
+                <h4 class="text-2xl">₦20,000.00</h4>
+                <p class="mt-2 ml-2">/Month</p>
+              </div>
+              <ul class="list-unstyled">
+                <li class="flex items-center mb-3">
+                  <i class="mdi mdi-check text-green-600 mr-2"></i>
+                  <span>2,000 Emails</span>
+                </li>
+                <li class="flex align-items-center mb-3">
+                  <i class="mdi mdi-check text-green-600 mr-2"></i>
+                  <span>20 Agents</span>
+                </li>
+              </ul>
+              <div>
+                <a href="#" class="button w-full"> Select Plan </a>
+              </div>
+            </div>
+            <div
+              class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow"
+            >
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                Monthly
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Lorem Ipsum is simply a dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry
+              </p>
+              <div class="flex align-items-center my-3">
+                <h4 class="text-2xl">₦50,000.00</h4>
+                <p class="mt-2 ml-2">/Month</p>
+              </div>
+              <ul class="list-unstyled">
+                <li class="flex items-center mb-3">
+                  <i class="mdi mdi-check text-green-600 mr-2"></i>
+                  <span>5,000 Emails</span>
+                </li>
+                <li class="flex align-items-center mb-3">
+                  <i class="mdi mdi-check text-green-600 mr-2"></i>
+                  <span>40 Agents</span>
+                </li>
+              </ul>
+              <div>
+                <a href="#" class="button w-full"> Select Plan </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-tab-content>
+          <div class="flex wrap gap-2">
+            <div
+              class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow"
+            >
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                Yearly
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Lorem Ipsum is simply a dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry
+              </p>
+              <div class="flex align-items-center my-3">
+                <h4 class="text-2xl">₦100,000.00</h4>
+                <p class="mt-2 ml-2">/Year</p>
+              </div>
+              <ul class="list-unstyled">
+                <li class="flex items-center mb-3">
+                  <i class="mdi mdi-check text-green-600 mr-2"></i>
+                  <span>10,000 Emails</span>
+                </li>
+                <li class="flex align-items-center mb-3">
+                  <i class="mdi mdi-check text-green-600 mr-2"></i>
+                  <span>60 Agents</span>
+                </li>
+              </ul>
+              <div>
+                <a href="#" class="button w-full"> Select Plan </a>
+              </div>
+            </div>
+            <div
+              class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow"
+            >
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                Yearly
+              </h5>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Lorem Ipsum is simply a dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry
+              </p>
+              <div class="flex align-items-center my-3">
+                <h4 class="text-2xl">₦160,000.00</h4>
+                <p class="mt-2 ml-2">/Year</p>
+              </div>
+              <ul class="list-unstyled">
+                <li class="flex items-center mb-3">
+                  <i class="mdi mdi-check text-green-600 mr-2"></i>
+                  <span>15,000 Emails</span>
+                </li>
+                <li class="flex align-items-center mb-3">
+                  <i class="mdi mdi-check text-green-600 mr-2"></i>
+                  <span>80 Agents</span>
+                </li>
+              </ul>
+              <div>
+                <button disabled href="#" class="button w-full">
+                  <i class="mdi mdi-pencil"></i> Active, Ex. 24 Jan, 2024.
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
 <footer class="footer">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
     <div class="flex items-center justify-start space-x-3">

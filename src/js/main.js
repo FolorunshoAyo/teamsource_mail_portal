@@ -148,3 +148,31 @@ if(document.getElementById("campaign-datetime")){
     minTime
   });
 }
+
+/* Tabs functionality */
+Array.from(document.querySelectorAll('[id^="tab-"]')).forEach(elA => {
+  const tabBtns = Array.from(elA.querySelectorAll(".tabs-section ul li a"));
+  const tabContent = Array.from(elA.querySelectorAll(".tab-content div[data-tab-content]"));
+
+  console.log(tabBtns);
+  console.log(tabContent);
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener("click", function (el){
+      const tabBtn = el.currentTarget;
+      //// Clear all active tab btns and content
+      tabBtns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      tabContent.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      const tabSelected = parseInt(tabBtn.dataset.tabTarget);
+
+      tabBtn.classList.add("active");
+      tabContent[tabSelected - 1].classList.add("active");
+    });
+  });
+})
