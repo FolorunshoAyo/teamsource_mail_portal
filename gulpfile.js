@@ -83,6 +83,7 @@ const concatHtml = file => {
     'admin-campaign-logs',
     'admin-profile',
     'admin-subscription-plans',
+    'admin-change-password',
   ];
 
   if (formScreenFiles.indexOf(file) > -1) {
@@ -172,6 +173,7 @@ const concatHtml = file => {
     'admin-mail-logs': 'Mail Logs | Teamsend Admin',
     'admin-campaign-logs': 'Campaign Logs | Teamsend Admin',
     'admin-profile': 'Admin Profile | Teamsend Admin',
+    'admin-change-password': 'Change Password | Teamsend Admin',
     'admin-subscription-plans': 'Subscription Plans & Limits | Teamsend Admin'
   }
 
@@ -216,6 +218,7 @@ const concatHtml = file => {
     'admin-email-tracker': 'Email Tracker',
     'admin-mail-logs': 'Mail Logs',
     'admin-campaign-logs': 'Mail Logs',
+    'admin-change-password': 'Change Password',
     'admin-subscription-plans': 'Subscription Plans & Limits'
   }
 
@@ -323,6 +326,7 @@ exports.default = series(
     () => concatHtml('admin-campaign-logs'),
     () => concatHtml('admin-profile'),
     () => concatHtml('admin-subscription-plans'),
+    () => concatHtml('admin-change-password'),
     processJsMain,
     processJsMainMin,
     processJsChartSample,

@@ -93,9 +93,9 @@
 }
 
 button[disabled]{
-  @apply bg-green-200
+  @apply bg-green-400
   cursor-not-allowed
-  hover:bg-green-200
+  hover:bg-green-400
 }
 
 .progress li{
