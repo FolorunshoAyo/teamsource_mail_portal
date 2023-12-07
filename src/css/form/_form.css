@@ -69,6 +69,10 @@
     @apply pointer-events-none bg-green-500 text-white;
   }
 
+  .input[disabeld] {
+    @apply pointer-events-none bg-gray-500 text-white;
+  }
+
   .textarea {
     @apply h-24;
   }

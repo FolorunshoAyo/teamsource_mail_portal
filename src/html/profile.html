@@ -1,6 +1,6 @@
 <section class="section main-section">
   <div class="p-6 bg-white shadow-sm rounded-sm">
-    <div class="card">
+    <div class="card mb-2">
       <header class="card-header">
         <p class="card-header-title">
           <span class="icon"><i class="mdi mdi-account-circle"></i></span>
@@ -30,7 +30,7 @@
           </div>
           <hr />
           <div class="field">
-            <label class="label">First Name</label>
+            <label class="label">First Name <span class="text-red-600">*</span></label>
             <div class="field-body">
               <div class="field">
                 <div class="control">
@@ -48,7 +48,7 @@
             </div>
           </div>
           <div class="field">
-            <label class="label">Last Name</label>
+            <label class="label">Last Name <span class="text-red-600">*</span></label>
             <div class="field-body">
               <div class="field">
                 <div class="control">
@@ -84,7 +84,7 @@
             </div>
           </div>
           <div class="field">
-            <label class="label">Mobile No</label>
+            <label class="label">Mobile No <span class="text-red-600">*</span></label>
             <div class="field-body">
               <div class="field">
                 <div class="control">
@@ -101,7 +101,7 @@
             </div>
           </div>
           <div class="field">
-            <label class="label">Company Name</label>
+            <label class="label">Company Name <span class="text-red-600">*</span></label>
             <div class="field-body">
               <div class="field">
                 <div class="control">
@@ -117,77 +117,90 @@
               </div>
             </div>
           </div>
-            <div class="field">
-                <label class="label">Company Website</label>
-                <div class="field-body">
-                <div class="field">
-                    <div class="control">
-                    <input
-                        type="text"
-                        autocomplete="on"
-                        name="org_website"
-                        value="Teamsouce Technologies"
-                        class="input"
-                    />
-                    </div>
-                    <p class="help">Your inputed company website</p>
+          <div class="field">
+            <label class="label">Company Website <span class="text-red-600">*</span></label>
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <input
+                    type="text"
+                    autocomplete="on"
+                    name="org_website"
+                    value="Teamsouce Technologies"
+                    class="input"
+                  />
                 </div>
-                </div>
+                <p class="help">Your inputed company website</p>
+              </div>
             </div>
-            <div class="field">
-                <label class="label">What is your Role In Company? <span class="text-red-600">*</span></label>
-                <div class="field-body">
-                <div class="field">
-                    <div class="control">
-                        <div class="select">
-                          <select>
-                            <option>CEO</option>
-                            <option>Marketer</option>
-                            <option>Developer</option>
-                            <option>Other</option>
-                          </select>
-                        </div>
-                      </div>
-                    <p class="help">Your inputed role in company</p>
+          </div>
+          <div class="field">
+            <label class="label"
+              >What is your Role In Company?
+              <span class="text-red-600">*</span></label
+            >
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>CEO</option>
+                      <option>Marketer</option>
+                      <option>Developer</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
                 </div>
-                </div>
+                <p class="help">Your inputed role in company</p>
+              </div>
             </div>
-            <div class="field">
-                <label class="label">How many emails do you send per month? <span class="text-red-600">*</span></label>
-                <div class="field-body">
-                <div class="field">
-                    <div class="control">
-                        <div class="select">
-                          <select>
-                            <option>0 - 5k</option>
-                            <option>5k - 10k</option>
-                            <option>10k - 20k</option>
-                            <option>20k - 30k</option>
-                          </select>
-                        </div>
-                      </div>
-                    <p class="help">Your inputed amount of mails you send per month</p>
+          </div>
+          <div class="field">
+            <label class="label"
+              >How many emails do you send per month?
+              <span class="text-red-600">*</span></label
+            >
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>0 - 5k</option>
+                      <option>5k - 10k</option>
+                      <option>10k - 20k</option>
+                      <option>20k - 30k</option>
+                    </select>
+                  </div>
                 </div>
-                </div>
+                <p class="help">
+                  Your inputed amount of mails you send per month
+                </p>
+              </div>
             </div>
-            <div class="field">
-                <label class="label">How many employees work at your company? <span class="text-red-600">*</span></label>
-                <div class="field-body">
-                <div class="field">
-                    <div class="control">
-                        <div class="select">
-                          <select>
-                            <option>1 - 50</option>
-                            <option>50 - 100</option>
-                            <option>100 - 500</option>
-                            <option>500 - 1000</option>
-                          </select>
-                        </div>
-                      </div>
-                    <p class="help">Your inputed amount of employees that work in your company</p>
+          </div>
+          <div class="field">
+            <label class="label"
+              >How many employees work at your company?
+              <span class="text-red-600">*</span></label
+            >
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>1 - 50</option>
+                      <option>50 - 100</option>
+                      <option>100 - 500</option>
+                      <option>500 - 1000</option>
+                    </select>
+                  </div>
                 </div>
-                </div>
+                <p class="help">
+                  Your inputed amount of employees that work in your company
+                </p>
+              </div>
             </div>
+          </div>
           <hr />
           <div class="field">
             <div class="control">
@@ -195,6 +208,72 @@
             </div>
           </div>
         </form>
+      </div>
+    </div>
+    <div class="card mb-4">
+      <header class="card-header">
+        <p class="card-header-title">
+          <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+          Plan Details
+        </p>
+      </header>
+      <div class="card-content">
+        <div
+          class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow"
+        >
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            Free
+          </h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            Lorem Ipsum is simply a dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry
+          </p>
+          <div class="flex align-items-center my-3">
+            <h4 class="text-2xl">₦0.00</h4>
+            <p class="mt-2 ml-2">/Month</p>
+          </div>
+          <ul class="list-unstyled">
+            <li class="flex items-center mb-3">
+              <i class="mdi mdi-check text-green-600 mr-2"></i>
+              <span>500 Emails</span>
+            </li>
+            <li class="flex align-items-center mb-3">
+              <i class="mdi mdi-check text-green-600 mr-2"></i>
+              <span>5 Emails</span>
+            </li>
+          </ul>
+          <div>
+            <button disabled class="button w-full"> Selected </button>
+          </div>
+        </div>
+        <div class="mt-4 text-right text-green-600">
+          <a href="subscription-plans.html" class="inline-flex hover:underline transition duration-300">
+            <i class="mdi mdi-open-in-new mr-2"></i> Change plan
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-4">
+      <header class="card-header">
+        <p class="card-header-title">
+          <span class="icon"><i class="mdi mdi-account-circle"></i></span>
+          Billing Details (Future charges would be made with this card)
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="image w-8">
+            <img
+              src="img/VISA.png"
+              class="w-full h-full"
+              alt="Card Image"
+            />
+          </div>
+          <p class="font-bold">4123 45** **** 1381</p>
+        </div>
+        <p class="mb-2">Holder Name: <span class="font-bold">John Doe</span></p>
+        <p class="mb-2">Expiry Date: <span class="font-bold">08/2026</span></p>
+        <p class="text-lg font-semibold">Your next billing date is December 22, 2023.</p>
       </div>
     </div>
   </div>
