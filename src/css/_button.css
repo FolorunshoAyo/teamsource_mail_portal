@@ -39,12 +39,7 @@
   @apply rounded-l-none;
 }
 
-.fav-button{
-  @apply text-yellow-500
-}
-
-.button.small,
-.fav-button {
+.button.small{
   @apply text-xs p-1;
 }
 
@@ -74,6 +69,14 @@
 
 .button.light {
   @apply bg-gray-500 border-gray-500 hover:bg-gray-600;
+}
+
+.favourite-btn{
+  @apply text-black;
+}
+
+.is-favourite{
+  @apply text-yellow-500;
 }
 
 .buttons {
