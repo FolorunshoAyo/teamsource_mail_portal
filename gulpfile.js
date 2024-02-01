@@ -118,7 +118,7 @@ const concatHtml = file => {
     'src/html/parts/bottom-scripts.html'
   )
 
-  if (file === 'index' || file === "email-tracker" || file === "admin-index" || file === 'campaign' || file === 'admin-organisation' || file === 'admin-email-tracker') {
+  if (file === 'index' || file === "email-tracker" || file === "admin-index" || file === 'campaign' || file === 'admin-organisation' || file === 'admin-email-tracker' || file === 'contacts-overview') {
     sources.push('src/html/parts/bottom-scripts-admin.html')
   }
 
@@ -135,6 +135,7 @@ const concatHtml = file => {
     "forgot-password": 'Forgot Password | TeamSend',
     'mail-sent': 'Mail Sent | TeamSend',
     agents: 'Agents | TeamSend',
+    'contacts-overview': "Audience Overview | Teamsend",
     'all-contacts': "Contacts | TeamSend",
     'bulk-upload': "Bulk Export Import Contacts | TeamSend",
     'new-group': "New Group | TeamSend",
@@ -181,6 +182,7 @@ const concatHtml = file => {
     tables: 'Responsive Tables',
     agents: 'Agents',
     plans: 'Subscription Plans',
+    'contacts-overview': "Audience Overview",
     'all-contacts': "Contacts",
     'bulk-upload': "Bulk Export Import Contacts",
     'new-group': "New Group",
@@ -223,6 +225,7 @@ const concatHtml = file => {
   }
 
   const subMenuLinks = {
+    'contacts-overview': "contacts",
     'all-contacts': "contacts",
     'bulk-upload': "contacts",
     'all-groups': "groups",
@@ -286,6 +289,7 @@ exports.default = series(
     () => concatHtml('mail-sent'),
     () => concatHtml('agents'),
     () => concatHtml('plans'),
+    () => concatHtml('contacts-overview'),
     () => concatHtml('all-contacts'),
     () => concatHtml('bulk-upload'),
     () => concatHtml('all-groups'),

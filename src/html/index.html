@@ -93,6 +93,84 @@
       </div>
     </div>
   </div>
+  
+  <div class="card mb-6">
+    <header class="card-header">
+      <p class="card-header-title">
+        <span class="icon"><i class="mdi mdi-dots-horizontal-circle-outline"></i></span>
+        Credits Used
+      </p>
+      <a href="#" class="card-header-icon">
+        <span class="icon"><i class="mdi mdi-reload"></i></span>
+      </a>
+    </header>
+
+    <div class="card-content">
+      <p class="text-lg mb-4">Below is the summary of how you spent your credits</p>
+      <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+        <div class="mb-2">
+          <div class="mb-2 flex items-center justify-between">
+            <h4 class="font-bold">Sending Credits</h4>
+            <div>
+              <span class="text-gray-500 me-2">0/&infin;</span>
+              <span>0.00%</span>
+            </div>
+          </div>
+          <div class="progress-cell">
+            <progress max="100" value="67">67</progress>
+          </div>
+        </div>
+        <div class="mb-2">
+          <div class="mb-2 flex items-center justify-between">
+            <h4 class="font-bold">List</h4>
+            <div>
+              <span class="text-gray-500 me-2">1/&infin;</span>
+              <span>Unlimited</span>
+            </div>
+          </div>
+          <div class="progress-cell">
+            <progress max="100" value="67">67</progress>
+          </div>
+        </div>
+        <div class="mb-2">
+          <div class="mb-2 flex items-center justify-between">
+            <h4 class="font-bold">Campaign</h4>
+            <div>
+              <span class="text-gray-500 me-2">0/&infin;</span>
+              <span>Unlimited</span>
+            </div>
+          </div>
+          <div class="progress-cell">
+            <progress max="100" value="67">67</progress>
+          </div>
+        </div>
+        <div class="mb-2">
+          <div class="mb-2 flex items-center justify-between">
+            <h4 class="font-bold">Subscribers</h4>
+            <div>
+              <span class="text-gray-500 me-2">0/10,000</span>
+              <span>0.00%</span>
+            </div>
+          </div>
+          <div class="progress-cell">
+            <progress max="100" value="67">67</progress>
+          </div>
+        </div>
+        <div class="mb-2">
+          <div class="mb-2 flex items-center justify-between">
+            <h4 class="font-bold">Agents</h4>
+            <div>
+              <span class="text-gray-500 me-2">0/5</span>
+              <span>0.00%</span>
+            </div>
+          </div>
+          <div class="progress-cell">
+            <progress max="100" value="67">67</progress>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="card mb-6">
     <header class="card-header">
@@ -158,9 +236,20 @@
         <span class="icon"><i class="mdi mdi-chart-timeline"></i></span>
         Campaign Report
       </p>
-      <a href="#" class="card-header-icon">
-        <span class="icon"><i class="mdi mdi-reload"></i></span>
-      </a>
+      <div class="inline-flex items-center space-x-2">
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Campaign 1</option>
+              <option>Campaign 2</option>
+              <option>Campaign 3</option>
+            </select>
+          </div>
+        </div>
+        <a href="#" class="card-header-icon">
+          <span class="icon"><i class="mdi mdi-reload"></i></span>
+        </a>
+      </div>
     </header>
 
     <div class="card-content">
@@ -1083,7 +1172,91 @@
     >
   </div>
 
-  <div class="flex flex-col md:flex-row gap-4">
+  <div class="flex flex-col md:flex-row gap-4 mb-4">
+    <div class="w-full md:w-1/2">
+      <div class="bg-white shadow-sm rounded-sm p-4">
+        <div class="mb-4 flex justify-between text-2xl font-semibold">
+          <h4>Open Rate</h4>
+          <span>0.00%</span>
+        </div>
+        <div class="progress-cell mb-2">
+          <progress max="100" value="67">67</progress>  
+        </div>
+        <ul class="list-none mb-2">
+          <li class="flex items-center justify-between pb-2 mb-2 border-b-2 border-slate-300">
+            <span>Successful Deliveries</span>
+            <div>
+              <b>9</b> <span class="text-gray-400">100%</span>
+            </div>
+          </li>
+          <li class="flex items-center justify-between pb-2 mb-2 border-b-2 border-slate-300">
+            <span>Total Opens</span>
+            <span>
+              0
+            </span>
+          </li>
+          <li class="flex items-center justify-between pb-2 mb-2 border-b-2 border-slate-300">
+            <span>Unique Opens</span>
+            <span>
+              0
+            </span>
+          </li>
+          <li class="flex items-center justify-between pb-2 mb-2 border-b-2 border-slate-300">
+            <span>Last Opened</span>
+            <span></span>
+          </li>
+        </ul>
+        <div class="text-end">
+          <a class="button">
+            Open Log <i class="mdi mdi-arrow-right-thin"></i> 
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2">
+      <div class="bg-white shadow-sm rounded-sm p-4">
+        <div class="mb-4 flex justify-between text-2xl font-semibold">
+          <h4>Click Rate</h4>
+          <span>0.00%</span>
+        </div>
+        <div class="progress-cell mb-2">
+          <progress max="100" value="67">67</progress>  
+        </div>
+        <ul class="list-none mb-2">
+          <li class="flex items-center justify-between pb-2 mb-2 border-b-2 border-slate-300">
+            <span>Total Clicks</span>
+            <span>
+              0
+            </span>
+          </li>
+          <li class="flex items-center justify-between pb-2 mb-2 border-b-2 border-slate-300">
+            <span>Total Opens</span>
+            <span>
+              0
+            </span>
+          </li>
+          <li class="flex items-center justify-between pb-2 mb-2 border-b-2 border-slate-300">
+            <span>Abuse Reports</span>
+            <span>
+              0
+            </span>
+          </li>
+          <li class="flex items-center justify-between pb-2 mb-2 border-b-2 border-slate-300">
+            <span>Last Clicked</span>
+            <span>
+            </span>
+          </li>
+        </ul>
+        <div class="text-end">
+          <a class="button">
+            Open Log <i class="mdi mdi-arrow-right-thin"></i> 
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row gap-4 mb-4">
     <div class="w-full md:w-1/2">
       <div class="bg-white shadow-sm rounded-sm p-4 flex items-center gap-2">
         <div class="image w-40">
@@ -1129,58 +1302,47 @@
           </a>
         </header>
         <div class="card-content">
-          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2">
+          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2 mb-1">
             <div
-              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              class="p-2 flex items-center bg-green-500 justify-center image-fit rounded-md overflow-hidden"
             >
-              <span class="text-4xl text-green-500">2</span>
+              <span class="text-xl text-white">4</span>
             </div>
             <div class="w-full">
-              <p class="mb-4 font-base font-semibold">adebisiemmanuel@gmail.com</p>
+              <p class="mb-2 font-base font-semibold">adebisiemmanuel@gmail.com</p>
               <span class="font-sm">4 November, 2022 </span>
             </div>
           </div>
-          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2">
+          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2 mb-1">
             <div
-              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              class="p-2 flex items-center bg-green-500 justify-center image-fit rounded-md overflow-hidden"
             >
-              <span class="text-4xl text-green-500">4</span>
+              <span class="text-xl text-white">3</span>
             </div>
             <div class="w-full">
-              <p class="mb-4 font-base font-semibold">adebisiemmanuel@gmail.com</p>
+              <p class="mb-2 font-base font-semibold">adebisiemmanuel@gmail.com</p>
               <span class="font-sm">4 November, 2022 </span>
             </div>
           </div>
-          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2">
+          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2 mb-1">
             <div
-              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              class="p-2 flex items-center bg-green-500 justify-center image-fit rounded-md overflow-hidden"
             >
-              <span class="text-4xl text-green-500">3</span>
+              <span class="text-xl text-white">2</span>
             </div>
             <div class="w-full">
-              <p class="mb-4 font-base font-semibold">adebisiemmanuel@gmail.com</p>
+              <p class="mb-2 font-base font-semibold">adebisiemmanuel@gmail.com</p>
               <span class="font-sm">4 November, 2022 </span>
             </div>
           </div>
-          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2">
+          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2 mb-1">
             <div
-              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              class="p-2 flex items-center bg-green-500 justify-center image-fit rounded-md overflow-hidden"
             >
-              <span class="text-4xl text-green-500">2</span>
+              <span class="text-xl text-white">1</span>
             </div>
             <div class="w-full">
-              <p class="mb-4 font-base font-semibold">adebisiemmanuel@gmail.com</p>
-              <span class="font-sm">4 November, 2022 </span>
-            </div>
-          </div>
-          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2">
-            <div
-              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
-            >
-              <span class="text-4xl text-green-500">1</span>
-            </div>
-            <div class="w-full">
-              <p class="mb-4 font-base font-semibold">adebisiemmanuel@gmail.com</p>
+              <p class="mb-2 font-base font-semibold">adebisiemmanuel@gmail.com</p>
               <span class="font-sm">4 November, 2022 </span>
             </div>
           </div>
@@ -1202,44 +1364,48 @@
           </a>
         </header>
         <div class="card-content">
-          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2">
+          <div class="shadow-sm rounded-sm p-4 mb-2 flex items-center gap-2">
             <div
-              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              class="p-2 flex items-center justify-center image-fit rounded-md overflow-hidden"
             >
-              <span class="text-4xl text-green-500">4</span>
+              <span class="text-xl text-white-500">4</span>
             </div>
             <div class="w-full">
-              <p class="font-base font-semibold">Campaign name</p>
+              <h4 class="font-semibold">Campaign name</h4>
+              <p class="text-gray-600 font-base">Campaign desc</p>
             </div>
           </div>
-          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2">
+          <div class="shadow-sm rounded-sm p-4 mb-2 flex items-center gap-2">
             <div
-              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              class="p-2 flex items-center justify-center image-fit rounded-md overflow-hidden"
             >
-              <span class="text-4xl text-green-500">3</span>
+              <span class="text-xl text-white-500">3</span>
             </div>
             <div class="w-full">
-              <p class="font-base font-semibold">Campaign Name</p>
+              <h4 class="font-semibold">Campaign name</h4>
+              <p class="text-gray-600 font-base">Campaign desc</p>
             </div>
           </div>
-          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2">
+          <div class="shadow-sm rounded-sm p-4 mb-2 flex items-center gap-2">
             <div
-              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              class="p-2 flex items-center justify-center image-fit rounded-md overflow-hidden"
             >
-              <span class="text-4xl text-green-500">2</span>
+              <span class="text-xl text-white-500">2</span>
             </div>
             <div class="w-full">
-              <p class="font-base font-semibold">Campaign Name</p>
+              <h4 class="font-semibold">Campaign name</h4>
+              <p class="text-gray-600 font-base">Campaign desc</p>
             </div>
           </div>
-          <div class="shadow-sm rounded-sm p-4 flex items-center gap-2">
+          <div class="shadow-sm rounded-sm p-4 mb-2 flex items-center gap-2">
             <div
-              class="w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+              class="p-2 flex items-center justify-center image-fit rounded-md overflow-hidden"
             >
-              <span class="text-4xl text-green-500">1</span>
+              <span class="text-xl text-white-500">1</span>
             </div>
             <div class="w-full">
-              <p class="font-base font-semibold">Campaign Name</p>
+              <h4 class="font-semibold">Campaign name</h4>
+              <p class="text-gray-600 font-base">Campaign desc</p>
             </div>
           </div>
           <div class="text-right">
