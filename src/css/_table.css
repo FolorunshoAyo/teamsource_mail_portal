@@ -69,3 +69,16 @@ td.image-cell .image {
 .details-table td{
   @apply justify-start
 }
+
+.animate-pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.5;
+  }
+}
